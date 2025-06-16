@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -94,10 +94,23 @@ export default function AppLayout({
             scrolled ? "show" : "hide"
           }`}
         >
-          <div className={styles.hoverTrigger} />
-
-          <div className={styles.navWrapper}>
-            <div className={styles.dropdown}></div>
+          <div className={styles.hoverTrigger}>
+            <Menu size={16} className={styles.menuIcon} />
+            <span className={styles.verticalNavHeader}>menu</span>
+          </div>
+          <div className={styles.dropdown}>
+            {navItems.map((item) => (
+              <NavLink
+                to={item.to}
+                key={item.to}
+                onClick={() => setCurrentPage(item.label)}
+                className={`${styles.VnavLink} ${
+                  currentPage === item.label ? styles.Vactive : styles.Vinactive
+                }`}
+              >
+                {item.label}
+              </NavLink>
+            ))}
           </div>
         </div>
       </>
