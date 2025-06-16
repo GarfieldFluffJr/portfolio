@@ -42,34 +42,52 @@ export default function AppLayout({
     <div className="relative">
       {/* Navbar */}
       <>
-        <div className={styles.navContainer}>
+        <div className={styles.horizontalNavContainer}>
           <div className={styles.navbar}>
-            <div className={styles.container}>
+            <nav className={styles.container}>
               <div className={styles.content}>
-                {/* Navigation Links */}
-                <div className={styles.navLinks}>
-                  {navItems.map((item, index) => {
-                    return (
-                      <NavLink
-                        key={item.to}
-                        to={item.to}
-                        className={`${styles.navLink} ${
-                          currentPage === item.label ? styles.active : ""
-                        }`}
-                        style={{
-                          transitionDelay: scrolled ? "0ms" : `${index * 50}ms`,
+                {navItems.map((item) => (
+                  <NavLink
+                    key={item.to}
+                    onClick={() => setCurrentPage(item.label)}
+                    className={`${styles.navLink} ${
+                      currentPage === item.label
+                        ? styles.active
+                        : styles.inactive
+                    }`}
+                    to={item.to}
+                  >
+                    {/* Active background - this animates between navlinks */}
+                    {currentPage === item.label && (
+                      <motion.div
+                        layoutId="activeBackground"
+                        className={styles.activeBackgroundStyle}
+                        initial={false}
+                        transition={{
+                          type: "spring",
+                          stiffness: 300,
+                          damping: 30,
                         }}
-                        onClick={() => setCurrentPage(item.label)}
-                      >
-                        {item.label}
-                      </NavLink>
-                    );
-                  })}
-                </div>
+                      />
+                    )}
+
+                    {/* Hover background - static per item */}
+                    <motion.div
+                      className={styles.hoverBackgroundStyle}
+                      whileHover={{
+                        opacity: currentPage !== item.label ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.2 }}
+                    />
+
+                    <span className={styles.textStyle}>{item.label}</span>
+                  </NavLink>
+                ))}
               </div>
-            </div>
+            </nav>
           </div>
         </div>
+
         {/* Vertical */}
         <div
           className={`${styles.floatingNavContainer} ${
@@ -79,8 +97,7 @@ export default function AppLayout({
           <div className={styles.hoverTrigger} />
 
           <div className={styles.navWrapper}>
-            <div className={styles.dropdown}>
-            </div>
+            <div className={styles.dropdown}></div>
           </div>
         </div>
       </>
