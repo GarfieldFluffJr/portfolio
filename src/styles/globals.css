@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Geist Mono", monospace;
+  background-color: var(--main-bg);
+}
+
+.overflow-page {
+  height: 200vh;
+}

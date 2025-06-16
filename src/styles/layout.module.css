@@ -1,0 +1,63 @@
+/* Navigation.module.css */
+
+.navbar {
+  background-color: var(--slight-hl);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border1);
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 50vw;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navLink {
+  color: var(--text-grey);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 200ms ease-in-out;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: black;
+  background-color: var(--hover-bg);
+}
+
+.navLink.active {
+  background-color: var(--btn-active);
+  color: black;
+}

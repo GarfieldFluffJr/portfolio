@@ -7,7 +7,6 @@ import { ContactHome as Contact } from "./pages/Contact";
 
 import NotFound from "./ui/404NotFound";
 
-import "./styles/global.css";
 import AppLayout from "./layout/AppLayout";
 
 function AppRouter() {
