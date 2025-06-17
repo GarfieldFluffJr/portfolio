@@ -53,7 +53,7 @@ export default function AppLayout({
                     className={`${styles.navLink} ${
                       currentPage === item.label
                         ? styles.active
-                        : styles.inactive
+                        : ""
                     }`}
                     to={item.to}
                   >
@@ -105,7 +105,7 @@ export default function AppLayout({
                 key={item.to}
                 onClick={() => setCurrentPage(item.label)}
                 className={`${styles.VnavLink} ${
-                  currentPage === item.label ? styles.Vactive : styles.Vinactive
+                  currentPage === item.label ? styles.Vactive : ""
                 }`}
               >
                 {item.label}
