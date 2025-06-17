@@ -51,9 +51,7 @@ export default function AppLayout({
                     key={item.to}
                     onClick={() => setCurrentPage(item.label)}
                     className={`${styles.navLink} ${
-                      currentPage === item.label
-                        ? styles.active
-                        : ""
+                      currentPage === item.label ? styles.active : ""
                     }`}
                     to={item.to}
                   >
@@ -108,7 +106,30 @@ export default function AppLayout({
                   currentPage === item.label ? styles.Vactive : ""
                 }`}
               >
-                {item.label}
+                {/* Active background - this animates between navlinks */}
+                {currentPage === item.label && (
+                  <motion.div
+                    layoutId="VactiveBackground"
+                    className={styles.VactiveBackgroundStyle}
+                    initial={false}
+                    transition={{
+                      type: "spring",
+                      stiffness: 300,
+                      damping: 30,
+                    }}
+                  />
+                )}
+
+                {/* Hover background - static per item */}
+                <motion.div
+                  className={styles.VhoverBackgroundStyle}
+                  whileHover={{
+                    opacity: currentPage !== item.label ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.2 }}
+                />
+
+                <span className={styles.textStyle}>{item.label}</span>
               </NavLink>
             ))}
           </div>
