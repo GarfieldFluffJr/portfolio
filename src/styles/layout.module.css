@@ -99,14 +99,6 @@
   font-weight: 200;
 }
 
-.floatingNavContainer {
-  z-index: 10;
-}
-
-/* .floatingNavContainer.show {
-  opacity: 1;
-} */
-
 .hoverTrigger {
   position: fixed;
   display: flex;

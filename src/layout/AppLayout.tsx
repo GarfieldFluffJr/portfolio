@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
 
+import ProgressBar from "../components/ProgressBar";
+
 import styles from "../styles/layout.module.css";
 
 const navItems = [
@@ -64,6 +66,7 @@ export default function AppLayout({
 
   return (
     <div className="relative">
+      <ProgressBar />
       {/* Navbar */}
       <>
         <div className={styles.horizontalNavContainer}>
