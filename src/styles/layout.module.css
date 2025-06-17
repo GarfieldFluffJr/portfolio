@@ -100,9 +100,12 @@
 }
 
 .floatingNavContainer {
-  /* position: relative; */
   z-index: 10;
 }
+
+/* .floatingNavContainer.show {
+  opacity: 1;
+} */
 
 .hoverTrigger {
   position: fixed;
@@ -111,10 +114,11 @@
   align-items: center;
   gap: 5px;
   top: 2rem;
+  opacity: 0;
 
   background-color: rgba(255, 235, 230, 0.7);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   border: solid 1px var(--border1);
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
@@ -124,6 +128,15 @@
   transition: all 0.2s ease-in-out;
   width: fit-content;
   box-shadow: var(--box-shadow);
+  pointer-events: none;
+
+  transform: translateY(-2rem);
+}
+
+.hoverTrigger.show {
+  pointer-events: auto;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .hoverTrigger:hover {
@@ -146,8 +159,8 @@
   top: 6rem;
   padding: 0.5rem;
   background-color: rgba(243, 233, 231, 0.2);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   box-shadow: var(--box-shadow);
   border: 1px solid var(--border1);
   font-size: 1rem;
@@ -157,6 +170,17 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  pointer-events: none;
+  opacity: 0;
+
+  transform: translateX(-3rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 .VnavLink {

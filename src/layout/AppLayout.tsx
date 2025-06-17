@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
@@ -19,6 +19,8 @@ export default function AppLayout({
 }: Readonly<{ children: ReactNode }>) {
   const [scrolled, setScrolled] = useState(false);
   const [currentPage, setCurrentPage] = useState("Home");
+  const [VNavIsOpen, setVNavIsOpen] = useState(false);
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
     let ticking = false;
@@ -26,7 +28,7 @@ export default function AppLayout({
     const onScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const isScrolled = window.scrollY > 30;
+          const isScrolled = window.scrollY > 50;
           setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
           ticking = false;
         });
@@ -36,6 +38,28 @@ export default function AppLayout({
 
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setVNavIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setVNavIsOpen(false);
+    }, 250);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -89,19 +113,34 @@ export default function AppLayout({
         {/* Vertical */}
         <div
           className={`${styles.floatingNavContainer} ${
-            scrolled ? "show" : "hide"
+            scrolled ? styles.show : ""
           }`}
         >
-          <div className={styles.hoverTrigger}>
+          <div
+            className={`${styles.hoverTrigger} ${scrolled ? styles.show : ""}`}
+            onMouseEnter={() => setVNavIsOpen(true)}
+            onMouseLeave={() => handleMouseLeave()}
+          >
             <Menu size={16} className={styles.menuIcon} />
             <span className={styles.verticalNavHeader}>menu</span>
           </div>
-          <div className={styles.dropdown}>
+          <div
+            className={`${styles.dropdown} ${VNavIsOpen ? styles.show : ""}`}
+            onMouseEnter={() => {
+              handleMouseEnter();
+            }}
+            onMouseLeave={() => {
+              setVNavIsOpen(false);
+            }}
+          >
             {navItems.map((item) => (
               <NavLink
                 to={item.to}
                 key={item.to}
-                onClick={() => setCurrentPage(item.label)}
+                onClick={() => {
+                  setCurrentPage(item.label);
+                  setVNavIsOpen(false);
+                }}
                 className={`${styles.VnavLink} ${
                   currentPage === item.label ? styles.Vactive : ""
                 }`}
