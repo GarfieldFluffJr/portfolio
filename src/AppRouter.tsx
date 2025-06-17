@@ -6,6 +6,7 @@ import { ProjectsHome as Projects } from "./pages/Projects";
 import { ContactHome as Contact } from "./pages/Contact";
 
 import NotFound from "./ui/404NotFound";
+import ScrollToTop from "./ui/ScrollToTop";
 
 import AppLayout from "./layout/AppLayout";
 
@@ -13,6 +14,7 @@ function AppRouter() {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/">
             <Route

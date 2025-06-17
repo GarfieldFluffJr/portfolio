@@ -8,7 +8,6 @@ interface ScrollProgressBarProps {
 }
 
 export default function ProgressBar({
-  height = 4,
   className = "",
 }: ScrollProgressBarProps) {
   const [progress, setProgress] = useState<number>(0);

@@ -1,3 +1,3 @@
 export const ProjectsHome = () => {
-  return <div>Projects Page</div>;
+  return <div className="overflow-page">Projects Page</div>;
 };
