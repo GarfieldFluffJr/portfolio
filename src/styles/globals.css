@@ -18,3 +18,9 @@ body {
 .overflow-page {
   height: 200vh;
 }
+
+hr {
+  color: black;
+  z-index: 100000000;
+  height: 2px;
+}

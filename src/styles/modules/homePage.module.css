@@ -1,0 +1,68 @@
+.sectionScrollText {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-grey2);
+}
+
+.heroGrid {
+  height: 90vh;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  position: relative;
+}
+
+.heroContainer {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroName {
+  font-size: 3rem;
+  color: var(--text-grey2);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.heroDesc {
+  font-size: 1.1rem;
+  color: var(--text-grey2);
+}
+
+.heroSocialsContainer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 35vw;
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  background-color: var(--slight-hl);
+}
+
+.heroSocials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-grey);
+  border-right: 1px solid var(--border2);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.heroSocials:nth-child(3n) {
+  border-right: none;
+}
+
+.heroSocialItem {
+  transition: all 0.1s ease-in-out;
+}
+
+.heroSocials:hover .heroSocialItem {
+  color: black;
+  transform: scale(1.05);
+}

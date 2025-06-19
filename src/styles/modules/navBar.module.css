@@ -123,6 +123,8 @@
   pointer-events: none;
 
   transform: translateY(-2rem);
+
+  z-index: 100000000000000000;
 }
 
 .hoverTrigger.show {
@@ -167,6 +169,7 @@
 
   transform: translateX(-3rem);
   transition: all 0.3s ease-in-out;
+  z-index: 1000000000000000;
 }
 
 .dropdown.show {
