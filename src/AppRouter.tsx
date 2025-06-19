@@ -20,7 +20,7 @@ function AppRouter() {
             <Route
               index
               element={
-                <AppLayout>
+                <AppLayout title="Home">
                   <Home />
                 </AppLayout>
               }
@@ -28,7 +28,7 @@ function AppRouter() {
             <Route
               path="about"
               element={
-                <AppLayout>
+                <AppLayout title="About">
                   <About />
                 </AppLayout>
               }
@@ -36,7 +36,7 @@ function AppRouter() {
             <Route
               path="projects"
               element={
-                <AppLayout>
+                <AppLayout title="Projects">
                   <Projects />
                 </AppLayout>
               }
@@ -44,7 +44,7 @@ function AppRouter() {
             <Route
               path="contact"
               element={
-                <AppLayout>
+                <AppLayout title="Contact">
                   <Contact />
                 </AppLayout>
               }

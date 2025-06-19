@@ -1,11 +1,16 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 
 import ProgressBar from "../components/ProgressBar";
 import Navigation from "../components/Navigation";
 
 export default function AppLayout({
   children,
-}: Readonly<{ children: ReactNode }>) {
+  title,
+}: Readonly<{ children: ReactNode; title: string }>) {
+  useEffect(() => {
+    document.title = `Louie Yin | ${title}`;
+  }, [title]);
+
   return (
     <div className="relative">
       <ProgressBar />
