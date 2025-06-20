@@ -11,6 +11,8 @@
   position: relative;
 }
 
+/* Hero Section */
+
 .heroContainer {
   display: flex;
   height: 100%;

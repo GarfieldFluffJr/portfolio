@@ -6,15 +6,13 @@ import HeroSection from "./components/HeroSection";
 export const Home = () => {
   return (
     <div className="overflow-page">
+      {/* Hero Section */}
       <div className={styles.sectionGrid}>
         <HeroSection />
         <div>
           <SectionScrollIndicator />
         </div>
       </div>
-
-      <hr />
-      <span>Hello</span>
     </div>
   );
 };
