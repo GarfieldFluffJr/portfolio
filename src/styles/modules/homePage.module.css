@@ -4,7 +4,7 @@
   color: var(--text-grey2);
 }
 
-.heroGrid {
+.sectionGrid {
   height: 90vh;
   display: grid;
   grid-template-rows: 4fr 1fr;
