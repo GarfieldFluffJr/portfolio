@@ -13,6 +13,14 @@ export const Home = () => {
           <SectionScrollIndicator />
         </div>
       </div>
+
+      {/* About Me Section */}
+      <div className={styles.sectionGrid}>
+        <div></div>
+        <div>
+          <SectionScrollIndicator />
+        </div>
+      </div>
     </div>
   );
 };
