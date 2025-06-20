@@ -5,9 +5,9 @@ import HeroSection from "./components/HeroSection";
 
 export const Home = () => {
   return (
-    <div className="overflow-page">
+    <div>
       {/* Hero Section */}
-      <div className={styles.sectionGrid}>
+      <div className={styles.heroGrid}>
         <HeroSection />
         <div>
           <SectionScrollIndicator />
@@ -15,8 +15,26 @@ export const Home = () => {
       </div>
 
       {/* About Me Section */}
-      <div className={styles.sectionGrid}>
-        <div></div>
+      <div className={styles.sectionContainer}>
+        <div className={styles.aboutContainer}>
+          <h1 className={styles.sectionHeader}>About Me</h1>
+          <hr className={styles.sectionHeaderHr} />
+          <div className={styles.aboutContent}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+            molestiae tenetur in ipsam dolore inventore odio, rem eligendi
+            mollitia quia accusamus impedit tempore obcaecati modi odit
+            architecto numquam illum est excepturi? Possimus necessitatibus
+            consectetur nisi fugit doloribus ipsa quod nemo voluptatibus fugiat,
+            exercitationem quaerat molestias ea accusantium quam nobis tempore
+            similique tenetur dignissimos expedita accusamus cupiditate culpa
+            quasi illo. Deleniti suscipit doloremque necessitatibus adipisci
+            saepe placeat nesciunt! Cumque vero commodi similique enim adipisci
+            exercitationem? Inventore repudiandae vel beatae dicta nemo nam
+            suscipit, officiis aliquid deleniti sunt illo labore, ratione sit
+            eaque veritatis non assumenda blanditiis sed laborum illum libero
+            sint.
+          </div>
+        </div>
         <div>
           <SectionScrollIndicator />
         </div>

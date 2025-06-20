@@ -6,7 +6,7 @@ import styles from "../styles/modules/homePage.module.css";
 
 function SectionScrollIndicator() {
   return (
-    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 block">
+    <div className="flex justify-center mt-4">
       <motion.div
         className="flex flex-col items-center justify-center opacity-60 hover:opacity-100 transition-opacity will-change-transform will-change-opacity"
         initial={{ opacity: 0 }}

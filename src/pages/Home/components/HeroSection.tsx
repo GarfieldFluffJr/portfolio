@@ -65,6 +65,7 @@ export default function HeroSection() {
         >
           <div
             className={styles.heroSocials}
+            id={styles.heroSocialsLast}
             onClick={() => handleSocialsClick("Email")}
           >
             <FiMail className={styles.heroSocialItem} />
