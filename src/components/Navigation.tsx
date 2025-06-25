@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from "../styles/modules/navBar.module.css";
@@ -13,9 +13,17 @@ const navItems = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
-  const [currentPage, setCurrentPage] = useState("Home");
   const [VNavIsOpen, setVNavIsOpen] = useState(false);
   const timeoutRef = useRef<number | null>(null);
+  const location = useLocation();
+
+  // Determine current page based on location
+  const getCurrentPage = () => {
+    const currentItem = navItems.find((item) => item.to === location.pathname);
+    return currentItem ? currentItem.label : "Home";
+  };
+
+  const currentPage = getCurrentPage();
 
   useEffect(() => {
     let ticking = false;
@@ -65,7 +73,6 @@ export default function Navigation() {
               {navItems.map((item) => (
                 <NavLink
                   key={item.to}
-                  onClick={() => setCurrentPage(item.label)}
                   className={`${styles.navLink} ${
                     currentPage === item.label ? styles.active : ""
                   }`}
@@ -130,7 +137,6 @@ export default function Navigation() {
               to={item.to}
               key={item.to}
               onClick={() => {
-                setCurrentPage(item.label);
                 setVNavIsOpen(false);
               }}
               className={`${styles.VnavLink} ${

@@ -1,5 +1,7 @@
+import { NavLink } from "react-router-dom";
+
 import styles from "../../styles/modules/homePage.module.css";
-import { FiPlay, FiGithub, FiExternalLink } from "react-icons/fi";
+import { FiPlay, FiGithub, FiExternalLink, FiArrowRight } from "react-icons/fi";
 
 import SectionScrollIndicator from "../../components/SectionScrollIndicator";
 import HeroSection from "./components/HeroSection";
@@ -175,6 +177,12 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <NavLink to="/projects" className={styles.viewAllProjectsButton}>
+              <span>View All Projects</span>
+              <FiArrowRight size={16} />
+            </NavLink>
           </div>
         </div>
         <div>
