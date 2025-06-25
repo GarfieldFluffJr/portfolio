@@ -25,7 +25,7 @@ export const Home = () => {
           <div className={styles.sectionDescriptionContainer}>
             <hr className={styles.sectionHeaderHr} />
           </div>
-          <div className={styles.aboutContent}>
+          <div className={`${styles.aboutContent} card`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             molestiae tenetur in ipsam dolore inventore odio, rem eligendi
             mollitia quia accusamus impedit tempore obcaecati modi odit

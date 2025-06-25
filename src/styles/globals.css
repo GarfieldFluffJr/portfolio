@@ -32,7 +32,7 @@ hr {
   box-shadow: var(--slight-box-shadow);
   border: 1px solid transparent;
   padding: 1rem;
-  color: var(--text-grey);
+  color: var(--text-grey2);
 
   transition: all 0.2s ease;
 }
