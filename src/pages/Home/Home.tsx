@@ -57,11 +57,20 @@ export const Home = () => {
 
           <div className={styles.projectsContainer}>
             <div className={styles.projectsCard}>
-              <img
-                src="/images/cook-buddy.png"
-                alt="Cook Buddy photo"
-                width={400}
-              />
+              <div className={styles.projectsImage}>
+                <img
+                  src="/images/cook-buddy.png"
+                  alt="Cook Buddy photo"
+                  width={400}
+                />
+
+                <a href="#" target="_blank">
+                  <div className={styles.projectsImageLink}>
+                    <FiPlay size={30} />
+                    {""}
+                  </div>
+                </a>
+              </div>
               <div className={styles.projectsCardText}>
                 <div className={styles.projectsCardName}>Cook Buddy</div>
                 <div className={styles.projectsCardDescriptionContainer}>
@@ -107,14 +116,18 @@ export const Home = () => {
               </div>
             </div>
             <div className={styles.projectsCard}>
-              <img
-                src="/images/cook-buddy.png"
-                alt="Cook Buddy photo"
-                width={400}
-              />
-              <div>
-                <a className={styles.projectsImage} href="#" target="_blank">
-                  <FiPlay size={30} />
+              <div className={styles.projectsImage}>
+                <img
+                  src="/images/cook-buddy.png"
+                  alt="Cook Buddy photo"
+                  width={400}
+                />
+
+                <a href="#" target="_blank">
+                  <div className={styles.projectsImageLink}>
+                    <FiPlay size={30} />
+                    {""}
+                  </div>
                 </a>
               </div>
 
