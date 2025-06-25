@@ -33,7 +33,19 @@
   height: 1px;
   width: 6vw;
   border: none;
+}
+
+.sectionDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 2.5rem;
+}
+
+.sectionDescription {
+  font-size: 0.9rem;
+  color: var(--text-grey);
 }
 
 /* Hero Section */
@@ -117,4 +129,66 @@
 
 /* Projects Section */
 
+.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+}
 
+.projectsCard {
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 400px;
+
+  background-color: var(--slight-hl);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid transparent;
+
+  transition: all 0.2s ease;
+}
+
+.projectsCard:hover {
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border2);
+}
+
+.projectsCardText {
+  padding: 1rem;
+}
+
+.projectsCardName {
+  font-size: 1.5rem;
+  color: var(--text-grey2);
+  font-weight: 500;
+}
+
+.projectsCardDescription {
+  font-size: 0.9rem;
+  color: var(--text-grey3);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+}
+
+.projectsCardDescriptionContainer {
+  height: 4rem;
+}
+
+.projectsSkillsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.projectsSkills {
+  font-size: 0.85rem;
+  color: var(--text-grey3);
+  background-color: var(--background-grey);
+  padding: 0 0.5rem;
+  border-radius: 8px;
+}

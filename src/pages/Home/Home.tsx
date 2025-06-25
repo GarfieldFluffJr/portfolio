@@ -17,7 +17,9 @@ export const Home = () => {
       <div className={styles.sectionContainer}>
         <div className={styles.sectionInnerContainer}>
           <h1 className={styles.sectionHeader}>About Me</h1>
-          <hr className={styles.sectionHeaderHr} />
+          <div className={styles.sectionDescriptionContainer}>
+            <hr className={styles.sectionHeaderHr} />
+          </div>
           <div className={styles.aboutContent}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
             molestiae tenetur in ipsam dolore inventore odio, rem eligendi
@@ -43,21 +45,57 @@ export const Home = () => {
       <div className={styles.sectionContainer}>
         <div className={styles.sectionInnerContainer}>
           <h1 className={styles.sectionHeader}>Projects</h1>
-          <hr className={styles.sectionHeaderHr} />
-          <div className={styles.aboutContent}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-            molestiae tenetur in ipsam dolore inventore odio, rem eligendi
-            mollitia quia accusamus impedit tempore obcaecati modi odit
-            architecto numquam illum est excepturi? Possimus necessitatibus
-            consectetur nisi fugit doloribus ipsa quod nemo voluptatibus fugiat,
-            exercitationem quaerat molestias ea accusantium quam nobis tempore
-            similique tenetur dignissimos expedita accusamus cupiditate culpa
-            quasi illo. Deleniti suscipit doloremque necessitatibus adipisci
-            saepe placeat nesciunt! Cumque vero commodi similique enim adipisci
-            exercitationem? Inventore repudiandae vel beatae dicta nemo nam
-            suscipit, officiis aliquid deleniti sunt illo labore, ratione sit
-            eaque veritatis non assumenda blanditiis sed laborum illum libero
-            sint.
+          <div className={styles.sectionDescriptionContainer}>
+            <hr className={styles.sectionHeaderHr} />
+            <div className={styles.sectionDescription}>
+              A few of my favourite projects. Go to my projects page to see all
+              my work!
+            </div>
+          </div>
+
+          <div className={styles.projectsContainer}>
+            <div className={styles.projectsCard}>
+              <img
+                src="/images/cook-buddy.png"
+                alt="Cook Buddy photo"
+                width={400}
+              />
+              <div className={styles.projectsCardText}>
+                <div className={styles.projectsCardName}>Cook Buddy</div>
+                <div className={styles.projectsCardDescriptionContainer}>
+                  <div className={styles.projectsCardDescription}>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptatibus facere officia ipsum soluta, corrupti odit
+                    autem ex corporis ipsa voluptatum?
+                  </div>
+                  <div className={styles.projectsSkillsContainer}>
+                    <span className={styles.projectsSkills}>Node.js</span>
+                    <span className={styles.projectsSkills}>Python</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.projectsCard}>
+              <img
+                src="/images/cook-buddy.png"
+                alt="Cook Buddy photo"
+                width={400}
+              />
+              <div className={styles.projectsCardText}>
+                <div className={styles.projectsCardName}>Cook Buddy</div>
+                <div className={styles.projectsCardDescriptionContainer}>
+                  <div className={styles.projectsCardDescription}>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptatibus facere officia ipsum soluta, corrupti odit
+                    autem ex corporis ipsa voluptatum?
+                  </div>
+                  <div className={styles.projectsSkillsContainer}>
+                    <span className={styles.projectsSkills}>Node.js</span>
+                    <span className={styles.projectsSkills}>Python</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div>
