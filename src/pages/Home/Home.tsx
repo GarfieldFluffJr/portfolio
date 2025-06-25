@@ -5,6 +5,7 @@ import HeroSection from "./components/HeroSection";
 import ProjectsSection from "./components/ProjectsSection";
 
 import { FiCode, FiDatabase, FiMonitor } from "react-icons/fi";
+import { SiJavascript, SiTypescript } from "react-icons/si";
 
 export const Home = () => {
   return (
@@ -122,6 +123,23 @@ export const Home = () => {
                     <FiMonitor size={22} />
                   </div>
                   <span>Technologies</span>
+                </div>
+                <div>
+                  <div className={styles.skillsAllWrapper}>
+                    <div className={styles.skillsAllHeader}>
+                      Programming Languages:
+                    </div>
+                    <div className={styles.skillsAllSkillsWrapper}>
+                      <div className={styles.skillsWrapper}>
+                        <SiJavascript size={14} />
+                        <span>JavaScript</span>
+                      </div>
+                      <div className={styles.skillsWrapper}>
+                        <SiTypescript size={14} />
+                        <span>TypeScript</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

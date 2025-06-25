@@ -373,5 +373,40 @@
 }
 
 .skillsAllSkills {
-  height: 100%; /* Change */
+  height: auto;
+}
+
+.skillsAllWrapper {
+  margin-bottom: 1rem;
+}
+
+.skillsAllHeader {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skillsAllSkillsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.skillsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 0.05rem 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.skillsWrapper:hover {
+  border: 1px solid var(--text-grey2);
+  background-color: var(--background-grey);
+  color: black;
 }
