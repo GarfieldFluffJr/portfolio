@@ -7,7 +7,7 @@ import styles from "../../../styles/modules/homePage.module.css";
 export default function ProjectsSection() {
   return (
     <div className={styles.sectionInnerContainer}>
-      <h1 className={styles.sectionHeader}>Projects</h1>
+      <h1 className={styles.sectionHeader}>Featured Projects</h1>
       <div className={styles.sectionDescriptionContainer}>
         <hr className={styles.sectionHeaderHr} />
         <div className={styles.sectionDescription}>
