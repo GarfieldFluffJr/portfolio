@@ -152,6 +152,14 @@
   border: 1px solid var(--border2);
 }
 
+.projectsCard img:hover {
+  transition: filter 0.2s ease;
+}
+
+.projectsCard img:hover {
+  filter: brightness(0.85);
+}
+
 .projectsCardText {
   padding: 1rem;
 }
@@ -177,6 +185,7 @@
 
 .projectsCardDescriptionContainer {
   height: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .projectsSkillsContainer {
@@ -191,4 +200,42 @@
   background-color: var(--background-grey);
   padding: 0 0.5rem;
   border-radius: 8px;
+}
+
+.projectsCardActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.projectsAction {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 5px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 8px;
+}
+
+.projectsDemo {
+  background-color: var(--text-grey2);
+  color: var(--slight-hl);
+  transition: background-color 0.1s ease;
+}
+
+.projectsDemo:hover {
+  background-color: var(--text-grey4);
+}
+
+.projectsGitHub {
+  color: var(--text-grey2);
+  border: 1px solid var(--border2);
+  background-color: var(--slight-hl);
+  transition: background-color 0.1s ease;
+}
+
+.projectsGitHub:hover {
+  background-color: var(--border1);
 }

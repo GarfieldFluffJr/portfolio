@@ -1,7 +1,9 @@
 import styles from "../../styles/modules/homePage.module.css";
+import { FiPlay, FiGithub, FiExternalLink } from "react-icons/fi";
 
 import SectionScrollIndicator from "../../components/SectionScrollIndicator";
 import HeroSection from "./components/HeroSection";
+
 export const Home = () => {
   return (
     <div>
@@ -73,6 +75,35 @@ export const Home = () => {
                     <span className={styles.projectsSkills}>Python</span>
                   </div>
                 </div>
+                <div className={styles.projectsCardActions}>
+                  <a
+                    className={`${styles.projectsDemo} ${styles.projectsAction}`}
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiPlay size={12} />
+                    <span>Watch Demo</span>
+                  </a>
+                  <a
+                    className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiGithub size={12} />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiExternalLink size={12} />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
               </div>
             </div>
             <div className={styles.projectsCard}>
@@ -81,6 +112,12 @@ export const Home = () => {
                 alt="Cook Buddy photo"
                 width={400}
               />
+              <div>
+                <a className={styles.projectsImage} href="#" target="_blank">
+                  <FiPlay size={30} />
+                </a>
+              </div>
+
               <div className={styles.projectsCardText}>
                 <div className={styles.projectsCardName}>Cook Buddy</div>
                 <div className={styles.projectsCardDescriptionContainer}>
@@ -93,6 +130,35 @@ export const Home = () => {
                     <span className={styles.projectsSkills}>Node.js</span>
                     <span className={styles.projectsSkills}>Python</span>
                   </div>
+                </div>
+                <div className={styles.projectsCardActions}>
+                  <a
+                    className={`${styles.projectsDemo} ${styles.projectsAction}`}
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiPlay size={12} />
+                    <span>Watch Demo</span>
+                  </a>
+                  <a
+                    className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiGithub size={12} />
+                    <span>GitHub</span>
+                  </a>
+                  <a
+                    className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiExternalLink size={12} />
+                    <span>Live Demo</span>
+                  </a>
                 </div>
               </div>
             </div>
