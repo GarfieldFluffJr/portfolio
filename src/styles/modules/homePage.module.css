@@ -304,3 +304,74 @@
   transform: translateY(-1px);
   box-shadow: var(--slight-box-shadow);
 }
+
+/* Technical Skills Section */
+
+.skillsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.skillsInnerContainer {
+  height: auto;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillsFocusCard {
+  height: auto;
+}
+
+.skillsFocusHeader {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.skillsFocusIcon {
+  background-color: var(--background-grey);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.skillsFocusDescriptionWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skillsFocusSkills {
+  font-size: 0.9rem;
+}
+
+.skillsFocusDescription {
+  font-size: 0.9rem;
+  color: var(--text-grey3);
+}
+
+.skillsFocusProgressContainer {
+  width: 100%;
+  height: 5px;
+  padding: 0;
+  background: var(--background-grey);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skillsFocusProgressBar {
+  height: 100%;
+  background-color: var(--text-grey);
+  border-radius: 8px;
+}
+
+.skillsAllSkills {
+  height: 100%; /* Change */
+}

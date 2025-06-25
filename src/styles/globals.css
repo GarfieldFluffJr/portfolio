@@ -25,3 +25,18 @@ hr {
   z-index: 100000000;
   height: 2px;
 }
+
+.card {
+  border-radius: 8px;
+  background-color: var(--slight-hl);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid transparent;
+  padding: 1rem;
+  color: var(--text-grey);
+
+  transition: all 0.2s ease;
+}
+.card:hover {
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border2);
+}
