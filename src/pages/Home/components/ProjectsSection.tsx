@@ -4,7 +4,40 @@ import { FiPlay, FiGithub, FiExternalLink, FiArrowRight } from "react-icons/fi";
 
 import styles from "../../../styles/modules/homePage.module.css";
 
+type Project = {
+  name: string;
+  description: string;
+  image: string;
+  tech: string[];
+  demoLink: string;
+  gitHubLink: string;
+  liveLink: string;
+};
+
 export default function ProjectsSection() {
+  // For the links, put "" to make element disappear
+  const projects: Project[] = [
+    {
+      name: "Cook Buddy",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus facere officia ipsum soluta, corrupti odit autem ex corporis ipsa voluptatum?",
+      image: "/images/cook-buddy.png",
+      tech: ["Node.js", "Python"],
+      demoLink: "#",
+      gitHubLink: "#",
+      liveLink: "#",
+    },
+    {
+      name: "Cook Buddy",
+      description:
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus facere officia ipsum soluta, corrupti odit autem ex corporis ipsa voluptatum?",
+      image: "/images/cook-buddy.png",
+      tech: ["Node.js", "Python"],
+      demoLink: "#",
+      gitHubLink: "#",
+      liveLink: "#",
+    },
+  ];
   return (
     <div className={styles.sectionInnerContainer}>
       <h1 className={styles.sectionHeader}>Featured Projects</h1>
@@ -17,125 +50,76 @@ export default function ProjectsSection() {
       </div>
 
       <div className={styles.projectsContainer}>
-        <div className={styles.projectsCard}>
-          <div className={styles.projectsImage}>
-            <img
-              src="/images/cook-buddy.png"
-              alt="Cook Buddy photo"
-              width={400}
-            />
+        {projects.map((proj, i) => (
+          <div key={i} className={styles.projectsCard}>
+            {proj.demoLink !== "" ? (
+              <div className={styles.projectsImage}>
+                <img src={proj.image} alt={`${proj.name} image`} width={400} />
 
-            <a href="#" target="_blank">
-              <div className={styles.projectsImageLink}>
-                <FiPlay size={30} />
-                {""}
+                <a href={proj.demoLink} target="_blank">
+                  <div className={styles.projectsImageLink}>
+                    <FiPlay size={30} />
+                    {""}
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div className={styles.projectsCardText}>
-            <div className={styles.projectsCardName}>Cook Buddy</div>
-            <div className={styles.projectsCardDescriptionContainer}>
-              <div className={styles.projectsCardDescription}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Voluptatibus facere officia ipsum soluta, corrupti odit autem ex
-                corporis ipsa voluptatum?
+            ) : (
+              <div className={styles.projectsImageNoLink}>
+                <img src={proj.image} alt={`${proj.name} image`} width={400} />
               </div>
-              <div className={styles.projectsSkillsContainer}>
-                <span className="grey-caption">Node.js</span>
-                <span className="grey-caption">Python</span>
+            )}
+            <div className={styles.projectsCardText}>
+              <div className={styles.projectsCardName}>{proj.name}</div>
+              <div className={styles.projectsCardDescriptionContainer}>
+                <div className={styles.projectsCardDescription}>
+                  {proj.description}
+                </div>
+                <div className={styles.projectsSkillsContainer}>
+                  {proj.tech.map((cur, i) => (
+                    <span key={i} className="grey-caption">
+                      {cur}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className={styles.projectsCardActions}>
-              <a
-                className="small-black-button"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiPlay size={12} />
-                <span>Watch Demo</span>
-              </a>
-              <a
-                className="small-transparent-button"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiGithub size={12} />
-                <span>GitHub</span>
-              </a>
-              <a
-                className="small-transparent-button"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiExternalLink size={12} />
-                <span>Live Demo</span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className={styles.projectsCard}>
-          <div className={styles.projectsImage}>
-            <img
-              src="/images/cook-buddy.png"
-              alt="Cook Buddy photo"
-              width={400}
-            />
-
-            <a href="#" target="_blank">
-              <div className={styles.projectsImageLink}>
-                <FiPlay size={30} />
-                {""}
-              </div>
-            </a>
-          </div>
-
-          <div className={styles.projectsCardText}>
-            <div className={styles.projectsCardName}>Cook Buddy</div>
-            <div className={styles.projectsCardDescriptionContainer}>
-              <div className={styles.projectsCardDescription}>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Voluptatibus facere officia ipsum soluta, corrupti odit autem ex
-                corporis ipsa voluptatum?
-              </div>
-              <div className={styles.projectsSkillsContainer}>
-                <span className="grey-caption">Node.js</span>
-                <span className="grey-caption">Python</span>
+              <div className={styles.projectsCardActions}>
+                {proj.demoLink !== "" && (
+                  <a
+                    className="small-black-button"
+                    href={proj.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiPlay size={12} />
+                    <span>Watch Demo</span>
+                  </a>
+                )}
+                {proj.gitHubLink !== "" && (
+                  <a
+                    className="small-transparent-button"
+                    href={proj.gitHubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiGithub size={12} />
+                    <span>GitHub</span>
+                  </a>
+                )}
+                {proj.liveLink !== "" && (
+                  <a
+                    className="small-transparent-button"
+                    href={proj.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiExternalLink size={12} />
+                    <span>Live Demo</span>
+                  </a>
+                )}
               </div>
             </div>
-            <div className={styles.projectsCardActions}>
-              <a
-                className="small-black-button"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiPlay size={12} />
-                <span>Watch Demo</span>
-              </a>
-              <a
-                className="small-transparent-button"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiGithub size={12} />
-                <span>GitHub</span>
-              </a>
-              <a
-                className="small-transparent-button"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FiExternalLink size={12} />
-                <span>Live Demo</span>
-              </a>
-            </div>
           </div>
-        </div>
+        ))}
       </div>
       <div>
         <NavLink to="/projects" className="big-black-button">
