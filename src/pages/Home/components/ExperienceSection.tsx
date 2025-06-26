@@ -6,6 +6,7 @@ type Experience = {
   duration: string;
   logo: string;
   tech: string[];
+  location: string;
 };
 
 export default function ExperienceSection() {
@@ -14,15 +15,31 @@ export default function ExperienceSection() {
       company: "Levanta Labs",
       title: "Software Engineer Intern",
       duration: "May 2025 - Present",
-      logo: "/images/cook-buddy.png",
-      tech: ["React", "TypeScript"],
+      logo: "/images/levanta-labs.png",
+      tech: [
+        "React",
+        "TypeScript",
+        "Express.js",
+        "Docker",
+        "Tailwind.css",
+        "MySQL",
+        "Astro",
+      ],
+      location: "Toronto, ON, CA",
     },
     {
-      company: "Levanta Labs",
-      title: "Software Engineer Intern",
-      duration: "May 2025 - Present",
-      logo: "/images/cook-buddy.png",
-      tech: ["React", "TypeScript"],
+      company: "City of Toronto",
+      title: "Lifeguard and Swim Instructor",
+      duration: "Apr 2022 - Aug 2024",
+      logo: "/images/city-of-toronto.png",
+      tech: [
+        "National Lifeguard",
+        "Standard First-Aid",
+        "CPR-C",
+        "Instructor",
+        "Patron Rapport",
+      ],
+      location: "Toronto, ON, CA",
     },
   ];
 
@@ -47,7 +64,10 @@ export default function ExperienceSection() {
                   <h3 className={styles.workTitle}>{exp.title}</h3>
                   <div className="grey-caption">{exp.duration}</div>
                 </div>
-                <div className={styles.workCompany}>{exp.company}</div>
+                <div className={styles.workSubHeaderWrapper}>
+                  <div className={styles.workCompany}>{exp.company}</div>
+                  <div className={styles.workLocation}>{exp.location}</div>
+                </div>
 
                 <div className={styles.workTechList}>
                   {exp.tech.map((tech, j) => (

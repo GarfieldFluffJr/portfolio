@@ -366,7 +366,7 @@
 
 .workGrid {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
   column-gap: 5rem;
 }
 
@@ -391,16 +391,29 @@
   font-weight: bold;
 }
 
-.workCompany {
+.workSubHeaderWrapper {
+  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.workCompany {
   color: var(--text-grey3);
-  margin-bottom: 0.5rem;
+}
+
+.workLocation {
+  color: var(--text-grey2);
 }
 
 .workTechList {
   display: flex;
   flex-direction: row;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .verticalLine {
