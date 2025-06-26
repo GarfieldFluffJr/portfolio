@@ -126,11 +126,6 @@ export const Home = () => {
           </p>
         </div>
       </section>
-      <footer className={styles.footerContainer}>
-        <div className={styles.footer}>
-          © {new Date().getFullYear()} Louie Yin
-        </div>
-      </footer>
     </div>
   );
 };
