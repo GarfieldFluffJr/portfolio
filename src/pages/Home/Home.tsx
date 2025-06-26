@@ -2,6 +2,7 @@ import styles from "../../styles/modules/homePage.module.css";
 
 import SectionScrollIndicator from "../../components/SectionScrollIndicator";
 import HeroSection from "./components/HeroSection";
+import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 
 import { FiCode, FiDatabase, FiMonitor } from "react-icons/fi";
@@ -41,6 +42,12 @@ export const Home = () => {
             sint.
           </div>
         </div>
+        <SectionScrollIndicator />
+      </div>
+
+      {/* Work Experience Section */}
+      <div className={styles.sectionContainer}>
+        <ExperienceSection />
         <SectionScrollIndicator />
       </div>
 
@@ -130,11 +137,11 @@ export const Home = () => {
                       Programming Languages:
                     </div>
                     <div className={styles.skillsAllSkillsWrapper}>
-                      <div className={styles.skillsWrapper}>
+                      <div className={`${styles.skillsWrapper} skill`}>
                         <SiJavascript size={14} />
                         <span>JavaScript</span>
                       </div>
-                      <div className={styles.skillsWrapper}>
+                      <div className={`${styles.skillsWrapper} skill`}>
                         <SiTypescript size={14} />
                         <span>TypeScript</span>
                       </div>

@@ -41,13 +41,13 @@ export default function ProjectsSection() {
                 corporis ipsa voluptatum?
               </div>
               <div className={styles.projectsSkillsContainer}>
-                <span className={styles.projectsSkills}>Node.js</span>
-                <span className={styles.projectsSkills}>Python</span>
+                <span className="grey-caption">Node.js</span>
+                <span className="grey-caption">Python</span>
               </div>
             </div>
             <div className={styles.projectsCardActions}>
               <a
-                className={`${styles.projectsDemo} ${styles.projectsAction}`}
+                className="small-black-button"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export default function ProjectsSection() {
                 <span>Watch Demo</span>
               </a>
               <a
-                className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                className="small-transparent-button"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -65,7 +65,7 @@ export default function ProjectsSection() {
                 <span>GitHub</span>
               </a>
               <a
-                className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                className="small-transparent-button"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -101,13 +101,13 @@ export default function ProjectsSection() {
                 corporis ipsa voluptatum?
               </div>
               <div className={styles.projectsSkillsContainer}>
-                <span className={styles.projectsSkills}>Node.js</span>
-                <span className={styles.projectsSkills}>Python</span>
+                <span className="grey-caption">Node.js</span>
+                <span className="grey-caption">Python</span>
               </div>
             </div>
             <div className={styles.projectsCardActions}>
               <a
-                className={`${styles.projectsDemo} ${styles.projectsAction}`}
+                className="small-black-button"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -116,7 +116,7 @@ export default function ProjectsSection() {
                 <span>Watch Demo</span>
               </a>
               <a
-                className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                className="small-transparent-button"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -125,7 +125,7 @@ export default function ProjectsSection() {
                 <span>GitHub</span>
               </a>
               <a
-                className={`${styles.projectsGitHub} ${styles.projectsAction}`}
+                className="small-transparent-button"
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -138,7 +138,7 @@ export default function ProjectsSection() {
         </div>
       </div>
       <div>
-        <NavLink to="/projects" className={styles.viewAllProjectsButton}>
+        <NavLink to="/projects" className="big-black-button">
           <span>View All Projects</span>
           <FiArrowRight size={16} />
         </NavLink>

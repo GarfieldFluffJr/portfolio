@@ -235,74 +235,11 @@
   gap: 10px;
 }
 
-.projectsSkills {
-  font-size: 0.85rem;
-  color: var(--text-grey3);
-  background-color: var(--background-grey);
-  padding: 0 0.5rem;
-  border-radius: 8px;
-}
-
 .projectsCardActions {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 15px;
-}
-
-.projectsAction {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 0.8rem;
-  gap: 5px;
-  padding: 0.25rem 0.75rem;
-  border-radius: 8px;
-}
-
-.projectsDemo {
-  background-color: var(--text-grey2);
-  color: var(--slight-hl);
-  transition: background-color 0.1s ease;
-}
-
-.projectsDemo:hover {
-  background-color: var(--text-grey4);
-}
-
-.projectsGitHub {
-  color: var(--text-grey2);
-  border: 1px solid var(--border2);
-  background-color: var(--slight-hl);
-  transition: background-color 0.1s ease;
-}
-
-.projectsGitHub:hover {
-  background-color: var(--border1);
-}
-
-.viewAllProjectsButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 0.75rem 1.5rem;
-  margin-top: 2rem;
-  background-color: var(--text-grey2);
-  color: var(--slight-hl);
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.viewAllProjectsButton:hover {
-  background-color: var(--text-grey4);
-  transform: translateY(-1px);
-  box-shadow: var(--slight-box-shadow);
 }
 
 /* Technical Skills Section */
@@ -397,16 +334,77 @@
   flex-direction: row;
   align-items: center;
   gap: 5px;
-  font-size: 0.85rem;
-  border: 1px solid var(--border2);
-  border-radius: 8px;
-  padding: 0.05rem 0.25rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
 
-.skillsWrapper:hover {
-  border: 1px solid var(--text-grey2);
+/* Work Experience */
+
+.workTimeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.workItem {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  column-gap: 5rem;
+}
+
+.workLogo {
+  background-color: var(--slight-hl);
+  aspect-ratio: 1 / 1;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.workHeaderWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.workTitle {
+  font-size: 1.1rem;
+}
+
+.workCompany {
+  font-size: 0.9rem;
+  color: var(--text-grey3);
+  margin-bottom: 0.5rem;
+}
+
+.workTechList {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.verticalLine {
+  width: 1.5px;
+  height: 90%;
+  position: absolute;
   background-color: var(--background-grey);
-  color: black;
+  left: 11.5vw;
+  top: 5vh;
+}
+
+.workDot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--slight-hl);
+  border: 0.25rem solid var(--border2);
+  position: absolute;
+  border-radius: 50%;
+  top: 3vh;
+  left: 10.6vw;
+  z-index: 10;
 }
