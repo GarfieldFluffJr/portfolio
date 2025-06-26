@@ -239,7 +239,7 @@
 }
 
 .projectsCardDescriptionContainer {
-  height: 4rem;
+  height: max(4rem, auto);
   margin-bottom: 1.5rem;
 }
 
@@ -247,6 +247,7 @@
   display: flex;
   flex-direction: row;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .projectsCardActions {
