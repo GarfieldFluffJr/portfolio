@@ -28,19 +28,17 @@ export const Home = () => {
             <hr className={styles.sectionHeaderHr} />
           </div>
           <div className={`${styles.aboutContent} card`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-            molestiae tenetur in ipsam dolore inventore odio, rem eligendi
-            mollitia quia accusamus impedit tempore obcaecati modi odit
-            architecto numquam illum est excepturi? Possimus necessitatibus
-            consectetur nisi fugit doloribus ipsa quod nemo voluptatibus fugiat,
-            exercitationem quaerat molestias ea accusantium quam nobis tempore
-            similique tenetur dignissimos expedita accusamus cupiditate culpa
-            quasi illo. Deleniti suscipit doloremque necessitatibus adipisci
-            saepe placeat nesciunt! Cumque vero commodi similique enim adipisci
-            exercitationem? Inventore repudiandae vel beatae dicta nemo nam
-            suscipit, officiis aliquid deleniti sunt illo labore, ratione sit
-            eaque veritatis non assumenda blanditiis sed laborum illum libero
-            sint.
+            Hi, I'm <strong>Louie Yin</strong>, a software engineering student
+            and varsity swimmer at the University of Waterloo. I love to learn
+            and you will often find me spending countless hours reading up code
+            documentation or building a multi-million dollar VC-backed startup.
+            <br /> <br />
+            In the occasions when I'm not developing my skills, you will most
+            likely find me <strong>drowning in the pool</strong> or lifting
+            weights in the gym until I can't physically stand anymore.
+            <br /> <br />I absolutely love <strong>touching grass</strong> and
+            you will always find me eating food no matter where I go. Thank you
+            so much for visiting my site, feel free to reach out!
           </div>
         </div>
         <SectionScrollIndicator />
