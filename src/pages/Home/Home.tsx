@@ -105,9 +105,10 @@ export const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className={styles.workDot}></div>
+                <div className={styles.workDot} />
               </div>
             ))}
+            <div className={styles.verticalLine} />
           </div>
         </div>
         <SectionScrollIndicator />
