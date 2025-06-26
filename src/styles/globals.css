@@ -30,7 +30,7 @@ hr {
   border-radius: 8px;
   background-color: var(--slight-hl);
   box-shadow: var(--slight-box-shadow);
-  border: 1px solid transparent;
+  border: 1px solid var(--border1);
   padding: 1rem;
   color: var(--text-grey2);
 

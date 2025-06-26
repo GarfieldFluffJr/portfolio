@@ -6,6 +6,9 @@ import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import SkillsSection from "./components/SkillsSection";
 
+import { FiArrowRight, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
+
 export const Home = () => {
   return (
     <div>
@@ -60,6 +63,74 @@ export const Home = () => {
         <SkillsSection />
         <SectionScrollIndicator />
       </section>
+
+      {/* Connect Section */}
+      <section className={styles.sectionContainer}>
+        <div className={styles.sectionInnerContainer}>
+          <h1 className={styles.sectionHeader}>Connect</h1>
+          <div className={styles.sectionDescriptionContainer}>
+            <hr className={styles.sectionHeaderHr} />
+            <div className={styles.sectionDescription}>
+              Want to chat? Feel free to reach out via any of the following
+              methods!
+            </div>
+          </div>
+
+          <div className={styles.connectContainer}>
+            <a
+              className={styles.connectLinkWrapper}
+              href="https://github.com/GarfieldFluffJr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${styles.connectItem} card`}>
+                <div className={styles.connectIcon}>
+                  <FiGithub size={24} />
+                </div>
+                <span className={styles.connectTitle}>GitHub</span>
+              </div>
+            </a>
+            <a
+              className={styles.connectLinkWrapper}
+              href="https://www.linkedin.com/in/louieyin/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${styles.connectItem} card`}>
+                <div className={styles.connectIcon}>
+                  <FiLinkedin size={24} />
+                </div>
+                <span className={styles.connectTitle}>LinkedIn</span>
+              </div>
+            </a>
+            <a
+              className={styles.connectLinkWrapper}
+              href="mailto:louieyin6@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className={`${styles.connectItem} card`}>
+                <div className={styles.connectIcon}>
+                  <FiMail size={24} />
+                </div>
+                <span className={styles.connectTitle}>Email</span>
+              </div>
+            </a>
+          </div>
+          <NavLink to="/contact" className="big-black-button">
+            <span>Contact Me</span>
+            <FiArrowRight size={16} />
+          </NavLink>
+          <p className={styles.connectEmail}>
+            Or send me an email at louieyin6@gmail.com
+          </p>
+        </div>
+      </section>
+      <footer className={styles.footerContainer}>
+        <div className={styles.footer}>
+          © {new Date().getFullYear()} Louie Yin
+        </div>
+      </footer>
     </div>
   );
 };
