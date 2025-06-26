@@ -2,36 +2,13 @@ import styles from "../../styles/modules/homePage.module.css";
 
 import SectionScrollIndicator from "../../components/SectionScrollIndicator";
 import HeroSection from "./components/HeroSection";
+import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 
 import { FiCode, FiDatabase, FiMonitor } from "react-icons/fi";
 import { SiJavascript, SiTypescript } from "react-icons/si";
 
-type Experience = {
-  company: string;
-  title: string;
-  duration: string;
-  logo: string;
-  tech: string[];
-};
-
 export const Home = () => {
-  const experiences: Experience[] = [
-    {
-      company: "Levanta Labs",
-      title: "Software Engineer Intern",
-      duration: "May 2025 - Present",
-      logo: "/images/cook-buddy.png",
-      tech: ["React", "TypeScript"],
-    },
-    {
-      company: "Levanta Labs",
-      title: "Software Engineer Intern",
-      duration: "May 2025 - Present",
-      logo: "/images/cook-buddy.png",
-      tech: ["React", "TypeScript"],
-    },
-  ];
   return (
     <div>
       {/* Hero Section */}
@@ -70,47 +47,7 @@ export const Home = () => {
 
       {/* Work Experience Section */}
       <div className={styles.sectionContainer}>
-        <div className={styles.sectionInnerContainer}>
-          <h1 className={styles.sectionHeader}>Highlighted Work Experience</h1>
-          <div className={styles.sectionDescriptionContainer}>
-            <hr className={styles.sectionHeaderHr} />
-            <div className={styles.sectionDescription}>
-              Some of my most memorable and impactful experiences.
-            </div>
-          </div>
-          <div className={styles.workTimeline}>
-            {experiences.map((exp, i) => (
-              <div key={i} className={styles.workItem}>
-                <div className={styles.workGrid}>
-                  <div className={`${styles.workLogo} card`}>
-                    <img
-                      src={exp.logo}
-                      alt={`${exp.company} logo`}
-                      width={80}
-                    />
-                  </div>
-                  <div className={`card`}>
-                    <div className={styles.workHeaderWrapper}>
-                      <h3 className={styles.workTitle}>{exp.title}</h3>
-                      <div className="grey-caption">{exp.duration}</div>
-                    </div>
-                    <div className={styles.workCompany}>{exp.company}</div>
-
-                    <div className={styles.workTechList}>
-                      {exp.tech.map((tech, j) => (
-                        <span key={j} className="skill">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.workDot} />
-              </div>
-            ))}
-            <div className={styles.verticalLine} />
-          </div>
-        </div>
+        <ExperienceSection />
         <SectionScrollIndicator />
       </div>
 
