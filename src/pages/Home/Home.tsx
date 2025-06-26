@@ -12,15 +12,15 @@ export const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className={styles.heroGrid}>
+      <section className={styles.heroGrid}>
         <HeroSection />
         <div>
           <SectionScrollIndicator />
         </div>
-      </div>
+      </section>
 
       {/* About Me Section */}
-      <div className={styles.sectionContainer}>
+      <section className={styles.sectionContainer}>
         <div className={styles.sectionInnerContainer}>
           <h1 className={styles.sectionHeader}>About Me</h1>
           <div className={styles.sectionDescriptionContainer}>
@@ -43,22 +43,22 @@ export const Home = () => {
           </div>
         </div>
         <SectionScrollIndicator />
-      </div>
+      </section>
 
       {/* Work Experience Section */}
-      <div className={styles.sectionContainer}>
+      <section className={styles.sectionContainer}>
         <ExperienceSection />
         <SectionScrollIndicator />
-      </div>
+      </section>
 
       {/* Projects Section */}
-      <div className={styles.sectionContainer}>
+      <section className={styles.sectionContainer}>
         <ProjectsSection />
         <SectionScrollIndicator />
-      </div>
+      </section>
 
       {/* Technical Skills Section */}
-      <div className={styles.sectionContainer}>
+      <section className={styles.sectionContainer}>
         <div className={styles.sectionInnerContainer}>
           <h1 className={styles.sectionHeader}>Technical Skills</h1>
           <div className={styles.sectionDescriptionContainer}>
@@ -152,7 +152,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <SectionScrollIndicator />
     </div>
   );
