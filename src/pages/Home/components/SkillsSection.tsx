@@ -1,7 +1,37 @@
 import styles from "../../../styles/modules/homePage.module.css";
 
 import { FiCode, FiDatabase, FiMonitor } from "react-icons/fi";
-import { SiJavascript, SiTypescript } from "react-icons/si";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiC,
+  SiCplusplus,
+  SiHtml5,
+  SiCss3,
+  SiMarkdown,
+  SiReact,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiExpress,
+  SiAstro,
+  SiTailwindcss,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiSocketdotio,
+  SiFlask,
+  SiGit,
+  SiLinux,
+  SiGithub,
+  SiDocker,
+  SiFigma,
+  SiVercel,
+  SiHeroku,
+  SiAutocad,
+  SiRaspberrypi,
+  SiOpenai,
+} from "react-icons/si";
 
 type FocusSkill = {
   tech: string;
@@ -140,6 +170,128 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiTypescript size={14} />
                     <span>TypeScript</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiPython size={14} />
+                    <span>Python</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiC size={14} />
+                    <span>C</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiCplusplus size={14} />
+                    <span>C++</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiHtml5 size={14} />
+                    <span>HTML5</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiCss3 size={14} />
+                    <span>CSS3</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiMarkdown size={14} />
+                    <span>Markdown</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.skillsAllWrapper}>
+                <div className={styles.skillsAllHeader}>
+                  Frameworks and Libraries:
+                </div>
+                <div className={styles.skillsAllSkillsWrapper}>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiReact size={14} />
+                    <span>React</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiNodedotjs size={14} />
+                    <span>Node.js</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiNextdotjs size={14} />
+                    <span>Next.js</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiExpress size={14} />
+                    <span>Express.js</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiAstro size={14} />
+                    <span>Astro</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiTailwindcss size={14} />
+                    <span>Tailwind.css</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiMysql size={14} />
+                    <span>MySQL</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiPostgresql size={14} />
+                    <span>PostgreSQL</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiMongodb size={14} />
+                    <span>MongoDB</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiSocketdotio size={14} />
+                    <span>Socket.io</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiFlask size={14} />
+                    <span>Flask</span>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.skillsAllWrapper}>
+                <div className={styles.skillsAllHeader}>
+                  Tools and Platforms:
+                </div>
+                <div className={styles.skillsAllSkillsWrapper}>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiGit size={14} />
+                    <span>Git</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiLinux size={14} />
+                    <span>Linux</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiGithub size={14} />
+                    <span>GitHub</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiDocker size={14} />
+                    <span>Docker</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiFigma size={14} />
+                    <span>Figma</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiVercel size={14} />
+                    <span>Vercel</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiHeroku size={14} />
+                    <span>Heroku</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiAutocad size={14} />
+                    <span>AutoCAD</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiRaspberrypi size={14} />
+                    <span>Raspberry Pi</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiOpenai size={14} />
+                    <span>OpenAI</span>
                   </div>
                 </div>
               </div>

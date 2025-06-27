@@ -334,6 +334,8 @@
 
 .skillsAllWrapper {
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skillsAllHeader {
@@ -346,6 +348,7 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .skillsWrapper {
