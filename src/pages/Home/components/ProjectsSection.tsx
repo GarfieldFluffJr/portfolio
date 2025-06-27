@@ -25,11 +25,9 @@ export default function ProjectsSection() {
       tech: [
         "Python",
         "Raspberry Pi",
-        "Socket.io",
-        "Flask",
         "OpenAI",
-        "GCP",
         "LLaMa 3.1",
+        "GCP",
         "HTML/CSS/JS",
         "Unsloth",
         "Hugging Face",
@@ -40,11 +38,11 @@ export default function ProjectsSection() {
     },
     {
       name: "Portfolio",
-      description: "My own portfolio site!",
+      description: "My own portfolio site! Built with ❤️",
       image: "/images/portfolio.png",
-      tech: ["Node.js", "Python"],
+      tech: ["React", "TypeScript", "TailwindCSS"],
       demoLink: "",
-      gitHubLink: "",
+      gitHubLink: "https://github.com/GarfieldFluffJr/portfolio",
       liveLink: "",
     },
   ];
