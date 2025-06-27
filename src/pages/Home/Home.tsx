@@ -31,7 +31,8 @@ export const Home = () => {
             Hi, I'm <strong>Louie Yin</strong>, a software engineering student
             and varsity swimmer at the University of Waterloo. I love to learn
             and you will often find me spending countless hours reading up code
-            documentation or building a multi-million dollar VC-backed startup.
+            documentation or building the next multi-million dollar VC-backed
+            startup.
             <br /> <br />
             In the occasions when I'm not developing my skills, you will most
             likely find me <strong>drowning in the pool</strong> or lifting
