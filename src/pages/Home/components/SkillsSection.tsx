@@ -3,7 +3,53 @@ import styles from "../../../styles/modules/homePage.module.css";
 import { FiCode, FiDatabase, FiMonitor } from "react-icons/fi";
 import { SiJavascript, SiTypescript } from "react-icons/si";
 
+type FocusSkill = {
+  tech: string;
+  level: string;
+  percentage: string;
+};
+
 export default function SkillsSection() {
+  const frontend: FocusSkill[] = [
+    {
+      tech: "React, Next.js, Astro",
+      level: "Advanced",
+      percentage: "95",
+    },
+    {
+      tech: "JavaScript, TypeScript",
+      level: "Advanced",
+      percentage: "98",
+    },
+    {
+      tech: "CSS, Tailwind.css",
+      level: "Advanced",
+      percentage: "98",
+    },
+  ];
+
+  const backend: FocusSkill[] = [
+    {
+      tech: "Node.js, Express.js, RESTful APIs",
+      level: "Advanced",
+      percentage: "90",
+    },
+    {
+      tech: "Python, C, C++",
+      level: "Proficient",
+      percentage: "85",
+    },
+    {
+      tech: "MySQL, PostgreSQL, MongoDB",
+      level: "Proficient",
+      percentage: "73",
+    },
+    {
+      tech: "Docker",
+      level: "Advanced",
+      percentage: "94",
+    },
+  ];
   return (
     <div className={styles.sectionInnerContainer}>
       <h1 className={styles.sectionHeader}>Technical Skills</h1>
@@ -24,22 +70,24 @@ export default function SkillsSection() {
               <span>Frontend Development</span>
             </div>
             <div>
-              <div className={styles.skillsFocusWrapper}>
-                <div className={styles.skillsFocusDescriptionWrapper}>
-                  <span className={styles.skillsFocusSkills}>
-                    React, Next.js
-                  </span>
-                  <span className={styles.skillsFocusDescription}>
-                    Advanced
-                  </span>
+              {frontend.map((focusSkill, i) => (
+                <div key={i} className={styles.skillsFocusWrapper}>
+                  <div className={styles.skillsFocusDescriptionWrapper}>
+                    <span className={styles.skillsFocusSkills}>
+                      {focusSkill.tech}
+                    </span>
+                    <span className={styles.skillsFocusDescription}>
+                      {focusSkill.level}
+                    </span>
+                  </div>
+                  <div className={styles.skillsFocusProgressContainer}>
+                    <div
+                      className={styles.skillsFocusProgressBar}
+                      style={{ width: `${focusSkill.percentage}%` }}
+                    />
+                  </div>
                 </div>
-                <div className={styles.skillsFocusProgressContainer}>
-                  <div
-                    className={styles.skillsFocusProgressBar}
-                    style={{ width: `95%` }}
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <div className={`${styles.skillsFocusCard} card`}>
@@ -50,22 +98,24 @@ export default function SkillsSection() {
               <span>Backend Development</span>
             </div>
             <div>
-              <div className={styles.skillsFocusWrapper}>
-                <div className={styles.skillsFocusDescriptionWrapper}>
-                  <span className={styles.skillsFocusSkills}>
-                    React, Next.js
-                  </span>
-                  <span className={styles.skillsFocusDescription}>
-                    Advanced
-                  </span>
+              {backend.map((focusSkill, i) => (
+                <div key={i} className={styles.skillsFocusWrapper}>
+                  <div className={styles.skillsFocusDescriptionWrapper}>
+                    <span className={styles.skillsFocusSkills}>
+                      {focusSkill.tech}
+                    </span>
+                    <span className={styles.skillsFocusDescription}>
+                      {focusSkill.level}
+                    </span>
+                  </div>
+                  <div className={styles.skillsFocusProgressContainer}>
+                    <div
+                      className={styles.skillsFocusProgressBar}
+                      style={{ width: `${focusSkill.percentage}%` }}
+                    />
+                  </div>
                 </div>
-                <div className={styles.skillsFocusProgressContainer}>
-                  <div
-                    className={styles.skillsFocusProgressBar}
-                    style={{ width: `95%` }}
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

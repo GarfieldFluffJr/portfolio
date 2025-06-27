@@ -277,6 +277,10 @@
   height: auto;
 }
 
+.skillsFocusWrapper {
+  margin-bottom: 1rem;
+}
+
 .skillsFocusHeader {
   font-size: 1.2rem;
   display: flex;
