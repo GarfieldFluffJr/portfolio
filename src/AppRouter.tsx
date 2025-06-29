@@ -7,6 +7,7 @@ import { ContactHome as Contact } from "./pages/Contact/Contact";
 
 import NotFound from "./ui/404NotFound";
 import ScrollToTop from "./ui/ScrollToTop";
+import UnderConstruction from "./ui/UnderConstruction";
 
 import AppLayout from "./layout/AppLayout";
 
@@ -29,7 +30,7 @@ function AppRouter() {
               path="about"
               element={
                 <AppLayout title="About">
-                  <About />
+                  <UnderConstruction />
                 </AppLayout>
               }
             />
@@ -37,7 +38,7 @@ function AppRouter() {
               path="projects"
               element={
                 <AppLayout title="Projects">
-                  <Projects />
+                  <UnderConstruction />
                 </AppLayout>
               }
             />
@@ -45,7 +46,7 @@ function AppRouter() {
               path="contact"
               element={
                 <AppLayout title="Contact">
-                  <Contact />
+                  <UnderConstruction />
                 </AppLayout>
               }
             />

@@ -30,16 +30,16 @@ export const Home = () => {
           <div className={`${styles.aboutContent} card`}>
             Hi, I'm <strong>Louie Yin</strong>, a software engineering student
             and varsity swimmer at the University of Waterloo. I love to learn
-            and you will often find me spending countless hours reading up code
+            and you will often find me spending my time reading up code
             documentation or building the next multi-million dollar VC-backed
             startup.
             <br /> <br />
-            In the occasions when I'm not developing my skills, you will most
-            likely find me <strong>drowning in the pool</strong> or lifting
-            weights in the gym until I can't physically stand anymore.
+            In the occasions when I'm not developing my skills, I'm probably{" "}
+            <strong>drowning in the pool</strong> or lifting really really heavy
+            weights in the gym.
             <br /> <br />I absolutely love <strong>touching grass</strong> and
             you will always find me eating food no matter where I go. Thank you
-            so much for visiting my site, feel free to reach out!
+            so much for visiting my site, please don't hesitate to reach out!
           </div>
         </div>
         <SectionScrollIndicator />
