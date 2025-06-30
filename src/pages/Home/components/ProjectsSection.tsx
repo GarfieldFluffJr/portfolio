@@ -43,7 +43,7 @@ export default function ProjectsSection() {
       tech: ["React", "TypeScript", "Tailwind.css", "Framer-Motion"],
       demoLink: "",
       gitHubLink: "https://github.com/GarfieldFluffJr/portfolio",
-      liveLink: "",
+      liveLink: "https://www.louiefatooey.space",
     },
   ];
   return (
