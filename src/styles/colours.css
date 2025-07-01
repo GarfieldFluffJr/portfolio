@@ -1,4 +1,19 @@
 :root {
+  --main-bg: #dedbd2;
+  --slight-hl: #f7e1d7;
+  --border1: #eedcd7;
+  --border2: #cfbdb7;
+  --text-grey: #374151;
+  --text-grey2: #222325;
+  --text-grey3: #747a85;
+  --text-grey4: #303237;
+  --hover-bg: #f0d7d0;
+  --btn-active: #f1c9be;
+  --main-hl: #b0c4b1;
+  --background-grey: #e4d4cf;
+}
+
+/* Original theme:
   --main-bg: #fff0ec;
   --light-bg: #fdf7f5;
   --slight-hl: #ffe9e3;
@@ -11,5 +26,5 @@
   --hover-bg: #f0d7d0;
   --btn-active: #f1c9be;
   --main-hl: #f0bbac;
-  --background-grey: #e4d4cf;
-}
+  --background-grey: #e4d4cf; 
+*/
