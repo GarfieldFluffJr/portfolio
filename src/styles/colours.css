@@ -1,14 +1,26 @@
 :root {
-  --main-bg: #f9f7fc;
+  --main-bg: #f9f7fc; /* Background color */
   --slight-hl: #ffffff;
+  /* Card background, black button text color, projects image circle link text color and border */
   --border1: #e0e0e0;
+  /* card border, projects transparent button border hover, navbar border, dropdown nav border*/
   --border2: #b39ddb;
+  /* card hover border, skill border, projects transparent button border, footer border, section header HR, hero socials container, hover border */
   --text-grey: #2d2d2d;
+  /* Main grey colour for content and headers, skills progress bar background, navbar color */
   --text-grey2: #4f4f4f;
+  /* card color, big black button background, projects transparent button text */
   --text-grey3: #828282;
+  /* lighter grey for captions, minor descriptions */
   --text-grey4: #303237;
+  /* big black button background color hover */
   --hover-bg: #ede7f6;
+  /* Navigation hover */
   --btn-active: #d1c4e9;
+  /* Navigation active */
   --main-hl: #7e57c2;
+  /* Progress scroll bar */
   --background-grey: #f2f2f5;
+  /* Skill hover background, caption background, combined with text-grey3, skills focus icon background, skills progress bar container background, work vertical timeline, connect icon circle background
+  */
 }
