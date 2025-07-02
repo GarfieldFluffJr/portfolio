@@ -75,6 +75,12 @@
 .heroDesc {
   font-size: 1.1rem;
   color: var(--text-grey2);
+  margin-bottom: 0.1rem;
+}
+
+.heroSchool {
+  font-size: 0.9rem;
+  color: var(--text-grey3);
 }
 
 .heroSocialsContainer {

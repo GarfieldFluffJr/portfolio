@@ -31,6 +31,7 @@ export default function HeroSection() {
     <div className={styles.heroContainer}>
       <div className={styles.heroName}>Louie Yin</div>
       <div className={styles.heroDesc}>SOFTWARE ENGINEER | VARSITY ATHLETE</div>
+      <div className={styles.heroSchool}>University of Waterloo</div>
       <div className={styles.heroSocialsContainer}>
         <a
           href="https://github.com/GarfieldFluffJr"
