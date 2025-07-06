@@ -40,7 +40,7 @@ export const Home = () => {
             <br /> <br />
             In the occasions when I'm not developing my skills, I'm probably{" "}
             <strong>drowning in the pool</strong> or lifting really really heavy
-            weights in the gym.
+            weights in the gym (🏋️‍♂️ {"<-"} that's totally me).
             <br /> <br />I absolutely love <strong>touching grass</strong> and
             you will always find me eating food no matter where I go. Thank you
             so much for visiting my site, please don't hesitate to reach out!
