@@ -436,8 +436,8 @@
   height: 90%;
   position: absolute;
   background-color: var(--background-grey);
-  left: 11.5vw;
-  top: 5vh;
+  left: 175px;
+  top: 30px;
 }
 
 .workDot {
@@ -447,8 +447,8 @@
   border: 0.25rem solid var(--border2);
   position: absolute;
   border-radius: 50%;
-  top: 3vh;
-  left: 10.6vw;
+  top: 18px;
+  left: 163px;
   z-index: 10;
 }
 
