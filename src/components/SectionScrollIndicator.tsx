@@ -27,7 +27,7 @@ const SectionScrollIndicator = ({
     <motion.button
       className="flex flex-col items-center justify-center opacity-60 hover:opacity-100 transition-opacity will-change-transform will-change-opacity cursor-pointer"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 0.7, y: [0, 5, 0] }}
+      animate={{ opacity: 0.7, y: [0, 10, 0] }}
       onClick={() => scrollToSection(targetRef)}
       transition={{
         y: {

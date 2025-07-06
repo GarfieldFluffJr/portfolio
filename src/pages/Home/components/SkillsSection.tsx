@@ -42,42 +42,42 @@ type FocusSkill = {
 export default function SkillsSection() {
   const frontend: FocusSkill[] = [
     {
-      tech: "React, Next.js, Astro",
+      tech: "JavaScript, TypeScript",
       level: "Advanced",
       percentage: "95",
     },
     {
-      tech: "JavaScript, TypeScript",
-      level: "Advanced",
-      percentage: "98",
-    },
-    {
       tech: "CSS, Tailwind.css",
       level: "Advanced",
-      percentage: "98",
+      percentage: "95",
+    },
+    {
+      tech: "React, Next.js, Astro",
+      level: "Advanced",
+      percentage: "90",
     },
   ];
 
   const backend: FocusSkill[] = [
     {
+      tech: "Docker",
+      level: "Advanced",
+      percentage: "95",
+    },
+    {
       tech: "Node.js, Express.js, RESTful APIs",
       level: "Advanced",
-      percentage: "90",
+      percentage: "85",
     },
     {
       tech: "Python, C, C++",
       level: "Proficient",
-      percentage: "85",
+      percentage: "80",
     },
     {
       tech: "MySQL, PostgreSQL, MongoDB",
       level: "Proficient",
       percentage: "73",
-    },
-    {
-      tech: "Docker",
-      level: "Advanced",
-      percentage: "94",
     },
   ];
   return (
