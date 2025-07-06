@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 import styles from "../../styles/modules/homePage.module.css";
 
 import SectionScrollIndicator from "../../components/SectionScrollIndicator";
@@ -10,18 +12,20 @@ import { FiArrowRight, FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
 export const Home = () => {
+  const aboutRef = useRef<HTMLElement | null>(null);
+
   return (
     <div>
       {/* Hero Section */}
       <section className={styles.heroGrid}>
         <HeroSection />
         <div>
-          <SectionScrollIndicator />
+          <SectionScrollIndicator targetRef={aboutRef} />
         </div>
       </section>
 
       {/* About Me Section */}
-      <section className={styles.sectionContainer}>
+      <section className={styles.sectionContainer} ref={aboutRef}>
         <div className={styles.sectionInnerContainer}>
           <h1 className={styles.sectionHeader}>About Me</h1>
           <div className={styles.sectionDescriptionContainer}>
@@ -42,25 +46,21 @@ export const Home = () => {
             so much for visiting my site, please don't hesitate to reach out!
           </div>
         </div>
-        <SectionScrollIndicator />
       </section>
 
       {/* Work Experience Section */}
       <section className={styles.sectionContainer}>
         <ExperienceSection />
-        <SectionScrollIndicator />
       </section>
 
       {/* Projects Section */}
       <section className={styles.sectionContainer}>
         <ProjectsSection />
-        <SectionScrollIndicator />
       </section>
 
       {/* Technical Skills Section */}
       <section className={styles.sectionContainer}>
         <SkillsSection />
-        <SectionScrollIndicator />
       </section>
 
       {/* Connect Section */}

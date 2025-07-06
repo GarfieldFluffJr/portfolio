@@ -9,8 +9,7 @@
   flex-direction: column;
   position: relative;
   height: auto;
-  margin-bottom: 2rem;
-  gap: 15px;
+  margin-bottom: 10rem;
   align-items: center;
 }
 
@@ -55,7 +54,7 @@
   display: grid;
   grid-template-rows: 6fr 1fr;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 7rem;
 }
 
 .heroContainer {
