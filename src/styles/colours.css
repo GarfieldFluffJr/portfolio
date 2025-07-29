@@ -1,27 +1,29 @@
 :root {
-  --main-bg: #fff0ec; /* Background color */
-  --slight-hl: #ffe9e3;
+  --main-bg: #f1e5ff; /* Background color */
+  --slight-hl: #FFE5EF;
+  /* #ffe5e6 */
   /* Card background, black button text color, projects image circle link text color and border */
-  --border1: #eedcd7;
+  --border1: #c5bad9;
   /* card border, projects transparent button border hover, navbar border, dropdown nav border*/
-  --border2: #cfbdb7;
-  /* card hover border, skill border, projects transparent button border, footer border, section header HR, hero socials container, hover border */ /* card hover border, skill border, projects transparent button border, footer border, section header HR, hero socials container, hover border */
-  --text-grey: #374151;
+  --border2: #805c9c;
+  /* card hover border, skill border, projects transparent button border, footer border, section header HR, hero socials container, hover border */
+  --text-grey: #2a2a2e;
   /* Main grey colour for content and headers, skills progress bar background, navbar color */
-  --text-grey2: #222325;
+  --text-grey2: #303237;
   /* card color, big black button background, projects transparent button text */
-  --text-grey3: #747a85;
+  --text-grey3: #606770;
   /* lighter grey for captions, minor descriptions */
-  --text-grey4: #303237;
   /* big black button background color hover */
-  --hover-bg: #f0d7d0;
+  --hover-bg: #d8c1e3;
   /* Navigation hover */
-  --btn-active: #f1c9be;
+  --btn-active: #d6abed;
   /* Navigation active */
-  --main-hl: #f0bbac;
+  --main-hl: #835bb3;
   /* Progress scroll bar */
-  --background-grey: #e4d4cf;
+  --background-grey: #decfe4;
   /* Skill hover background, caption background, combined with text-grey3, skills focus icon background, skills progress bar container background, work vertical timeline, connect icon circle background */
+  --purple-highlight: #9d87cc;
+  /* Connect icon hover background */
 }
 
 /* Custom colours:
