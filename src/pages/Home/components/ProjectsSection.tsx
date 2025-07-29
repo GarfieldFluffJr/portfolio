@@ -39,7 +39,7 @@ export default function ProjectsSection() {
     {
       name: "Portfolio",
       description: "My own portfolio site! Made with ❤️",
-      image: "/images/portfolio.png",
+      image: "/images/portfolio2.png",
       tech: ["React", "TypeScript", "Tailwind.css", "Framer-Motion"],
       demoLink: "",
       gitHubLink: "https://github.com/GarfieldFluffJr/portfolio",
