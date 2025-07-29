@@ -1,1 +1,10 @@
 Aspect ratio 2:1
+
+Icon:
+https://favicon.io/favicon-generator/
+
+Font: Nunito
+Font Size: 80
+Font Strength: 600
+Background Color: #f1e5ff
+Text Color: #2a2a2e
