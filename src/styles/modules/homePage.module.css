@@ -226,7 +226,7 @@
   transition: all 0.2s ease;
 }
 
-.projectsCardText:hover {
+.projectsCard:hover .projectsCardText {
   border-top: 1px solid var(--border2);
 }
 
