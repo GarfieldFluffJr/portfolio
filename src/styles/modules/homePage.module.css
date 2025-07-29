@@ -222,6 +222,12 @@
 
 .projectsCardText {
   padding: 1rem;
+  border-top: 1px solid var(--border1);
+  transition: all 0.2s ease;
+}
+
+.projectsCardText:hover {
+  border-top: 1px solid var(--border2);
 }
 
 .projectsCardName {
