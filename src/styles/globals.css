@@ -16,6 +16,12 @@ body {
   margin: 0px 2rem;
 }
 
+@media (max-width: 767px) {
+  body {
+    margin: 0px 1rem;
+  }
+}
+
 .overflow-page {
   height: 200vh;
 }
@@ -133,4 +139,11 @@ hr {
   justify-content: center;
   align-items: center;
   color: var(--text-grey);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+  }
 }

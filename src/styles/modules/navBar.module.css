@@ -3,6 +3,12 @@
   justify-content: center;
 }
 
+@media (max-width: 767px) {
+  .horizontalNavContainer {
+    padding: 0 1rem;
+  }
+}
+
 .navbar {
   background-color: var(--slight-hl);
   -webkit-backdrop-filter: blur(16px);
@@ -16,11 +22,20 @@
 }
 
 .container {
-  width: 50vw;
+  width: max(50vw, 500px);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 600px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -38,6 +53,12 @@
   gap: 2rem;
 }
 
+@media (max-width: 767px) {
+  .content {
+    gap: 1rem;
+  }
+}
+
 .navLink {
   color: var(--text-grey);
   font-weight: 500;
@@ -47,6 +68,13 @@
   text-decoration: none;
   position: relative;
   background: transparent;
+}
+
+@media (max-width: 767px) {
+  .navLink {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
 }
 
 .navLink:hover {
@@ -127,6 +155,14 @@
   z-index: 100000000000000000;
 }
 
+@media (max-width: 767px) {
+  .hoverTrigger {
+    top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
 .hoverTrigger.show {
   pointer-events: auto;
   transform: translateY(0);
@@ -172,6 +208,14 @@
   z-index: 1000000000000000;
 }
 
+@media (max-width: 767px) {
+  .dropdown {
+    top: 4rem;
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+}
+
 .dropdown.show {
   opacity: 1;
   transform: translateX(0);
@@ -187,6 +231,12 @@
   text-decoration: none;
   position: relative;
   background: transparent;
+}
+
+@media (max-width: 767px) {
+  .VnavLink {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .VnavLink:hover {
