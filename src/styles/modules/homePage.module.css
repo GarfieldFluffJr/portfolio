@@ -108,6 +108,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -220,6 +221,105 @@
     padding: 1.5rem 1rem;
     font-size: 1rem;
     line-height: 1.6;
+  }
+}
+
+.heroImage {
+  --r: 15px;
+  padding: var(--r);
+  filter: grayscale(0.4) drop-shadow(0 0 1px #0005) drop-shadow(0 0 1px #0005);
+  background: radial-gradient(50% 50%, #0000 65%, #fff 67%) round var(--r)
+    var(--r) / calc(2 * var(--r)) calc(2 * var(--r));
+
+  position: absolute;
+}
+
+@keyframes slideInJolibee {
+  from {
+    transform: rotate(-5deg) translate(-298.4px, 164.8px);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-5deg) translate(20px, 130px);
+    opacity: 1;
+  }
+}
+
+.heroImageJolibee {
+  top: 0;
+  left: 0;
+  transform: rotate(-5deg);
+  animation: slideInJolibee 0.8s ease-in-out forwards;
+}
+
+@keyframes slideInOUA {
+  from {
+    transform: rotate(10deg) translate(19.4px, -359px);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(10deg) translate(-50px, 35px);
+  }
+}
+
+.heroImageOUA {
+  top: 0;
+  right: 0;
+  transform: rotate(10deg);
+  animation: slideInOUA 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInGarfield {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.heroImageGarfield {
+  top: 310px;
+  right: 20px;
+
+  --r: 7px;
+  padding: var(--r);
+  filter: grayscale(0.4) drop-shadow(0 0 1px #0005) drop-shadow(0 0 1px #0005);
+  background: radial-gradient(50% 50%, #0000 65%, #fff 67%) round var(--r)
+    var(--r) / calc(2 * var(--r)) calc(2 * var(--r));
+
+  position: absolute;
+  animation: fadeInGarfield 2s ease forwards;
+}
+
+.heroImageHandwriting {
+  position: absolute;
+  right: 100vw;
+  top: 320px;
+  transform: rotate(5deg);
+  animation: slideInHandwriting 0.4s ease-in-out 1.5s forwards;
+}
+
+@keyframes slideInHandwriting {
+  from {
+    right: 100vw;
+  }
+  to {
+    right: 155px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .heroImage {
+    display: none;
+  }
+
+  .heroImageGarfield {
+    display: none;
+  }
+
+  .heroImageHandwriting {
+    display: none;
   }
 }
 
