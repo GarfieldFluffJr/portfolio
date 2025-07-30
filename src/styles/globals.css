@@ -16,6 +16,12 @@ body {
   margin: 0px 2rem;
 }
 
+@media (max-width: 767px) {
+  body {
+    margin: 0px 1rem;
+  }
+}
+
 .overflow-page {
   height: 200vh;
 }
@@ -81,6 +87,13 @@ hr {
   cursor: pointer;
 }
 
+@media (max-width: 767px) {
+  .big-black-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
 .big-black-button:hover {
   background-color: var(--text-grey2);
   transform: translateY(-1px);
@@ -133,4 +146,11 @@ hr {
   justify-content: center;
   align-items: center;
   color: var(--text-grey);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+  }
 }
