@@ -771,7 +771,7 @@
 
 @media (max-width: 767px) {
   .connectItem {
-    padding: 1.5rem 2rem !important;
+    padding: 1rem 1.5rem !important;
     font-size: 0.85rem;
   }
 }
