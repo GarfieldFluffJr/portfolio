@@ -742,6 +742,12 @@
   gap: 30px;
 }
 
+@media (max-width: 767px) {
+  .connectContainer {
+    gap: 15px;
+  }
+}
+
 .connectLinkWrapper {
   flex: 1;
   width: 100%;
@@ -766,6 +772,7 @@
 @media (max-width: 767px) {
   .connectItem {
     padding: 1.5rem 2rem !important;
+    font-size: 0.85rem;
   }
 }
 
