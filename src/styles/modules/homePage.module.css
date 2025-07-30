@@ -170,10 +170,9 @@
 
 @media (max-width: 767px) {
   .heroSocialsContainer {
-    margin-top: 1.5rem;
-    grid-template-columns: 1fr;
     width: 100%;
     max-width: 300px;
+    font-size: 0.9rem;
   }
 }
 
@@ -187,13 +186,6 @@
   border-right: 1px solid var(--border2);
   overflow: hidden;
   cursor: pointer;
-}
-
-@media (max-width: 767px) {
-  .heroSocials {
-    border-right: none;
-    padding: 0.5rem;
-  }
 }
 
 .heroSocials#heroSocialsLast {
@@ -244,6 +236,7 @@
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    align-items: center;
   }
 }
 
@@ -431,7 +424,6 @@
 
 @media (max-width: 767px) {
   .projectsCardActions {
-    flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
