@@ -19,7 +19,7 @@ export const Home = () => {
       {/* Hero Section */}
       <section className={styles.heroGrid}>
         <HeroSection />
-        <div>
+        <div className={styles.scrollIndicatorContainer}>
           <SectionScrollIndicator targetRef={aboutRef} />
         </div>
       </section>
