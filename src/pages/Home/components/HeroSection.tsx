@@ -1,5 +1,7 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
+import BounceTitle from "../../../components/BounceTitle";
+
 import styles from "../../../styles/modules/homePage.module.css";
 
 export default function HeroSection() {
@@ -29,7 +31,9 @@ export default function HeroSection() {
 
   return (
     <div className={styles.heroContainer}>
-      <div className={styles.heroName}>Louie Yin</div>
+      <div className={styles.heroName}>
+        <BounceTitle text="Louie Yin" />
+      </div>
       <div className={styles.heroDesc}>SOFTWARE ENGINEER | VARSITY ATHLETE</div>
       <div className={styles.heroSchool}>University of Waterloo</div>
       <div className={styles.heroSocialsContainer}>
