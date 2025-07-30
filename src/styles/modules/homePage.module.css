@@ -742,13 +742,13 @@
   gap: 30px;
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .connectContainer {
     flex-direction: column;
     gap: 15px;
     width: 100%;
   }
-}
+} */
 
 .connectLinkWrapper {
   flex: 1;

@@ -87,13 +87,6 @@ hr {
   cursor: pointer;
 }
 
-@media (max-width: 767px) {
-  .big-black-button {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
 .big-black-button:hover {
   background-color: var(--text-grey2);
   transform: translateY(-1px);
