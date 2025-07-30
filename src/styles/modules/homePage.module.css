@@ -735,6 +735,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  cursor: pointer;
 }
 
 @media (max-width: 767px) {

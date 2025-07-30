@@ -7,6 +7,7 @@ type Experience = {
   logo: string;
   tech: string[];
   location: string;
+  link: string;
 };
 
 export default function ExperienceSection() {
@@ -26,6 +27,7 @@ export default function ExperienceSection() {
         "Astro",
       ],
       location: "Toronto, ON, CA",
+      link: "https://www.levantalabs.com/",
     },
     {
       company: "City of Toronto",
@@ -40,6 +42,7 @@ export default function ExperienceSection() {
         "Patron Rapport",
       ],
       location: "Toronto, ON, CA",
+      link: "https://www.toronto.ca/",
     },
   ];
 
@@ -57,7 +60,10 @@ export default function ExperienceSection() {
           <div key={i} className={styles.workItem}>
             <div className={styles.workGrid}>
               <div className={`${styles.workLogo} card`}>
-                <img src={exp.logo} alt={`${exp.company} logo`} width={80} />
+                <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                  {" "}
+                  <img src={exp.logo} alt={`${exp.company} logo`} width={80} />
+                </a>
               </div>
               <div className={`card`}>
                 <div className={styles.workHeaderWrapper}>
