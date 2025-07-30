@@ -108,6 +108,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -221,6 +222,39 @@
     font-size: 1rem;
     line-height: 1.6;
   }
+}
+
+.heroImage {
+  --r: 15px;
+  padding: var(--r);
+  filter: grayscale(0.4) drop-shadow(0 0 1px #0005) drop-shadow(0 0 1px #0005);
+  background: radial-gradient(50% 50%, #0000 65%, #fff 67%) round var(--r)
+    var(--r) / calc(2 * var(--r)) calc(2 * var(--r));
+
+  position: absolute;
+}
+
+.heroImageJolibee {
+  top: 25vh;
+  left: 8vw;
+}
+
+.heroImageOUA {
+  top: 6vh;
+  right: 6vw;
+}
+
+.heroImageGarfield {
+  top: 55vh;
+  right: 2vw;
+
+  --r: 7px;
+  padding: var(--r);
+  filter: grayscale(0.4) drop-shadow(0 0 1px #0005) drop-shadow(0 0 1px #0005);
+  background: radial-gradient(50% 50%, #0000 65%, #fff 67%) round var(--r)
+    var(--r) / calc(2 * var(--r)) calc(2 * var(--r));
+
+  position: absolute;
 }
 
 /* Projects Section */
