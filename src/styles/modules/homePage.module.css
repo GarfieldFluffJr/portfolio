@@ -279,8 +279,8 @@
 }
 
 .heroImageGarfield {
-  top: 55vh;
-  right: 2vw;
+  top: 310px;
+  right: 20px;
 
   --r: 7px;
   padding: var(--r);
@@ -292,12 +292,33 @@
   animation: fadeInGarfield 2s ease forwards;
 }
 
+.heroImageHandwriting {
+  position: absolute;
+  right: 100vw;
+  top: 320px;
+  transform: rotate(5deg);
+  animation: slideInHandwriting 0.4s ease-in-out 1.5s forwards;
+}
+
+@keyframes slideInHandwriting {
+  from {
+    right: 100vw;
+  }
+  to {
+    right: 155px;
+  }
+}
+
 @media (max-width: 1000px) {
   .heroImage {
     display: none;
   }
 
   .heroImageGarfield {
+    display: none;
+  }
+
+  .heroImageHandwriting {
     display: none;
   }
 }

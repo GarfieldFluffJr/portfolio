@@ -96,6 +96,12 @@ export default function HeroSection() {
         width={"125px"}
         className={`${styles.heroImageGarfield}`}
       />
+      <img
+        src={"/images/handwriting.png"}
+        alt={`Handwriting image`}
+        width={"80px"}
+        className={styles.heroImageHandwriting}
+      />
     </div>
   );
 }
