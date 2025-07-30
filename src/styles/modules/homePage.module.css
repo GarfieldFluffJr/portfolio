@@ -234,14 +234,48 @@
   position: absolute;
 }
 
+@keyframes slideInJolibee {
+  from {
+    transform: rotate(-5deg) translate(-298.4px, 164.8px);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(-5deg) translate(20px, 130px);
+    opacity: 1;
+  }
+}
+
 .heroImageJolibee {
-  top: 25vh;
-  left: 8vw;
+  top: 0;
+  left: 0;
+  transform: rotate(-5deg);
+  animation: slideInJolibee 0.8s ease-in-out forwards;
+}
+
+@keyframes slideInOUA {
+  from {
+    transform: rotate(10deg) translate(19.4px, -359px);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(10deg) translate(-50px, 35px);
+  }
 }
 
 .heroImageOUA {
-  top: 6vh;
-  right: 6vw;
+  top: 0;
+  right: 0;
+  transform: rotate(10deg);
+  animation: slideInOUA 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInGarfield {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .heroImageGarfield {
@@ -255,6 +289,17 @@
     var(--r) / calc(2 * var(--r)) calc(2 * var(--r));
 
   position: absolute;
+  animation: fadeInGarfield 2s ease forwards;
+}
+
+@media (max-width: 1000px) {
+  .heroImage {
+    display: none;
+  }
+
+  .heroImageGarfield {
+    display: none;
+  }
 }
 
 /* Projects Section */
