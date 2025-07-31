@@ -244,7 +244,7 @@
     opacity: 0;
   }
   to {
-    transform: rotate(-5deg) translate(20px, 130px);
+    transform: rotate(-5deg) translate(2vw, 25vh);
     opacity: 1;
   }
 }
@@ -254,6 +254,7 @@
   left: 0;
   transform: rotate(-5deg);
   animation: slideInJolibee 0.8s ease-in-out forwards;
+  width: 15vw;
 }
 
 @keyframes slideInOUA {
@@ -262,7 +263,7 @@
     opacity: 0;
   }
   to {
-    transform: rotate(10deg) translate(-50px, 35px);
+    transform: rotate(10deg) translate(-4vw, 10vh);
   }
 }
 
@@ -271,6 +272,7 @@
   right: 0;
   transform: rotate(10deg);
   animation: slideInOUA 0.8s ease-in-out forwards;
+  width: 18vw;
 }
 
 @keyframes fadeInGarfield {
@@ -283,8 +285,9 @@
 }
 
 .heroImageGarfield {
-  top: 310px;
-  right: 20px;
+  top: 55vh;
+  right: 1vw;
+  width: 10vw;
 
   --r: 7px;
   padding: var(--r);
@@ -299,9 +302,10 @@
 .heroImageHandwriting {
   position: absolute;
   right: 100vw;
-  top: 320px;
+  top: 56vh;
   transform: rotate(5deg);
   animation: slideInHandwriting 0.4s ease-in-out 1.5s forwards;
+  width: 6.5vw;
 }
 
 @keyframes slideInHandwriting {
@@ -309,7 +313,7 @@
     right: 100vw;
   }
   to {
-    right: 155px;
+    right: 11.5vw;
   }
 }
 

@@ -81,25 +81,21 @@ export default function HeroSection() {
       <img
         src={"/images/Jolibee.jpeg"}
         alt={`Jolibee person image`}
-        width={"200px"}
         className={`${styles.heroImage} ${styles.heroImageJolibee}`}
       />
       <img
         src={"/images/OUA.jpeg"}
         alt={`OUA medal image`}
-        width={"250px"}
         className={`${styles.heroImage} ${styles.heroImageOUA}`}
       />
       <img
         src={"/images/Garfield.jpg"}
         alt={`Garfield ice cream image`}
-        width={"125px"}
         className={`${styles.heroImageGarfield}`}
       />
       <img
         src={"/images/handwriting.png"}
         alt={`Handwriting image`}
-        width={"80px"}
         className={styles.heroImageHandwriting}
       />
     </div>
