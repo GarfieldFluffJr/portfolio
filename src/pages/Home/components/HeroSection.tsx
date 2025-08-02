@@ -1,10 +1,39 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { useEffect, useState } from "react";
 
 import BounceTitle from "../../../components/BounceTitle";
 
 import styles from "../../../styles/modules/homePage.module.css";
 
 export default function HeroSection() {
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const totalImages = 4;
+
+  useEffect(() => {
+    const imageUrls = [
+      "/images/Jolibee.jpeg",
+      "/images/OUA.jpeg",
+      "/images/Garfield.jpg",
+      "/images/handwriting.png",
+    ];
+
+    let loadCount = 0;
+
+    const checkAllImagesLoaded = () => {
+      loadCount++;
+      if (loadCount === totalImages) {
+        setImagesLoaded(true);
+      }
+    };
+
+    imageUrls.forEach((url) => {
+      const img = new Image();
+      img.onload = checkAllImagesLoaded;
+      img.onerror = checkAllImagesLoaded;
+      img.src = url;
+    });
+  }, []);
+
   const handleSocialsClick = (social: string) => {
     switch (social) {
       case "GitHub":
@@ -81,22 +110,30 @@ export default function HeroSection() {
       <img
         src={"/images/Jolibee.jpeg"}
         alt={`Jolibee person image`}
-        className={`${styles.heroImage} ${styles.heroImageJolibee}`}
+        className={`${styles.heroImage} ${
+          imagesLoaded ? styles.heroImageJolibee : ""
+        }`}
       />
       <img
         src={"/images/OUA.jpeg"}
         alt={`OUA medal image`}
-        className={`${styles.heroImage} ${styles.heroImageOUA}`}
+        className={`${styles.heroImage} ${
+          imagesLoaded ? styles.heroImageOUA : ""
+        }`}
       />
       <img
         src={"/images/Garfield.jpg"}
         alt={`Garfield ice cream image`}
-        className={`${styles.heroImageGarfield}`}
+        className={`${styles.heroImage} ${
+          imagesLoaded ? styles.heroImageGarfield : ""
+        }`}
       />
       <img
         src={"/images/handwriting.png"}
         alt={`Handwriting image`}
-        className={styles.heroImageHandwriting}
+        className={`${styles.heroImageHandwritingInitial} ${
+          imagesLoaded ? styles.heroImageHandwriting : ""
+        }`}
       />
     </div>
   );

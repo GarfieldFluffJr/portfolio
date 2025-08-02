@@ -206,28 +206,6 @@
   align-self: flex-end;
 }
 
-/* About Me Section */
-
-.aboutContent {
-  background-color: var(--slight-hl);
-  border: 1px solid var(--border1);
-  border-radius: 8px;
-  box-shadow: var(--slight-box-shadow);
-  width: 75vw;
-  padding: 2.5rem 2rem;
-  color: var(--text-grey);
-  font-size: 1.1rem;
-}
-
-@media (max-width: 767px) {
-  .aboutContent {
-    width: 100%;
-    padding: 1.5rem 1rem;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-}
-
 .heroImage {
   --r: 15px;
   padding: var(--r);
@@ -236,6 +214,13 @@
     var(--r) / calc(2 * var(--r)) calc(2 * var(--r));
 
   position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.heroImageHandwritingInitial {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @keyframes slideInJolibee {
@@ -255,6 +240,8 @@
   transform: rotate(-5deg);
   animation: slideInJolibee 0.8s ease-in-out forwards;
   width: 15vw;
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes slideInOUA {
@@ -273,6 +260,8 @@
   transform: rotate(10deg);
   animation: slideInOUA 0.8s ease-in-out forwards;
   width: 18vw;
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes fadeInGarfield {
@@ -297,6 +286,8 @@
 
   position: absolute;
   animation: fadeInGarfield 2s ease forwards;
+  opacity: 1;
+  visibility: visible;
 }
 
 .heroImageHandwriting {
@@ -306,6 +297,8 @@
   transform: rotate(5deg);
   animation: slideInHandwriting 0.4s ease-in-out 1.5s forwards;
   width: 6.5vw;
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes slideInHandwriting {
@@ -328,6 +321,29 @@
 
   .heroImageHandwriting {
     display: none;
+  }
+}
+
+
+/* About Me Section */
+
+.aboutContent {
+  background-color: var(--slight-hl);
+  border: 1px solid var(--border1);
+  border-radius: 8px;
+  box-shadow: var(--slight-box-shadow);
+  width: 75vw;
+  padding: 2.5rem 2rem;
+  color: var(--text-grey);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 767px) {
+  .aboutContent {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }
 
