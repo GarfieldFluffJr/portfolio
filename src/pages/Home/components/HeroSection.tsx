@@ -1,62 +1,13 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
-import { useEffect, useState } from "react";
 
 import BounceTitle from "../../../components/BounceTitle";
+
+import useHero from "../../../hooks/useHero";
 
 import styles from "../../../styles/modules/homePage.module.css";
 
 export default function HeroSection() {
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const totalImages = 4;
-
-  useEffect(() => {
-    const imageUrls = [
-      "/images/Jolibee.jpeg",
-      "/images/OUA.jpeg",
-      "/images/Garfield.jpg",
-      "/images/handwriting.png",
-    ];
-
-    let loadCount = 0;
-
-    const checkAllImagesLoaded = () => {
-      loadCount++;
-      if (loadCount === totalImages) {
-        setImagesLoaded(true);
-      }
-    };
-
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.onload = checkAllImagesLoaded;
-      img.onerror = checkAllImagesLoaded;
-      img.src = url;
-    });
-  }, []);
-
-  const handleSocialsClick = (social: string) => {
-    switch (social) {
-      case "GitHub":
-        window.open("https://github.com/GarfieldFluffJr", "_blank");
-        break;
-      case "LinkedIn":
-        window.open("https://www.linkedin.com/in/louieyin/", "_blank");
-        break;
-      case "Email":
-        const email = "louieyin6@gmail.com";
-        const subject = "I would like to connect";
-        const body = "Hi Louie, I would like to get in touch...";
-
-        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-          subject
-        )}&body=${encodeURIComponent(body)}`;
-        window.open(mailtoLink, "_blank");
-        break;
-      default:
-        window.open("");
-        console.error("Social was not found");
-    }
-  };
+  const { imagesLoaded, handleSocialsClick } = useHero();
 
   return (
     <div className={styles.heroContainer}>
@@ -108,10 +59,10 @@ export default function HeroSection() {
         </a>
       </div>
       <img
-        src={"/images/Jolibee.jpeg"}
-        alt={`Jolibee person image`}
+        src={"/images/Jollibee.jpeg"}
+        alt={`Jollibee person image`}
         className={`${styles.heroImage} ${
-          imagesLoaded ? styles.heroImageJolibee : ""
+          imagesLoaded ? styles.heroImageJollibee : ""
         }`}
       />
       <img

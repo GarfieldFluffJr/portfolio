@@ -223,7 +223,7 @@
   visibility: hidden;
 }
 
-@keyframes slideInJolibee {
+@keyframes slideInJollibee {
   from {
     transform: rotate(-5deg) translate(-298.4px, 164.8px);
     opacity: 0;
@@ -234,11 +234,11 @@
   }
 }
 
-.heroImageJolibee {
+.heroImageJollibee {
   top: 0;
   left: 0;
   transform: rotate(-5deg);
-  animation: slideInJolibee 0.8s ease-in-out forwards;
+  animation: slideInJollibee 0.8s ease-in-out forwards;
   width: 15vw;
   opacity: 1;
   visibility: visible;
@@ -323,7 +323,6 @@
     display: none;
   }
 }
-
 
 /* About Me Section */
 
