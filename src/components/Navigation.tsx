@@ -7,6 +7,7 @@ import styles from "../styles/modules/navBar.module.css";
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/swim", label: "Swim" },
   { to: "/projects", label: "Projects" },
   { to: "/contact", label: "Contact" },
 ];

@@ -35,6 +35,14 @@ function AppRouter() {
               }
             />
             <Route
+              path="swim"
+              element={
+                <AppLayout title="Swim">
+                  <UnderConstruction />
+                </AppLayout>
+              }
+            />
+            <Route
               path="projects"
               element={
                 <AppLayout title="Projects">
