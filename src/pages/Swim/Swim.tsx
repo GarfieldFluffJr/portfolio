@@ -1,3 +1,3 @@
 export const SwimHome = () => {
-  return <div className="overflow-page">Swim Page</div>;
+  return <div>Swim Page</div>;
 };
