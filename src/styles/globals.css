@@ -147,3 +147,8 @@ hr {
     padding: 2rem 1rem;
   }
 }
+
+.resume-link:hover {
+  color: var(--border2);
+  text-decoration: underline;
+}
