@@ -1,9 +1,11 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import { Home } from "./pages/Home/Home";
-// import { AboutHome as About } from "./pages/About/About";
+import { AboutHome as About } from "./pages/About/About";
+// import { SwimHome as Swim } from "./pages/Swim/Swim";
 // import { ProjectsHome as Projects } from "./pages/Projects/Projects";
 // import { ContactHome as Contact } from "./pages/Contact/Contact";
+import { ResumeHome as Resume } from "./pages/Resume/Resume";
 
 import NotFound from "./ui/404NotFound";
 import ScrollToTop from "./ui/ScrollToTop";
@@ -30,7 +32,7 @@ function AppRouter() {
               path="about"
               element={
                 <AppLayout title="About">
-                  <UnderConstruction />
+                  <About />
                 </AppLayout>
               }
             />
@@ -58,6 +60,7 @@ function AppRouter() {
                 </AppLayout>
               }
             />
+            <Route path="resume" element={<Resume />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
