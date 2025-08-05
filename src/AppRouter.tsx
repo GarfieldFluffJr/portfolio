@@ -32,7 +32,7 @@ function AppRouter() {
               path="about"
               element={
                 <AppLayout title="About">
-                  <About />
+                  <UnderConstruction />
                 </AppLayout>
               }
             />
