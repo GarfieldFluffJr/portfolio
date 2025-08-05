@@ -44,6 +44,11 @@ export const Home = () => {
             <br /> <br />I absolutely love <strong>touching grass</strong> and
             you will always find me eating food no matter where I go. Thank you
             so much for visiting my site, please don't hesitate to reach out!
+            <br /> <br />
+            View my <strong>resume</strong> here:{" "}
+            <NavLink to="/resume" className={"resume-link"}>
+              Louie's Resume
+            </NavLink>
           </div>
         </div>
       </section>
