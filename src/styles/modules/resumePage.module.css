@@ -1,8 +1,10 @@
 .container {
   display: flex;
-  padding-top: 5rem;
+  padding-top: 3rem;
   flex-direction: column;
   align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .subContainer {
@@ -10,7 +12,7 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .title {
@@ -18,28 +20,92 @@
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .titleHR {
   background-color: var(--border2);
   height: 1px;
-  width: 6vw;
+  width: 6rem;
+  min-width: 60px;
   border: none;
 }
 
 .titleDesc {
   font-size: 0.9rem;
   color: var(--text-grey);
+  text-align: center;
 }
 
 .resumeContainer {
-  width: 65vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 65vw;
+  height: 80vh;
   border: 1px solid var(--border2);
+  margin-bottom: 1rem;
 }
 
 .resumeFooterText {
   font-size: 0.9rem;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   color: var(--text-grey);
+  text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .titleHR {
+    width: 4rem;
+  }
+
+  .resumeContainer {
+    max-width: 95vw;
+    height: 70vh;
+    min-height: 500px;
+  }
+
+  .subContainer {
+    margin-bottom: 1.5rem;
+  }
+
+  .resumeFooterText {
+    font-size: 0.8rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .container {
+    padding-top: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .resumeContainer {
+    max-width: 98vw;
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .titleDesc {
+    font-size: 0.8rem;
+  }
+
+  .resumeFooterText {
+    font-size: 0.75rem;
+  }
 }
