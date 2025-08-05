@@ -6,7 +6,7 @@ import styles from "../../styles/modules/resumePage.module.css";
 
 export const ResumeHome = () => {
   const screenWidth = window.innerWidth;
-  const zoom = screenWidth < 550 ? "page-height" : "page-width";
+  const zoom = screenWidth < 550 ? "10" : "page-width";
 
   return (
     <div>
