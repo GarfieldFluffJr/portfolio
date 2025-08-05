@@ -40,7 +40,7 @@
 .resumeContainer {
   width: 100%;
   max-width: 65vw;
-  height: 80vh;
+  height: 100vh;
   border: 1px solid var(--border2);
   margin-bottom: 1rem;
 }
