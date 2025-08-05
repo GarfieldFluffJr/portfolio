@@ -37,17 +37,17 @@ function AppRouter() {
               }
             />
             <Route
-              path="swim"
+              path="projects"
               element={
-                <AppLayout title="Swim">
+                <AppLayout title="Projects">
                   <UnderConstruction />
                 </AppLayout>
               }
             />
             <Route
-              path="projects"
+              path="swim"
               element={
-                <AppLayout title="Projects">
+                <AppLayout title="Swim">
                   <UnderConstruction />
                 </AppLayout>
               }
@@ -60,7 +60,14 @@ function AppRouter() {
                 </AppLayout>
               }
             />
-            <Route path="resume" element={<Resume />} />
+            <Route
+              path="resume"
+              element={
+                <AppLayout title="Resume">
+                  <Resume />
+                </AppLayout>
+              }
+            />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

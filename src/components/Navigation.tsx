@@ -7,9 +7,8 @@ import styles from "../styles/modules/navBar.module.css";
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/swim", label: "Swim" },
   { to: "/projects", label: "Projects" },
-  { to: "/contact", label: "Contact" },
+  { to: "/swim", label: "Swim" },
 ];
 
 export default function Navigation() {
@@ -21,7 +20,7 @@ export default function Navigation() {
   // Determine current page based on location
   const getCurrentPage = () => {
     const currentItem = navItems.find((item) => item.to === location.pathname);
-    return currentItem ? currentItem.label : "Home";
+    return currentItem ? currentItem.label : "";
   };
 
   const currentPage = getCurrentPage();
