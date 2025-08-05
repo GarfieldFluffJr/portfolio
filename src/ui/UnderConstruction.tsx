@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function UnderConstruction() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
-      <div className="card p-6 rounded shadow">
+      <div className="card p-6 rounded shadow text-center">
         Page is currently under construction!!
       </div>
       <div>
