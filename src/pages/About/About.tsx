@@ -27,14 +27,18 @@ export const AboutHome = () => {
                   <div className={styles.educationDuration}>
                     {education.duration}
                   </div>
-                  <div className={styles.educationDegree}>{education.degree}</div>
+                  <div className={styles.educationDegree}>
+                    {education.degree}
+                  </div>
                 </div>
-                <div>{education.location}</div>
+                <div className={styles.educationLocation}>
+                  {education.location}
+                </div>
               </div>
               <div className={styles.educationName}>{education.name}</div>
-              <ul>
+              <ul className={styles.educationNotes}>
                 {education.notes.map((note) => (
-                  <li>{note}</li>
+                  <li className={styles.educationNote}>{note}</li>
                 ))}
               </ul>
             </div>

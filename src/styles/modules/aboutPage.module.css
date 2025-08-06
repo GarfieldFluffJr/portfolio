@@ -103,7 +103,8 @@
 .educationDuration {
   background-color: var(--background-grey);
   color: var(--text-grey);
-  padding: 0 0.5rem;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
   border-radius: 8px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -111,6 +112,7 @@
   transition: all 0.2s ease;
   cursor: pointer;
   justify-content: center;
+  text-align: center;
 }
 
 .educationDuration:hover {
@@ -123,7 +125,27 @@
   font-weight: 600;
 }
 
+@media (max-width: 767px) {
+  .educationHeader {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .educationLocation {
+    font-size: 0.85rem;
+  }
+}
+
 .educationName {
   color: var(--text-grey3);
   padding-bottom: 0.5rem;
+}
+
+.educationNotes {
+  font-size: 0.85rem;
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.educationNote {
+  padding-left: 0.5rem;
 }
