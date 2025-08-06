@@ -1,7 +1,7 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import { Home } from "./pages/Home/Home";
-// import { AboutHome as About } from "./pages/About/About";
+import { AboutHome as About } from "./pages/About/About";
 // import { ProjectsHome as Projects } from "./pages/Projects/Projects";
 // import { ContactHome as Contact } from "./pages/Contact/Contact";
 
@@ -30,7 +30,7 @@ function AppRouter() {
               path="about"
               element={
                 <AppLayout title="About">
-                  <UnderConstruction />
+                  <About />
                 </AppLayout>
               }
             />
