@@ -15,7 +15,7 @@ export default function ExperienceSection() {
     {
       company: "Levanta Labs",
       title: "Software Engineer Intern",
-      duration: "May 2025 - Present",
+      duration: "May 2025 - Aug 2025",
       logo: "/images/levanta-labs.png",
       tech: [
         "React",

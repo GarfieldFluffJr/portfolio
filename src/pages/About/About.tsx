@@ -1,5 +1,6 @@
 import styles from "../../styles/modules/aboutPage.module.css";
 import { educationData } from "./Data/educationData";
+import { experienceData } from "./Data/experienceData";
 
 export const AboutHome = () => {
   return (
@@ -17,6 +18,7 @@ export const AboutHome = () => {
         </div>
       </div>
 
+      {/* Education Section */}
       <div className={styles.sectionContainer}>
         <h2 className={styles.sectionHeader}>Education</h2>
         <div className={styles.educationContainer}>
@@ -41,6 +43,22 @@ export const AboutHome = () => {
                   <li className={styles.educationNote}>{note}</li>
                 ))}
               </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Work Experience Section */}
+      <div className={styles.sectionContainer}>
+        <h2 className={styles.sectionHeader}>Work Experience</h2>
+        <div className={styles.experienceContainer}>
+          {experienceData.map((experience) => (
+            <div className="card">
+              <div className={styles.experienceHeader}>
+                <div className={styles.experienceInnerHeader}>
+                  <div className={styles.experienceDuration}>{experience.duration}</div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
