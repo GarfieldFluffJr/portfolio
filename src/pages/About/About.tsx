@@ -22,8 +22,8 @@ export const AboutHome = () => {
       <div className={styles.sectionContainer}>
         <h2 className={styles.sectionHeader}>Education</h2>
         <div className={styles.educationContainer}>
-          {educationData.map((education) => (
-            <div className="card">
+          {educationData.map((education, index) => (
+            <div key={index} className="card">
               <div className={styles.educationHeader}>
                 <div className={styles.educationInnerHeader}>
                   <div className={styles.educationDuration}>
@@ -39,8 +39,10 @@ export const AboutHome = () => {
               </div>
               <div className={styles.educationName}>{education.name}</div>
               <ul className={styles.educationNotes}>
-                {education.notes.map((note) => (
-                  <li className={styles.educationNote}>{note}</li>
+                {education.notes.map((note, noteIndex) => (
+                  <li key={noteIndex} className={styles.educationNote}>
+                    {note}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -50,13 +52,39 @@ export const AboutHome = () => {
 
       {/* Work Experience Section */}
       <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>Work Experience</h2>
+        <h2 className={styles.sectionHeader}>Experience</h2>
         <div className={styles.experienceContainer}>
-          {experienceData.map((experience) => (
-            <div className="card">
-              <div className={styles.experienceHeader}>
-                <div className={styles.experienceInnerHeader}>
-                  <div className={styles.experienceDuration}>{experience.duration}</div>
+          {experienceData.map((experience, index) => (
+            <div key={index} className={styles.experienceGrid}>
+              <div />
+              <div className="card">
+                <div className={styles.experienceHeader}>
+                  <div className={styles.experienceInnerHeader}>
+                    <div className={styles.experienceTitle}>
+                      {experience.position}
+                    </div>
+                    <div className={styles.experienceDuration}>
+                      {experience.duration}
+                    </div>
+                  </div>
+                  <div className={styles.experienceSubHeader}>
+                    <div className={styles.experienceCompany}>
+                      {experience.company}
+                    </div>
+                    <div className={styles.experienceLocation}>
+                      {experience.location}
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.experienceDescription}>
+                  {experience.description}
+                </div>
+                <div className={styles.experienceTechList}>
+                  {experience.tech.map((tech, techIndex) => (
+                    <span key={techIndex} className="skill">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

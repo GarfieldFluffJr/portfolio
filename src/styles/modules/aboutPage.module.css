@@ -149,3 +149,106 @@
 .educationNote {
   padding-left: 0.5rem;
 }
+
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  gap: 1rem;
+}
+
+.experienceHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.experienceInnerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .experienceInnerHeader {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+.experienceTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .experienceTitle {
+    font-size: 1rem;
+  }
+}
+
+.experienceDuration {
+  background-color: var(--background-grey);
+  color: var(--text-grey);
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--border1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+}
+
+.experienceDuration:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--border2);
+}
+
+.experienceSubHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .experienceSubHeader {
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    align-items: flex-start;
+  }
+}
+
+.experienceCompany {
+  color: var(--text-grey3);
+}
+
+.experienceLocation {
+  color: var(--text-grey);
+}
+
+.experienceDescription {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-grey);
+  margin-bottom: 1rem;
+}
+
+.experienceTechList {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+}
