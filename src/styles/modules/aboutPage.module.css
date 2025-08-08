@@ -79,6 +79,8 @@
   text-align: left;
 }
 
+/* Education Section */
+
 .educationContainer {
   display: flex;
   flex-direction: column;
@@ -149,6 +151,84 @@
 .educationNote {
   padding-left: 0.5rem;
 }
+
+/* Honours Section */
+
+.honoursContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.honoursItem {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 8px;
+  background-color: var(--slight-hl);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid var(--border1);
+  padding: 1rem 1.5rem;
+  color: var(--text-grey);
+  flex: 1 1 30%;
+
+  transition: all 0.2s ease;
+}
+
+.honoursItem:hover {
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border2);
+}
+
+.honoursItemLeftBorder {
+  position: absolute;
+  background-color: var(--main-hl);
+  height: 100%;
+  width: 6px;
+  left: 0;
+  top: 0;
+}
+
+.honoursHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+}
+
+.honoursItemTitle {
+  font-weight: 600;
+}
+
+.honoursIcon {
+  background-color: var(--border1);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1.75rem;
+}
+
+.honoursRightHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.honoursDuration {
+  width: fit-content;
+}
+
+.honoursDescription {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-grey3);
+}
+
+/* Experience Section */
 
 .experienceContainer {
   display: flex;

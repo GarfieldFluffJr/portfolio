@@ -3,7 +3,10 @@ import { useLocation } from "react-router-dom";
 
 import styles from "../../styles/modules/aboutPage.module.css";
 import { educationData } from "./Data/educationData";
+import { HonoursData } from "./Data/honoursData";
 import { experienceData } from "./Data/experienceData";
+
+import { FiBook } from "react-icons/fi";
 
 export const AboutHome = () => {
   const location = useLocation();
@@ -63,6 +66,34 @@ export const AboutHome = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Honours and Certifications Section */}
+      <div className={styles.sectionContainer}>
+        <h2 className={styles.sectionHeader}>Honours and Certificates</h2>
+        <div className={styles.honoursContainer}>
+          {HonoursData.map((honours, index) => (
+            <div className={styles.honoursItem} key={index}>
+              <div className={styles.honoursItemLeftBorder} />
+              <div className={styles.honoursHeader}>
+                <div className={styles.honoursIcon}>
+                  <honours.icon />
+                </div>
+                <div className={styles.honoursRightHeader}>
+                  <div className={styles.honoursItemTitle}>{honours.name}</div>
+                  <div
+                    className={`${styles.titleTag} ${styles.honoursDuration}`}
+                  >
+                    {honours.date}
+                  </div>
+                </div>
+              </div>
+              <div className={styles.honoursDescription}>
+                {honours.description}
+              </div>
             </div>
           ))}
         </div>
