@@ -1,8 +1,26 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import styles from "../../styles/modules/aboutPage.module.css";
 import { educationData } from "./Data/educationData";
 import { experienceData } from "./Data/experienceData";
 
 export const AboutHome = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 1300);
+    }
+  }, [location]);
+
   return (
     <div className={styles.container}>
       <div className={styles.subContainer}>
@@ -51,7 +69,7 @@ export const AboutHome = () => {
       </div>
 
       {/* Work Experience Section */}
-      <div className={styles.sectionContainer}>
+      <div className={styles.sectionContainer} id="experience">
         <h2 className={styles.sectionHeader}>Experience</h2>
         <div className={styles.experienceContainer}>
           {experienceData.map((experience, index) => (
