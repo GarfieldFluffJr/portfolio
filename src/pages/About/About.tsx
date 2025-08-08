@@ -87,6 +87,11 @@ export const AboutHome = () => {
                   <div
                     className={`${styles.titleTag} ${styles.honoursDuration}`}
                   >
+                    {honours.status}
+                  </div>
+                  <div
+                    className={`${styles.titleTag} ${styles.honoursDuration}`}
+                  >
                     {honours.date}
                   </div>
                 </div>
