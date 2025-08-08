@@ -129,8 +129,3 @@ hr {
 .small-transparent-button:hover {
   background-color: var(--border1);
 }
-
-.resume-link:hover {
-  color: var(--border2);
-  text-decoration: underline;
-}
