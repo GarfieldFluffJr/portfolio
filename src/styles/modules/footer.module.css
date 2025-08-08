@@ -1,0 +1,43 @@
+.footer {
+  margin-top: 7rem;
+  border-top: 1px solid var(--border2);
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-grey);
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    margin-top: 4rem;
+  }
+
+  .iconContainer {
+    display: none;
+  }
+
+  .icon {
+    display: none;
+  }
+}
+
+.iconContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 10px;
+  gap: 15px;
+  color: var(--text-grey);
+}
+
+.icon {
+  transition: all 0.1s ease-in-out;
+}
+
+.icon:hover {
+  color: black;
+  transform: scale(1.05);
+}
