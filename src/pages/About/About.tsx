@@ -6,8 +6,6 @@ import { educationData } from "./Data/educationData";
 import { HonoursData } from "./Data/honoursData";
 import { experienceData } from "./Data/experienceData";
 
-import { FiBook } from "react-icons/fi";
-
 export const AboutHome = () => {
   const location = useLocation();
 
