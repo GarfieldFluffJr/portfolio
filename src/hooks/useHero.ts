@@ -38,7 +38,7 @@ export default function useHero() {
         window.open("https://www.linkedin.com/in/louieyin/", "_blank");
         break;
       case "Email":
-        const email = "louieyin6@gmail.com";
+        const email = "l5yin@uwaterloo.ca";
         const subject = "I would like to connect";
         const body = "Hi Louie, I would like to get in touch...";
 

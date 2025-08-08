@@ -44,7 +44,7 @@ export default function HeroSection() {
           </div>
         </a>
         <a
-          href="mailto:louieyin6@gmail.com"
+          href="mailto:l5yin@uwaterloo.ca"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -113,7 +113,7 @@ export const Home = () => {
             </a>
             <a
               className={styles.connectLinkWrapper}
-              href="mailto:louieyin6@gmail.com"
+              href="mailto:l5yin@uwaterloo.ca"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -130,7 +130,7 @@ export const Home = () => {
             <FiArrowRight size={16} />
           </NavLink>
           <p className={styles.connectEmail}>
-            Or send me an email at louieyin6@gmail.com
+            Or send me an email at l5yin@uwaterloo.ca
           </p>
         </div>
       </section>
