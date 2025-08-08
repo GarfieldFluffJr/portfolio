@@ -154,12 +154,22 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: relative;
 }
 
 .experienceGrid {
   display: grid;
   grid-template-columns: 1fr 9fr;
   gap: 1rem;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .experienceGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .experienceHeader {
@@ -251,4 +261,35 @@
   flex-direction: row;
   gap: 5px;
   flex-wrap: wrap;
+}
+
+.workDot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--slight-hl);
+  border: 0.25rem solid var(--border2);
+  position: absolute;
+  border-radius: 50%;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+}
+
+.verticalLine {
+  width: 1.5px;
+  height: 100%;
+  position: absolute;
+  background-color: var(--border1);
+  left: 37px;
+  top: 30px;
+}
+
+@media (max-width: 767px) {
+  .verticalLine {
+    display: none;
+  }
+
+  .workDot {
+    display: none;
+  }
 }

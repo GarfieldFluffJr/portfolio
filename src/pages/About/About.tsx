@@ -87,8 +87,10 @@ export const AboutHome = () => {
                   ))}
                 </div>
               </div>
+              <div className={styles.workDot} />
             </div>
           ))}
+          <div className={styles.verticalLine} />
         </div>
       </div>
     </div>
