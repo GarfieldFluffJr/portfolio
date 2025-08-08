@@ -56,6 +56,10 @@ export const Home = () => {
       {/* Work Experience Section */}
       <section className={styles.sectionContainer}>
         <ExperienceSection />
+        <NavLink to="/about#experience" className="big-black-button">
+          <span>View All Experiences</span>
+          <FiArrowRight size={16} />
+        </NavLink>
       </section>
 
       {/* Projects Section */}
