@@ -33,13 +33,6 @@ export const projectsData: Project[] = [
     githubLink: "https://github.com/GarfieldFluffJr/portfolio",
     liveLink: "",
     demoLink: "",
-    techStack: [
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vite",
-      "Vercel",
-      "Framer Motion",
-    ],
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
   },
 ];
