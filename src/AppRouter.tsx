@@ -2,7 +2,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 import { Home } from "./pages/Home/Home";
 import { AboutHome as About } from "./pages/About/About";
-// import { ProjectsHome as Projects } from "./pages/Projects/Projects";
+import { ProjectsHome as Projects } from "./pages/Projects/Projects";
 // import { ContactHome as Contact } from "./pages/Contact/Contact";
 import { ResumeHome as Resume } from "./pages/Resume/Resume";
 
@@ -39,7 +39,7 @@ function AppRouter() {
               path="projects"
               element={
                 <AppLayout title="Projects">
-                  <UnderConstruction />
+                  <Projects />
                 </AppLayout>
               }
             />
