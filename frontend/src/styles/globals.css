@@ -64,15 +64,15 @@ hr {
 .grey-caption {
   background-color: var(--background-grey);
   color: var(--text-grey);
-  line-height: 1;
-  padding: 0.25rem 0.5rem;
+  padding: 0 0.5rem;
   border-radius: 8px;
   font-size: 0.8rem;
   border: 1px solid var(--border1);
   transition: all 0.2s ease;
   cursor: pointer;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 600;
+  width: fit-content;
 }
 
 .grey-caption:hover {

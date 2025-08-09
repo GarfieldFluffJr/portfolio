@@ -84,7 +84,7 @@ export default function ProjectsSection() {
                 </div>
                 <div className={styles.projectsSkillsContainer}>
                   {proj.tech.map((cur, i) => (
-                    <span key={i} className="grey-caption">
+                    <span key={i} className={styles.projectsSkills}>
                       {cur}
                     </span>
                   ))}

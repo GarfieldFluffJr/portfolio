@@ -31,9 +31,9 @@ export const AboutHome = () => {
           Waterloo Software Engineer x Varsity Athlete
         </div>
         <div className={styles.titleTagsContainer}>
-          <div className={styles.titleTag}>Full Stack Development</div>
-          <div className={styles.titleTag}>UI/UX Design</div>
-          <div className={styles.titleTag}>AI/ML</div>
+          <div className="grey-caption">Full Stack Development</div>
+          <div className="grey-caption">UI/UX Design</div>
+          <div className="grey-caption">AI/ML</div>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ export const AboutHome = () => {
             <div key={index} className="card">
               <div className={styles.educationHeader}>
                 <div className={styles.educationInnerHeader}>
-                  <div className={styles.educationDuration}>
+                  <div className="grey-caption">
                     {education.duration}
                   </div>
                   <div className={styles.educationDegree}>
@@ -83,12 +83,12 @@ export const AboutHome = () => {
                 <div className={styles.honoursRightHeader}>
                   <div className={styles.honoursItemTitle}>{honours.name}</div>
                   <div
-                    className={`${styles.titleTag} ${styles.honoursDuration}`}
+                    className="grey-caption"
                   >
                     {honours.status}
                   </div>
                   <div
-                    className={`${styles.titleTag} ${styles.honoursDuration}`}
+                    className="grey-caption"
                   >
                     {honours.date}
                   </div>
@@ -115,7 +115,7 @@ export const AboutHome = () => {
                     <div className={styles.experienceTitle}>
                       {experience.position}
                     </div>
-                    <div className={styles.experienceDuration}>
+                    <div className="grey-caption">
                       {experience.duration}
                     </div>
                   </div>

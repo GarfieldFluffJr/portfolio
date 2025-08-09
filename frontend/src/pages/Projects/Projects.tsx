@@ -93,7 +93,7 @@ export const ProjectsHome = () => {
 
             <div className={styles.techStackContainer}>
               {project.techStack.map((tech, techIndex) => (
-                <span key={techIndex} className={styles.techTag}>
+                <span key={techIndex} className="grey-caption">
                   {tech}
                 </span>
               ))}
@@ -129,7 +129,7 @@ export const ProjectsHome = () => {
                 <h3 className={styles.modalTechTitle}>Technologies Used:</h3>
                 <div className={styles.modalTechContainer}>
                   {selectedProject.techStack.map((tech, index) => (
-                    <span key={index} className={styles.techTag}>
+                    <span key={index} className="grey-caption">
                       {tech}
                     </span>
                   ))}
