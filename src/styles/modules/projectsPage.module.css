@@ -75,6 +75,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .projectTitle {
@@ -83,6 +84,8 @@
   font-weight: 600;
   margin: 0;
   line-height: 1.3;
+  flex: 1;
+  min-width: 0;
 }
 
 .projectLinks {
@@ -122,6 +125,14 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.projectDivider {
+  background-color: var(--border1);
+  height: 1px;
+  width: 100%;
+  border: none;
+  margin: 0;
 }
 
 .techStackContainer {
@@ -180,13 +191,14 @@
   }
 
   .projectHeader {
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: flex-start;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
   }
 
-  .projectLinks {
-    align-self: flex-end;
+  .projectTitle {
+    flex: 1;
+    min-width: 0;
   }
 }
 
@@ -201,7 +213,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
   padding: 1rem;
 }
 
@@ -214,15 +226,16 @@
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: var(--box-shadow);
+  position: relative;
+  z-index: 10000;
 }
 
 .modalHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1.5rem 0;
+  padding: 1.5rem;
   border-bottom: 1px solid var(--border1);
-  margin-bottom: 1.5rem;
 }
 
 .modalTitle {
@@ -230,7 +243,6 @@
   font-size: 1.5rem;
   font-weight: 600;
   margin: 0;
-  padding-bottom: 1rem;
 }
 
 .modalCloseButton {
@@ -252,7 +264,7 @@
 }
 
 .modalBody {
-  padding: 0 1.5rem 1.5rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -321,8 +333,7 @@
   }
 
   .modalHeader {
-    padding: 1rem 1rem 0;
-    margin-bottom: 1rem;
+    padding: 1rem;
   }
 
   .modalTitle {
@@ -330,7 +341,7 @@
   }
 
   .modalBody {
-    padding: 0 1rem 1rem;
+    padding: 1rem;
     gap: 1rem;
   }
 

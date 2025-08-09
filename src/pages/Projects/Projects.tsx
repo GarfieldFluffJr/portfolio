@@ -29,7 +29,9 @@ export const ProjectsHome = () => {
       <div className={styles.subContainer}>
         <h1 className={styles.title}>My Projects</h1>
         <hr className={styles.titleHR} />
-        <div className={styles.titleDesc}>A collection of all my projects!</div>
+        <div className={styles.titleDesc}>
+          A collection of all my projects. Click on each one to learn more!
+        </div>
       </div>
 
       {/* Projects Grid */}
@@ -42,35 +44,39 @@ export const ProjectsHome = () => {
           >
             <div className={styles.projectHeader}>
               <h3 className={styles.projectTitle}>{project.name}</h3>
-              <div className={styles.projectLinks}>
-                {project.githubLink && (
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.projectLink}
-                    aria-label="View GitHub repository"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <FiGithub size={16} />
-                  </a>
-                )}
-                {project.liveLink && (
-                  <a
-                    href={project.liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.projectLink}
-                    aria-label="View live project"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <FiExternalLink size={16} />
-                  </a>
-                )}
-              </div>
+              {(project.githubLink || project.liveLink) && (
+                <div className={styles.projectLinks}>
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.projectLink}
+                      aria-label="View GitHub repository"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FiGithub size={16} />
+                    </a>
+                  )}
+                  {project.liveLink && (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.projectLink}
+                      aria-label="View live project"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FiExternalLink size={16} />
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
 
             <p className={styles.projectDescription}>{project.description}</p>
+
+            <hr className={styles.projectDivider} />
 
             <div className={styles.techStackContainer}>
               {project.techStack.map((tech, techIndex) => (
