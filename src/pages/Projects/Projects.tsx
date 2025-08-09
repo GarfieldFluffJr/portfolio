@@ -1,13 +1,14 @@
 import { useState } from "react";
 import styles from "../../styles/modules/projectsPage.module.css";
 import { projectsData } from "./projectsData";
-import { FiGithub, FiExternalLink, FiX } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiX, FiPlay } from "react-icons/fi";
 
 type Project = {
   name: string;
   description: string;
   githubLink: string;
   liveLink: string;
+  demoLink: string;
   techStack: string[];
 };
 
@@ -44,8 +45,20 @@ export const ProjectsHome = () => {
           >
             <div className={styles.projectHeader}>
               <h3 className={styles.projectTitle}>{project.name}</h3>
-              {(project.githubLink || project.liveLink) && (
+              {(project.demoLink || project.githubLink || project.liveLink) && (
                 <div className={styles.projectLinks}>
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.projectLink}
+                      aria-label="View project demo"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <FiPlay size={16} />
+                    </a>
+                  )}
                   {project.githubLink && (
                     <a
                       href={project.githubLink}
@@ -126,6 +139,17 @@ export const ProjectsHome = () => {
               <hr className={styles.modalDivider} />
 
               <div className={styles.modalLinks}>
+                {selectedProject.demoLink && (
+                  <a
+                    href={selectedProject.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.modalLinkButton}
+                  >
+                    <FiPlay size={20} />
+                    Watch Demo
+                  </a>
+                )}
                 {selectedProject.githubLink && (
                   <a
                     href={selectedProject.githubLink}
