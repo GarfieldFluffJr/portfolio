@@ -36,3 +36,78 @@
   color: var(--text-grey);
   text-align: center;
 }
+
+.formContainer {
+  width: 60vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formSubContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.formItem,
+.formItem > label,
+.formItem > input,
+.formItem > textarea {
+  width: 100%;
+}
+
+.formItem > label {
+  font-size: 0.9rem;
+}
+
+.formText {
+  background-color: var(--background-grey);
+  color: var(--text-grey);
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--border1);
+  transition: all 0.2s ease;
+}
+
+.formText::placeholder {
+  color: var(--text-grey3);
+  font-size: 0.85rem;
+}
+
+.formText:hover {
+  border: 1.5px solid var(--purple-highlight);
+  background-color: var(--hover-bg);
+}
+
+.formText:focus {
+  outline: none;
+  border: 1.5px solid var(--border2);
+  background-color: var(--hover-bg);
+}
+
+.formSubmitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--text-grey);
+  color: var(--slight-hl);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.formSubmitBtn:hover {
+  background-color: var(--text-grey2);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid var(--border2);
+  color: var(--btn-active);
+}
