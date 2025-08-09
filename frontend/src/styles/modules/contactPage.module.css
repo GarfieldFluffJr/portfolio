@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: var(--text-grey);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.titleHR {
+  background-color: var(--border2);
+  height: 1px;
+  width: 6rem;
+  min-width: 60px;
+  border: none;
+}
+
