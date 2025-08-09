@@ -88,6 +88,11 @@
   background-color: var(--hover-bg);
 }
 
+.formTextarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
 .formSubmitBtn {
   display: inline-flex;
   align-items: center;
@@ -110,4 +115,5 @@
   box-shadow: var(--slight-box-shadow);
   border: 1px solid var(--border2);
   color: var(--btn-active);
+  transform: translateY(-1.5px);
 }

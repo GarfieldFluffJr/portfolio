@@ -54,7 +54,7 @@ export const ContactHome = () => {
               name="message"
               placeholder="Your message"
               required
-              className={styles.formText}
+              className={`${styles.formText} ${styles.formTextarea}`}
               rows={5}
             />
           </div>
