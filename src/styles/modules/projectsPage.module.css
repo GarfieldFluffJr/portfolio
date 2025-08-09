@@ -119,12 +119,13 @@
   font-size: 0.85rem;
   line-height: 1.5;
   margin: 0;
-  flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  word-break: break-word;
 }
 
 .projectDivider {
@@ -139,7 +140,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: auto;
 }
 
 .techTag {
@@ -212,7 +212,6 @@
   background-color: rgba(0, 0, 0, 0.75);
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
