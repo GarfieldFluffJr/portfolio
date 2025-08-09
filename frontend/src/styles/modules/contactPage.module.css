@@ -31,3 +31,8 @@
   border: none;
 }
 
+.titleDesc {
+  font-size: 0.9rem;
+  color: var(--text-grey);
+  text-align: center;
+}
