@@ -76,6 +76,8 @@ export const ProjectsHome = () => {
 
             <p className={styles.projectDescription}>{project.description}</p>
 
+            <hr className={styles.projectDivider} />
+
             <div className={styles.techStackContainer}>
               {project.techStack.map((tech, techIndex) => (
                 <span key={techIndex} className={styles.techTag}>
@@ -120,6 +122,8 @@ export const ProjectsHome = () => {
                   ))}
                 </div>
               </div>
+
+              <hr className={styles.modalDivider} />
 
               <div className={styles.modalLinks}>
                 {selectedProject.githubLink && (

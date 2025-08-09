@@ -210,6 +210,9 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -234,13 +237,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--border1);
+  padding: 1rem 1.5rem;
+  border-bottom: 2px solid var(--border1);
 }
 
 .modalTitle {
   color: var(--text-grey);
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   margin: 0;
 }
@@ -267,13 +270,13 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .modalDescription {
   color: var(--text-grey3);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -285,7 +288,7 @@
 
 .modalTechTitle {
   color: var(--text-grey);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin: 0;
 }
@@ -296,6 +299,14 @@
   gap: 0.5rem;
 }
 
+.modalDivider {
+  background-color: var(--border1);
+  height: 1px;
+  width: 100%;
+  border: none;
+  margin: 0;
+}
+
 .modalLinks {
   display: flex;
   gap: 1rem;
@@ -304,22 +315,23 @@
 
 .modalLinkButton {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
-  background-color: var(--background-grey);
-  color: var(--text-grey);
-  padding: 0.75rem 1rem;
+  justify-content: center;
+  font-size: 0.8rem;
+  gap: 7px;
+  padding: 0.5rem 0.75rem;
   border-radius: 8px;
+  color: var(--text-grey);
+  border: 1px solid var(--border2);
+  background-color: var(--slight-hl);
+  transition: background-color 0.1s ease;
   text-decoration: none;
   font-weight: 500;
-  border: 1px solid var(--border1);
-  transition: all 0.2s ease;
 }
 
 .modalLinkButton:hover {
-  background-color: var(--hover-bg);
-  border-color: var(--border2);
-  transform: translateY(-1px);
+  background-color: var(--border1);
 }
 
 /* Modal Responsive */
