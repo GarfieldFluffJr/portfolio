@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-import { FiSend, FiCheckCircle } from "react-icons/fi";
+import { FiSend } from "react-icons/fi";
 
 import styles from "../../styles/modules/contactPage.module.css";
 
