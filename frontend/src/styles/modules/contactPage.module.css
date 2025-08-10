@@ -117,3 +117,9 @@
   color: var(--btn-active);
   transform: translateY(-1.5px);
 }
+
+.formError {
+  color: var(--error);
+  font-size: 0.9rem;
+  font-weight: 600;
+}

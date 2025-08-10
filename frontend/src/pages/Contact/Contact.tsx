@@ -1,11 +1,52 @@
+import { useState, useRef } from "react";
+
 import { FiSend } from "react-icons/fi";
 
 import styles from "../../styles/modules/contactPage.module.css";
 
 export const ContactHome = () => {
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const formRef = useRef<HTMLFormElement>(null);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(e);
+
+    const form = formRef.current;
+    if (!form) return;
+
+    const newErrors: { [key: string]: string } = {};
+
+    form
+      .querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
+        "input, textarea"
+      )
+      .forEach((input) => {
+        if (!input.checkValidity()) {
+          let message = "Invalid input value";
+
+          if (input.validity.valueMissing) {
+            message = `${
+              input.name[0].toUpperCase() + input.name.slice(1)
+            } is required`;
+          } else if (input.validity.typeMismatch) {
+            if (input.type === "email") {
+              message = "Please enter a valid email address";
+            }
+          } else if (input.validity.patternMismatch) {
+            message = "Please match the requested format";
+          }
+
+          newErrors[input.name] = message;
+        }
+      });
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      console.log("Form submitted");
+      // form.submit();
+    }
   };
 
   return (
@@ -16,46 +57,54 @@ export const ContactHome = () => {
         <div className={styles.titleDesc}>Get in touch with me!</div>
       </div>
 
-      <form onSubmit={handleSubmit} className={`card ${styles.formContainer}`}>
+      <form
+        onSubmit={handleSubmit}
+        className={`card ${styles.formContainer}`}
+        ref={formRef}
+        noValidate={true}
+      >
         <div className={styles.formSubContainer}>
           <div className={styles.formItem}>
             <label>Name</label>
+            <div className={styles.formError}>{errors.name}</div>
           </div>
           <div className={styles.formItem}>
             <input
               type="text"
               name="name"
               placeholder="Your name"
-              required
               className={styles.formText}
+              required
             />
           </div>
         </div>
         <div className={styles.formSubContainer}>
           <div className={styles.formItem}>
             <label>Email</label>
+            <div className={styles.formError}>{errors.email}</div>
           </div>
           <div className={styles.formItem}>
             <input
-              type="text"
+              type="email"
               name="email"
               placeholder="you@example.com"
-              required
               className={styles.formText}
+              required
             />
           </div>
         </div>
         <div className={styles.formSubContainer}>
           <div className={styles.formItem}>
             <label>Message</label>
+            <div className={styles.formError}>{errors.message}</div>
           </div>
           <div className={styles.formItem}>
             <textarea
               name="message"
               placeholder="Your message"
-              required
               className={`${styles.formText} ${styles.formTextarea}`}
               rows={5}
+              required
             />
           </div>
         </div>
