@@ -1,5 +1,5 @@
 :root {
-  --main-bg: #f1e5ff; /* Background color */ 
+  --main-bg: #f1e5ff; /* Background color */
   --slight-hl: #f1efea;
   /* #ffe5e6 FFE5EF F2EFE9 */
   /* Card background, black button text color, projects image circle link text color and border */
@@ -24,6 +24,8 @@
   /* Skill hover background, caption background, combined with text-grey3, skills focus icon background, skills progress bar container background, work vertical timeline, connect icon circle background */
   --purple-highlight: #9d87cc;
   /* Connect icon hover background */
+  --error: #e03468;
+  --success: #28a745;
 }
 
 /* Custom colours:

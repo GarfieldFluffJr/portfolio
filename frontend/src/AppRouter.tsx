@@ -3,7 +3,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import { AboutHome as About } from "./pages/About/About";
 import { ProjectsHome as Projects } from "./pages/Projects/Projects";
-// import { ContactHome as Contact } from "./pages/Contact/Contact";
+import { ContactHome as Contact } from "./pages/Contact/Contact";
 import { ResumeHome as Resume } from "./pages/Resume/Resume";
 
 import NotFound from "./ui/404NotFound";
@@ -55,7 +55,7 @@ function AppRouter() {
               path="contact"
               element={
                 <AppLayout title="Contact">
-                  <UnderConstruction />
+                  <Contact />
                 </AppLayout>
               }
             />

@@ -1,0 +1,237 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: var(--text-grey);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.titleHR {
+  background-color: var(--border2);
+  height: 1px;
+  width: 6rem;
+  min-width: 60px;
+  border: none;
+}
+
+.titleDesc {
+  font-size: 0.9rem;
+  color: var(--text-grey);
+  text-align: center;
+}
+
+.formContainer {
+  width: 60vw;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formSubContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.formItem,
+.formItem > label,
+.formItem > input,
+.formItem > textarea {
+  width: 100%;
+}
+
+.formItem > label {
+  font-size: 0.9rem;
+}
+
+.formText {
+  background-color: var(--background-grey);
+  color: var(--text-grey);
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--border1);
+  transition: all 0.2s ease;
+}
+
+.formText::placeholder {
+  color: var(--text-grey3);
+  font-size: 0.85rem;
+}
+
+.formText:hover {
+  border: 1.5px solid var(--purple-highlight);
+  background-color: var(--hover-bg);
+}
+
+.formText:focus {
+  outline: none;
+  border: 1.5px solid var(--border2);
+  background-color: var(--hover-bg);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.formSubmitBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--text-grey);
+  color: var(--slight-hl);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.formSubmitBtn:hover {
+  background-color: var(--text-grey2);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid var(--border2);
+  color: var(--btn-active);
+  transform: translateY(-1.5px);
+}
+
+.formError {
+  color: var(--error);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.successCard {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.successContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.successIcon {
+  font-size: 3rem;
+  color: var(--purple-highlight);
+  animation: fadeInScale 0.5s ease-out;
+  margin-top: 1rem;
+}
+
+.successTitle {
+  color: var(--text-grey);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.successMessage {
+  color: var(--text-grey2);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 400px;
+}
+
+.successButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--text-grey);
+  color: var(--slight-hl);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.successButton:hover {
+  background-color: var(--text-grey2);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid var(--border2);
+  color: var(--btn-active);
+  transform: translateY(-1.5px);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .successIcon {
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .successTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .successMessage {
+    font-size: 0.9rem;
+    max-width: 300px;
+  }
+
+  .successButton {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .successContent {
+    gap: 1rem;
+  }
+}
