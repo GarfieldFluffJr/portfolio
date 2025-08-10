@@ -54,7 +54,7 @@ export const ContactHome = () => {
   const SuccessCard = () => (
     <div className={`card ${styles.successCard}`}>
       <div className={styles.successContent}>
-        <FiCheckCircle className={styles.successIcon} />
+        <FiSend className={styles.successIcon} />
         <h2 className={styles.successTitle}>Message Sent Successfully!</h2>
         <p className={styles.successMessage}>
           Thank you for reaching out. I'll get back to you as soon as possible.
