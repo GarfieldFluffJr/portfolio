@@ -47,7 +47,6 @@ export const ContactHome = () => {
     if (Object.keys(newErrors).length === 0) {
       console.log("Form submitted");
       setIsSubmitted(true);
-      // form.submit();
     }
   };
 
