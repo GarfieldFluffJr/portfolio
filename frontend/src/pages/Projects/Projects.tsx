@@ -31,7 +31,8 @@ export const ProjectsHome = () => {
         <h1 className={styles.title}>My Projects</h1>
         <hr className={styles.titleHR} />
         <div className={styles.titleDesc}>
-          A collection of all my projects. Click on each one to learn more!
+          A collection of all my projects. <strong>Click</strong> on each one to
+          learn more!
         </div>
       </div>
 
