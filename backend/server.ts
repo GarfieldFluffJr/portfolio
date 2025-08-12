@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/data", (req, res) => {
-  console.log(res.body);
+  console.log(req.body);
   res.json({ message: "Data received", yourData: req.body });
 });
 
