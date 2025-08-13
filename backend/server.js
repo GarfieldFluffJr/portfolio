@@ -8,14 +8,9 @@ const PORT = process.env.PORT || 3000;
 app.use(cors()); // TODO: change after production to url, right now accepts every origin
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Hello from Express");
-});
+const testRoute = require("./modules/test/routes");
 
-app.post("/data", (req, res) => {
-  console.log(req.body);
-  res.status(200).json({ message: "Data received", yourData: req.body });
-});
+app.use("/test", testRoute);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
