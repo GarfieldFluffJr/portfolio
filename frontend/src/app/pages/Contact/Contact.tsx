@@ -4,7 +4,7 @@ import { FiSend } from "react-icons/fi";
 
 import styles from "../../styles/modules/contactPage.module.css";
 
-import { testReturnData } from "../../../api/test";
+import { sendEmail } from "../../../api/contact";
 
 export const ContactHome = () => {
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
@@ -13,7 +13,7 @@ export const ContactHome = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(e);
+    // console.log(e);
 
     const form = formRef.current as HTMLFormElement;
     if (!form) return;
@@ -52,7 +52,7 @@ export const ContactHome = () => {
       const emailInput = form[1] as HTMLInputElement;
       const messageInput = form[2] as HTMLTextAreaElement;
       setIsSubmitted(true);
-      await testReturnData({
+      await sendEmail({
         name: nameInput.value,
         email: emailInput.value,
         message: messageInput.value,
