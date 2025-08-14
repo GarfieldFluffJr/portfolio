@@ -48,7 +48,6 @@ export const ContactHome = () => {
 
     if (Object.keys(newErrors).length === 0) {
       console.log("Form submitted");
-      const formValues = e.target as HTMLFormElement;
       const nameInput = form[0] as HTMLInputElement;
       const emailInput = form[1] as HTMLInputElement;
       const messageInput = form[2] as HTMLTextAreaElement;
