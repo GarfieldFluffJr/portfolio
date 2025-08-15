@@ -25,6 +25,8 @@ app.use(
     },
   })
 );
+
+app.set("trust proxy", 1);
 app.use(express.json());
 
 const testRoute = require("./modules/test/routes");
