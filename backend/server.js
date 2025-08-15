@@ -23,11 +23,13 @@ app.use(
         callback(new Error("Not allowed by CORS"));
       }
     },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
 
 app.set("trust proxy", 1);
 app.use(express.json());
+app.options("*", cors());
 
 const testRoute = require("./modules/test/routes");
 const contactRoute = require("./modules/contact/routes");
