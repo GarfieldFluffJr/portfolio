@@ -6,7 +6,25 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Global middleware
-app.use(cors()); // TODO: change after production to url, right now accepts every origin
+let corsWL = ["www.louiefatooey.space"];
+if (process.env.LOCAL_ENV === "developement") {
+  corsWL = [...corsWL, "http://localhost:5173/"];
+}
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin) return callback(null, true);
+
+      if (corsWL.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+  })
+);
 app.use(express.json());
 
 const testRoute = require("./modules/test/routes");
