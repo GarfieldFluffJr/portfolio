@@ -13,16 +13,7 @@ if (process.env.LOCAL_ENV === "development") {
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps or curl requests)
-      if (!origin) return callback(null, true);
-
-      if (corsWL.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: corsWL,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
