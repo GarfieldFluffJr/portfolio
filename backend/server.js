@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Global middleware
 let corsWL = ["www.louiefatooey.space"];
-if (process.env.LOCAL_ENV === "developement") {
+if (process.env.LOCAL_ENV === "development") {
   corsWL = [...corsWL, "http://localhost:5173/"];
 }
 
