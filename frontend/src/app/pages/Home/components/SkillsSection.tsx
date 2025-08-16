@@ -60,14 +60,14 @@ export default function SkillsSection() {
 
   const backend: FocusSkill[] = [
     {
-      tech: "Docker",
+      tech: "Node.js, Express.js, RESTful APIs",
       level: "Advanced",
       percentage: "95",
     },
     {
-      tech: "Node.js, Express.js, RESTful APIs",
+      tech: "Docker",
       level: "Advanced",
-      percentage: "85",
+      percentage: "88",
     },
     {
       tech: "Python, C, C++",
