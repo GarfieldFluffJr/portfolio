@@ -21,7 +21,7 @@
   --main-hl: #835bb3;
   /* Progress scroll bar */
   --background-grey: #decfe4;
-  /* Skill hover background, caption background, combined with text-grey3, skills focus icon background, skills progress bar container background, work vertical timeline, connect icon circle background */
+  /* Skill hover background, caption background, combined with text-grey3, skills progress bar container background, work vertical timeline, connect icon circle background */
   --purple-highlight: #9d87cc;
   /* Connect icon hover background */
   --error: #e03468;
@@ -32,3 +32,11 @@
 - Navbar vertical menu background color (.hoverTrigger)
 - Navbar vertical dropdown background color (.dropdown)
 */
+
+/* Swim page specific styling */
+body.swimPage, html.swimPage{
+  --main-bg: red; 
+  
+}
+
+
