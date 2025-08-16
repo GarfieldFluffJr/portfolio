@@ -26,7 +26,7 @@
   /* Connect icon hover background */
   --error: #e03468;
   --success: #28a745;
-  --blue: #5c939c;
+  --blue: #7254c4;
 }
 
 /* Custom colours:
@@ -38,6 +38,7 @@
 body.swimPage,
 html.swimPage {
   --main-bg: #e5f5ff;
+  --border1: #bacdd9;
   --border2: #5c939c;
   --hover-bg: #c1e3e2;
   --btn-active: #abdaed;
