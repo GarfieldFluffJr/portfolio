@@ -13,6 +13,8 @@ export const SwimHome = () => {
         </div>
       </div>
 
+      {/* Add big black button to scroll down to photos */}
+
       {/* What Swimming Means to Me Section */}
       <div className={styles.sectionContainer}>
         <h2 className={styles.sectionHeader}>What Swimming means to Me</h2>
@@ -253,6 +255,8 @@ export const SwimHome = () => {
           <div className={styles.verticalLine} />
         </div>
       </div>
+
+      {/* Still need swimming resources and photos section (add additional photo albums) */}
     </div>
   );
 };
