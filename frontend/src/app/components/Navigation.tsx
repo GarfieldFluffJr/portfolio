@@ -75,6 +75,10 @@ export default function Navigation() {
                   key={item.to}
                   className={`${styles.navLink} ${
                     currentPage === item.label ? styles.active : ""
+                  } ${
+                    item.label === "Swim"
+                      ? styles.swimNavLink
+                      : styles.regularNavLink
                   }`}
                   to={item.to}
                 >
@@ -141,6 +145,10 @@ export default function Navigation() {
               }}
               className={`${styles.VnavLink} ${
                 currentPage === item.label ? styles.Vactive : ""
+              } ${
+                item.label === "Swim"
+                  ? styles.swimNavLink
+                  : styles.regularNavLink
               }`}
             >
               {/* Active background - this animates between navlinks */}

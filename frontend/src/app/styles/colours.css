@@ -26,6 +26,7 @@
   /* Connect icon hover background */
   --error: #e03468;
   --success: #28a745;
+  --blue: #5c939c;
 }
 
 /* Custom colours:
@@ -34,9 +35,13 @@
 */
 
 /* Swim page specific styling */
-body.swimPage, html.swimPage{
-  --main-bg: red; 
-  
+body.swimPage,
+html.swimPage {
+  --main-bg: #e5f5ff;
+  --border2: #5c939c;
+  --hover-bg: #c1e3e2;
+  --btn-active: #abdaed;
+  --main-hl: #5baab3;
+  --background-grey: #cfe2e4;
+  --purple-highlight: #87becc;
 }
-
-
