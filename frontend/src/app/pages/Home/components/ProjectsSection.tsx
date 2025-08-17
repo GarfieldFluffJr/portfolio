@@ -21,7 +21,7 @@ export default function ProjectsSection() {
       name: "Cook Buddy",
       description:
         "A friendly, interactive AI assistant who not only cooks alongside you but adapts recipes to fit whatever ingredients you have on hand. ",
-      image: "/images/cook-buddy.png",
+      image: "/images/Home/cook-buddy.png",
       tech: [
         "Python",
         "Raspberry Pi",
@@ -39,7 +39,7 @@ export default function ProjectsSection() {
     {
       name: "Portfolio",
       description: "My own portfolio site! Made with ❤️",
-      image: "/images/portfolio3.png",
+      image: "/images/Home/portfolio3.png",
       tech: ["React", "TypeScript", "Tailwind.css", "Node.js", "Express.js", "Framer-Motion"],
       demoLink: "",
       gitHubLink: "https://github.com/GarfieldFluffJr/portfolio",
