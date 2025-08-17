@@ -1,13 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { FiX } from "react-icons/fi";
 
 import styles from "../../styles/modules/aboutPage.module.css";
 import { educationData } from "./Data/educationData";
-import { HonoursData } from "./Data/honoursData";
+import { HonoursData, type Honours } from "./Data/honoursData";
 import { experienceData } from "./Data/experienceData";
 
 export const AboutHome = () => {
   const location = useLocation();
+  const [selectedHonours, setSelectedHonours] = useState<Honours | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const hash = location.hash;
@@ -21,6 +24,16 @@ export const AboutHome = () => {
       }, 1300);
     }
   }, [location]);
+
+  const openModal = (honours: Honours) => {
+    setSelectedHonours(honours);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedHonours(null);
+  };
 
   return (
     <div className={styles.container}>
@@ -45,9 +58,7 @@ export const AboutHome = () => {
             <div key={index} className="card">
               <div className={styles.educationHeader}>
                 <div className={styles.educationInnerHeader}>
-                  <div className="grey-caption">
-                    {education.duration}
-                  </div>
+                  <div className="grey-caption">{education.duration}</div>
                   <div className={styles.educationDegree}>
                     {education.degree}
                   </div>
@@ -74,7 +85,11 @@ export const AboutHome = () => {
         <h2 className={styles.sectionHeader}>Honours and Certificates</h2>
         <div className={styles.honoursContainer}>
           {HonoursData.map((honours, index) => (
-            <div className={styles.honoursItem} key={index}>
+            <div
+              className={styles.honoursItem}
+              key={index}
+              onClick={() => openModal(honours)}
+            >
               <div className={styles.honoursItemLeftBorder} />
               <div className={styles.honoursHeader}>
                 <div className={styles.honoursIcon}>
@@ -82,16 +97,8 @@ export const AboutHome = () => {
                 </div>
                 <div className={styles.honoursRightHeader}>
                   <div className={styles.honoursItemTitle}>{honours.name}</div>
-                  <div
-                    className="grey-caption"
-                  >
-                    {honours.status}
-                  </div>
-                  <div
-                    className="grey-caption"
-                  >
-                    {honours.date}
-                  </div>
+                  <div className="grey-caption">{honours.status}</div>
+                  <div className="grey-caption">{honours.date}</div>
                 </div>
               </div>
               <div className={styles.honoursDescription}>
@@ -115,9 +122,7 @@ export const AboutHome = () => {
                     <div className={styles.experienceTitle}>
                       {experience.position}
                     </div>
-                    <div className="grey-caption">
-                      {experience.duration}
-                    </div>
+                    <div className="grey-caption">{experience.duration}</div>
                   </div>
                   <div className={styles.experienceSubHeader}>
                     <div className={styles.experienceCompany}>
@@ -145,6 +150,53 @@ export const AboutHome = () => {
           <div className={styles.verticalLine} />
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && selectedHonours && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className={styles.modalHeader}>
+              <h2 className={styles.modalTitle}>{selectedHonours.name}</h2>
+              <button
+                className={styles.modalCloseButton}
+                onClick={closeModal}
+                aria-label="Close modal"
+              >
+                <FiX size={24} />
+              </button>
+            </div>
+
+            <div className={styles.modalBody}>
+              {selectedHonours.image && (
+                <div className={styles.modalImageContainer}>
+                  <img
+                    src={selectedHonours.image}
+                    alt={selectedHonours.name}
+                    className={styles.modalImage}
+                  />
+                </div>
+              )}
+
+              <hr className={styles.modalDivider} />
+
+              <div className={styles.modalInfo}>
+                <span className="grey-caption">{selectedHonours.status}</span>
+                <span className="grey-caption">{selectedHonours.date}</span>
+              </div>
+
+              <div className={styles.modalDescription}>
+                <h3 className={styles.modalDescriptionTitle}>Description</h3>
+                <p className={styles.modalDescriptionText}>
+                  {selectedHonours.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

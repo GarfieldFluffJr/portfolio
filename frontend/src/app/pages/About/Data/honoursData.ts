@@ -2,12 +2,13 @@ import type { IconType } from "react-icons";
 import { FiBook, FiMusic } from "react-icons/fi";
 import { FaSwimmer } from "react-icons/fa";
 
-type Honours = {
+export type Honours = {
   name: string;
   date: string;
   icon: IconType;
   status: string;
   description: string;
+  image: string;
 };
 
 export const HonoursData: Honours[] = [
@@ -18,6 +19,7 @@ export const HonoursData: Honours[] = [
     status: "Award Recipient",
     description:
       "Ranked 1 out of my graduating class of 2024. Awarded for the highest academic average in high school.",
+    image: "/images/About/governor_general_medal.jpg",
   },
   {
     name: "Paris 2024 Olympic Trials",
@@ -26,6 +28,7 @@ export const HonoursData: Honours[] = [
     status: "Qualifier",
     description:
       "Canadian Olympic Swimming Trials Qualifier. Canadian Nationals Finalist (9th). Ontario Provincials Silver Medalist.",
+    image: "/images/About/osc_silver.jpeg",
   },
   {
     name: "RCM Piano Level 10",
@@ -34,5 +37,6 @@ export const HonoursData: Honours[] = [
     status: "First-Class Honours",
     description:
       "Graduated the Royal Conservatory of Music Level 10 Piano Curriculum, the highest level before earning a professional degree.",
+    image: "/images/About/piano.jpeg",
   },
 ];
