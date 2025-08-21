@@ -33,22 +33,26 @@ export const Home = () => {
           </div>
           <div className={`${styles.aboutContent} card`}>
             Hi, I'm <strong>Louie Yin</strong>, a software engineering student
-            and varsity swimmer at the University of Waterloo. I love to learn
-            and you will often find me spending my time reading up code
-            documentation or building the next multi-million dollar VC-backed
-            startup.
+            and varsity swimmer at the University of Waterloo. I love learning
+            in my free time and you will often find me spending my time reading
+            up code documentation or building the next multi-million dollar
+            VC-backed startup.
             <br /> <br />
             In the occasions when I'm not developing my skills, I'm probably{" "}
             <strong>drowning in the pool</strong> or lifting really really heavy
             weights in the gym (🏋️‍♂️ {"<-"} that's totally me).
-            <br /> <br />I absolutely love <strong>touching grass</strong> and
-            you will always find me eating food no matter where I go. Thank you
-            so much for visiting my site, please don't hesitate to reach out!
+            <br /> <br />
+            You will always find me <strong>eating food</strong> no matter where
+            I go, and I think I make a solid effort to roll around in grass
+            daily. Thank you so much for visiting my site, please don't hesitate
+            to reach out!
             <br /> <br />
             View my <strong>resume</strong> here:{" "}
-            <NavLink to="/resume" className={"resume-link"}>
-              Louie's Resume
-            </NavLink>
+            <u>
+              <NavLink to="/resume" className={"resume-link"}>
+                Louie's Resume
+              </NavLink>
+            </u>
           </div>
         </div>
       </section>
