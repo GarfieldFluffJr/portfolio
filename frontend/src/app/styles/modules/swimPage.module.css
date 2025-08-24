@@ -202,6 +202,13 @@
   grid-template-columns: 2fr 1fr;
 }
 
+@media (max-width: 1000px) {
+  .teamsGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .teamsLeftContainer {
   display: flex;
   flex-direction: column;
@@ -256,6 +263,21 @@
 
 .teamsImage {
   border: 1px solid var(--border2);
+  min-width: 250px;
+}
+
+@media (max-width: 1000px) {
+  .teamsImageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teamsImage {
+    min-width: 250px;
+    width: min(30vw, 350px);
+  }
 }
 
 /* Journey Section */

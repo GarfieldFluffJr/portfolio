@@ -159,7 +159,6 @@ export const SwimHome = () => {
                     <img
                       src={team.imageLink}
                       alt={team.imageAltText}
-                      width={250}
                       className={styles.teamsImage}
                     />
                   </div>
