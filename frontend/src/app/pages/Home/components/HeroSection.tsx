@@ -2,7 +2,7 @@ import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 import BounceTitle from "../../../components/BounceTitle";
 
-import useHero from "../../../hooks/useHero";
+import useHero from "../hooks/useHero";
 
 import styles from "../../../styles/modules/homePage.module.css";
 

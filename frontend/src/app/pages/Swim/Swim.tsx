@@ -1,7 +1,20 @@
+import { useState } from "react";
+
 import styles from "../../styles/modules/swimPage.module.css";
 import { FaSwimmer, FaTrophy, FaMedal } from "react-icons/fa";
 
+import useSwim from "./hooks/useSwim";
+
 export const SwimHome = () => {
+  const [swimAboutIsOpen, setSwimAboutIsOpen] = useState(false);
+  const isMobile = useSwim();
+
+  const handleSwimAboutClick = () => {
+    if (isMobile) {
+      setSwimAboutIsOpen((prev) => !prev);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.subContainer}>
@@ -18,7 +31,15 @@ export const SwimHome = () => {
       {/* What Swimming Means to Me Section */}
       <div className={styles.sectionContainer}>
         <h2 className={styles.sectionHeader}>My Message to Swimming</h2>
-        <div className={`${styles.swimCardContainer} card`}>
+        <div
+          className={`${styles.swimCardContainer} card ${
+            isMobile &&
+            (swimAboutIsOpen
+              ? styles.swimCardMobileOpen
+              : styles.swimCardMobileClosed)
+          }`}
+          onClick={handleSwimAboutClick}
+        >
           Dear Swimming:
           <br />
           <br />
@@ -70,6 +91,16 @@ export const SwimHome = () => {
           You made me who I am today.
           <br />
           <br />- Louie
+        </div>
+        <div className="container">
+          {isMobile && (
+            <button
+              className={`big-black-button ${styles.aboutSwimToggleButton}`}
+              onClick={handleSwimAboutClick}
+            >
+              {swimAboutIsOpen ? "Show Less" : "Read More"}
+            </button>
+          )}
         </div>
       </div>
 
