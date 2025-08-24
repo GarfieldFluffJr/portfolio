@@ -13,12 +13,64 @@ export const SwimHome = () => {
         </div>
       </div>
 
-      {/* Add big black button to scroll down to photos */}
+      {/* TODO: Add big black button to scroll down to photos */}
 
       {/* What Swimming Means to Me Section */}
       <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>What Swimming means to Me</h2>
-        <div className={`${styles.swimCardContainer} card`}>Text</div>
+        <h2 className={styles.sectionHeader}>My Message to Swimming</h2>
+        <div className={`${styles.swimCardContainer} card`}>
+          Dear Swimming:
+          <br />
+          <br />
+          I never would have guessed how much of an impact you would have on my
+          life. I began learning to swim at 6 years old and you have played an
+          irreplaceable role in shaping who I am today.
+          <br />
+          <br />
+          As the years flew by, I became a better swimmer. I am able to
+          confidently move in the water and even compete at the national level.
+          Furthermore, I am grateful for the opportunity of giving back to my
+          community in the form of lifeguarding and swim instructing. However,
+          the impact you have had on me extends well beyond the swimming pool.
+          <br />
+          <br />
+          I am able to thrive in high-intensity environments and I find joy in
+          hardship as I work towards my goals. I am able to stay concentrated as
+          I handle my wins and losses and push myself on my off-days. I am able
+          to balance my academics and athletics and stay disciplined as I chase
+          that fulfillment of accomplishing my goals.
+          <br />
+          <br />
+          Thanks to you, I am able to be patient. I prioritize long-term impact
+          and don't let small setbacks upset me. Beyond swimming, this has
+          allowed me to formulate meaningful and deep connections with people I
+          care about.
+          <br />
+          <br />
+          Thanks to you, I am able to be humble. I will always remember where I
+          started and I am so unbelievably grateful of the many opportunities I
+          have had to reach where I am today.
+          <br />
+          <br />
+          Thanks to you, I am able to feel confident. You have raised my
+          self-esteem. I am no longer shy to see myself in a mirror nor let
+          comparison bring me down.
+          <br />
+          <br />
+          Finally, most importantly, I am able to feel proud of myself. I can
+          visibly see the results of my consistent hard work and proudly look
+          back on all the progress I have made. I am proud of setting club
+          records and qualifying for national standards. I am proud of losing my
+          races, being able to reflect, and bounce back. And finally, I am
+          proud. Proud of showing up every single day, early in the morning with
+          the sun still set, leaving my warm bed to embrace the freezing morning
+          breeze without an ounce of motivation.
+          <br />
+          <br />
+          You made me who I am today.
+          <br />
+          <br />- Louie
+        </div>
       </div>
 
       {/* Major Milestones Section */}
