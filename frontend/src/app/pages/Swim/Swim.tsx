@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 import styles from "../../styles/modules/swimPage.module.css";
-import { FaSwimmer, FaTrophy, FaMedal } from "react-icons/fa";
 
 import useSwim from "./hooks/useSwim";
+import { majorMilestones } from "./Data/majorMilestones";
+import { Teams } from "./Data/teams";
 
 export const SwimHome = () => {
   const [swimAboutIsOpen, setSwimAboutIsOpen] = useState(false);
@@ -108,132 +109,63 @@ export const SwimHome = () => {
       <div className={styles.sectionContainer}>
         <h2 className={styles.sectionHeader}>Major Milestones</h2>
         <div className={styles.milestonesContainer}>
-          <div className={styles.milestoneItem}>
-            <div className={styles.milestoneItemLeftBorder} />
-            <div className={styles.milestoneHeader}>
-              <div className={styles.milestoneIcon}>
-                <FaSwimmer />
-              </div>
-              <div className={styles.milestoneRightHeader}>
-                <div className={styles.milestoneItemTitle}>
-                  Varsity Team Selection
+          {majorMilestones.map((milestone, index) => (
+            <div className={styles.milestoneItem} key={index}>
+              <div className={styles.milestoneItemLeftBorder} />
+              <div className={styles.milestoneHeader}>
+                <div className={styles.milestoneIcon}>
+                  <milestone.icon />
                 </div>
-                <div className="grey-caption">Achievement</div>
-                <div className="grey-caption">Sep 2023</div>
-              </div>
-            </div>
-            <div className={styles.milestoneDescription}>
-              Made the University of Waterloo Varsity Swim Team as a freshman,
-              competing in the OUA (Ontario University Athletics) conference.
-            </div>
-          </div>
-
-          <div className={styles.milestoneItem}>
-            <div className={styles.milestoneItemLeftBorder} />
-            <div className={styles.milestoneHeader}>
-              <div className={styles.milestoneIcon}>
-                <FaTrophy />
-              </div>
-              <div className={styles.milestoneRightHeader}>
-                <div className={styles.milestoneItemTitle}>
-                  Provincial Champion
+                <div className={styles.milestoneRightHeader}>
+                  <div className={styles.milestoneItemTitle}>
+                    {milestone.title}
+                  </div>
+                  <div className="grey-caption">{milestone.date}</div>
                 </div>
-                <div className="grey-caption">Gold Medal</div>
-                <div className="grey-caption">Mar 2023</div>
+              </div>
+              <div className={styles.milestoneDescription}>
+                {milestone.description}
               </div>
             </div>
-            <div className={styles.milestoneDescription}>
-              Won gold at the Ontario Provincial Championships in the 200m
-              butterfly, setting a new personal best time of 2:08.45.
-            </div>
-          </div>
-
-          <div className={styles.milestoneItem}>
-            <div className={styles.milestoneItemLeftBorder} />
-            <div className={styles.milestoneHeader}>
-              <div className={styles.milestoneIcon}>
-                <FaMedal />
-              </div>
-              <div className={styles.milestoneRightHeader}>
-                <div className={styles.milestoneItemTitle}>
-                  National Qualifier
-                </div>
-                <div className="grey-caption">Qualifier</div>
-                <div className="grey-caption">Dec 2022</div>
-              </div>
-            </div>
-            <div className={styles.milestoneDescription}>
-              Qualified for Canadian Swimming Championships for the first time,
-              competing in multiple events including 100m and 200m butterfly.
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
       {/* My Families Section */}
       <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>My Families</h2>
-        <div className={styles.familiesContainer}>
-          <div className="card">
-            <div className={styles.familiesHeader}>
-              <div className={styles.familiesInnerHeader}>
-                <div className="grey-caption">2023 - Present</div>
-                <div className={styles.familiesTeam}>Varsity Team</div>
+        <div className={styles.teamsBigContainer}>
+          <div className={styles.teamsContainer}>
+            <h2 className={`${styles.teamsHeader} ${styles.sectionHeader}`}>
+              My Teams
+            </h2>
+            {Teams.map((team, index) => (
+              <div className="card" key={index}>
+                <div className={styles.teamsGrid}>
+                  <div className={styles.teamsLeftContainer}>
+                    <div className={styles.teamsLeftHeaderContainer}>
+                      <div className={`grey-caption`}>{team.duration}</div>
+                      <div className={styles.teamsName}>{team.name}</div>
+                    </div>
+                    <div className={styles.teamsLocation}>{team.location}</div>
+                    <ul className={styles.teamsNotes}>
+                      {team.notes.map((note, i) => (
+                        <li className={styles.teamsNote} key={i}>
+                          {note}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={styles.teamsImageContainer}>
+                    <img
+                      src={team.imageLink}
+                      alt={team.imageAltText}
+                      width={250}
+                      className={styles.teamsImage}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className={styles.familiesLocation}>
-                University of Waterloo
-              </div>
-            </div>
-            <div className={styles.familiesName}>Warriors Swimming</div>
-            <ul className={styles.familiesNotes}>
-              <li className={styles.familiesNote}>
-                OUA Conference Champions (2024)
-              </li>
-              <li className={styles.familiesNote}>
-                USPORTS National Finalists
-              </li>
-              <li className={styles.familiesNote}>Team Captain (2024-2025)</li>
-            </ul>
-          </div>
-
-          <div className="card">
-            <div className={styles.familiesHeader}>
-              <div className={styles.familiesInnerHeader}>
-                <div className="grey-caption">2020 - 2024</div>
-                <div className={styles.familiesTeam}>High School Team</div>
-              </div>
-              <div className={styles.familiesLocation}>
-                Parkdale Collegiate Institute
-              </div>
-            </div>
-            <div className={styles.familiesName}>Parkdale Panthers</div>
-            <ul className={styles.familiesNotes}>
-              <li className={styles.familiesNote}>
-                Toronto District School Board Champions
-              </li>
-              <li className={styles.familiesNote}>Team MVP (2023, 2024)</li>
-              <li className={styles.familiesNote}>
-                School Record Holder - 200m Butterfly
-              </li>
-            </ul>
-          </div>
-
-          <div className="card">
-            <div className={styles.familiesHeader}>
-              <div className={styles.familiesInnerHeader}>
-                <div className="grey-caption">2018 - 2024</div>
-                <div className={styles.familiesTeam}>Club Team</div>
-              </div>
-              <div className={styles.familiesLocation}>Toronto, ON</div>
-            </div>
-            <div className={styles.familiesName}>Toronto Swim Club</div>
-            <ul className={styles.familiesNotes}>
-              <li className={styles.familiesNote}>Provincial Team Member</li>
-              <li className={styles.familiesNote}>
-                National Qualifier (2022-2024)
-              </li>
-              <li className={styles.familiesNote}>Senior Group Captain</li>
-            </ul>
+            ))}
           </div>
         </div>
       </div>

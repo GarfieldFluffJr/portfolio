@@ -171,55 +171,91 @@
 }
 
 /* Families Section */
-.familiesContainer {
+.teamsBigContainer {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
-.familiesHeader {
+.teamsContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 0.5rem;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
 }
 
-.familiesInnerHeader {
+@media (max-width: 1000px) {
+  .teamsContainer {
+    width: 100%;
+  }
+}
+
+.teamsHeader {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.teamsGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.teamsLeftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-right: 0.5rem;
+}
+
+.teamsLeftHeaderContainer {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  justify-content: left;
+  padding-bottom: 0.5rem;
 }
 
-.familiesTeam {
+.teamsName {
   font-size: 1.1rem;
   font-weight: 600;
 }
 
-@media (max-width: 767px) {
-  .familiesHeader {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-  .familiesLocation {
-    font-size: 0.85rem;
-  }
-}
-
-.familiesName {
+.teamsLocation {
   color: var(--text-grey3);
   padding-bottom: 0.5rem;
 }
 
-.familiesNotes {
+@media (max-width: 767px) {
+  .teamsLocation {
+    font-size: 0.85rem;
+  }
+}
+
+.teamsNotes {
   font-size: 0.85rem;
   list-style-type: disc;
   margin-left: 1rem;
 }
 
-.familiesNote {
+.teamsNote {
   padding-left: 0.5rem;
+}
+
+.teamsImageContainer {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center;
+  align-items: center; */
+  justify-content: right;
+  width: 100%;
+  /* margin-top: 0.5rem; */
+}
+
+.teamsImage {
+  border: 1px solid var(--border2);
 }
 
 /* Journey Section */
