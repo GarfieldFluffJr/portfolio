@@ -278,6 +278,10 @@
     min-width: 250px;
     width: min(30vw, 350px);
   }
+
+  .teamsLeftContainer {
+    padding-bottom: 0.5rem;
+  }
 }
 
 /* Journey Section */
