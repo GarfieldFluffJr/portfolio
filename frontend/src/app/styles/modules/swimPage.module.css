@@ -354,3 +354,15 @@
     display: none;
   }
 }
+
+/* Resources */
+.resourcesContainer {
+  /* font-size: 0.95rem; */
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.resourcesContainer > li {
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}

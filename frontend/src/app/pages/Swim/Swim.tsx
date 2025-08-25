@@ -132,7 +132,7 @@ export const SwimHome = () => {
         </div>
       </div>
 
-      {/* My Families Section */}
+      {/* My Teams Section */}
       <div className={styles.sectionContainer}>
         <div className={styles.teamsBigContainer}>
           <div className={styles.teamsContainer}>
@@ -187,6 +187,71 @@ export const SwimHome = () => {
             </div>
           ))}
           <div className={styles.verticalLine} />
+        </div>
+      </div>
+
+      {/* Resources */}
+      <div className={styles.sectionContainer}>
+        <div className={styles.teamsBigContainer}>
+          <div className={styles.teamsContainer}>
+            <h2 className={`${styles.teamsHeader} ${styles.sectionHeader}`}>
+              Swimming Resources
+            </h2>
+            <div className="card">
+              <ul className={styles.resourcesContainer}>
+                <li>
+                  <a
+                    href="https://athletics.uwaterloo.ca/sports/mens-swimming-and-diving/roster"
+                    target="_blank"
+                    rel="noopener"
+                    className="resume-link"
+                  >
+                    Varsity Roster
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.swimrankings.net/index.php?page=athleteDetail&athleteId=4787719&athletePage=PBEST"
+                    className="resume-link"
+                    rel="noopener"
+                    target="_blank"
+                  >
+                    Swim Ranking Stats
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.swimming.ca/"
+                    className="resume-link"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Swimming Canada
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.swimming.ca/time-standards-and-preliminary-competition-information/"
+                    className="resume-link"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Swim Canada National Standards
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.swimontario.com/athletes/time-standards/"
+                    className="resume-link"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Swim Ontario Provincial Standards
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
