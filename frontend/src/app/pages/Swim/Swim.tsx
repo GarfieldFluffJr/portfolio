@@ -204,68 +204,6 @@ export const SwimHome = () => {
             </div>
             <div className={styles.journeyDot} />
           </div>
-
-          <div className={styles.journeyGrid}>
-            <div />
-            <div className="card">
-              <div className={styles.journeyHeader}>
-                <div className={styles.journeyInnerHeader}>
-                  <div className={styles.journeyTitle}>
-                    High School Swimming
-                  </div>
-                  <div className="grey-caption">2020 - 2024</div>
-                </div>
-                <div className={styles.journeySubHeader}>
-                  <div className={styles.journeyTeam}>
-                    Parkdale Collegiate Institute
-                  </div>
-                  <div className={styles.journeyLocation}>Toronto, ON, CA</div>
-                </div>
-              </div>
-              <div className={styles.journeyDescription}>
-                Led the Parkdale Panthers to multiple championships. Set school
-                records and earned MVP honors. Developed leadership skills as
-                team captain and mentor to younger swimmers.
-              </div>
-              <div className={styles.journeyTechList}>
-                <span className="skill">Team Captain</span>
-                <span className="skill">School Records</span>
-                <span className="skill">TDSB Champions</span>
-                <span className="skill">Mentorship</span>
-              </div>
-            </div>
-            <div className={styles.journeyDot} />
-          </div>
-
-          <div className={styles.journeyGrid}>
-            <div />
-            <div className="card">
-              <div className={styles.journeyHeader}>
-                <div className={styles.journeyInnerHeader}>
-                  <div className={styles.journeyTitle}>
-                    Club Swimming Development
-                  </div>
-                  <div className="grey-caption">2018 - 2024</div>
-                </div>
-                <div className={styles.journeySubHeader}>
-                  <div className={styles.journeyTeam}>Toronto Swim Club</div>
-                  <div className={styles.journeyLocation}>Toronto, ON, CA</div>
-                </div>
-              </div>
-              <div className={styles.journeyDescription}>
-                Built the foundation of my swimming career through dedicated
-                training and competition. Progressed from novice to
-                national-level competitor, learning discipline and perseverance.
-              </div>
-              <div className={styles.journeyTechList}>
-                <span className="skill">Technical Development</span>
-                <span className="skill">National Qualifier</span>
-                <span className="skill">Provincial Team</span>
-                <span className="skill">Discipline</span>
-              </div>
-            </div>
-            <div className={styles.journeyDot} />
-          </div>
           <div className={styles.verticalLine} />
         </div>
       </div>
