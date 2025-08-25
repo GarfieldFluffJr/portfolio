@@ -311,21 +311,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.journeyInnerHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@media (max-width: 767px) {
-  .journeyInnerHeader {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-  }
 }
 
 .journeyTitle {
@@ -337,45 +322,6 @@
   .journeyTitle {
     font-size: 1rem;
   }
-}
-
-.journeySubHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 767px) {
-  .journeySubHeader {
-    flex-direction: column;
-    gap: 0.25rem;
-    font-size: 0.85rem;
-    align-items: flex-start;
-  }
-}
-
-.journeyTeam {
-  color: var(--text-grey3);
-}
-
-.journeyLocation {
-  color: var(--text-grey);
-}
-
-.journeyDescription {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--text-grey);
-  margin-bottom: 1rem;
-}
-
-.journeyTechList {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-  flex-wrap: wrap;
 }
 
 .journeyDot {

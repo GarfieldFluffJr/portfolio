@@ -5,6 +5,7 @@ import styles from "../../styles/modules/swimPage.module.css";
 import useSwim from "./hooks/useSwim";
 import { majorMilestones } from "./Data/majorMilestones";
 import { Teams } from "./Data/teams";
+import { journeyItems } from "./Data/journeyItems";
 
 export const SwimHome = () => {
   const [swimAboutIsOpen, setSwimAboutIsOpen] = useState(false);
@@ -173,37 +174,18 @@ export const SwimHome = () => {
       <div className={styles.sectionContainer}>
         <h2 className={styles.sectionHeader}>My Journey</h2>
         <div className={styles.journeyContainer}>
-          <div className={styles.journeyGrid}>
-            <div />
-            <div className="card">
-              <div className={styles.journeyHeader}>
-                <div className={styles.journeyInnerHeader}>
-                  <div className={styles.journeyTitle}>Varsity Swimming</div>
-                  <div className="grey-caption">2023 - Present</div>
-                </div>
-                <div className={styles.journeySubHeader}>
-                  <div className={styles.journeyTeam}>
-                    University of Waterloo Warriors
-                  </div>
-                  <div className={styles.journeyLocation}>Waterloo, ON, CA</div>
+          {journeyItems.map((item, index) => (
+            <div className={styles.journeyGrid} key={index}>
+              <div />
+              <div className="card">
+                <div className={styles.journeyHeader}>
+                  <div className={styles.journeyTitle}>{item.title}</div>
+                  <div className="grey-caption">{item.date}</div>
                 </div>
               </div>
-              <div className={styles.journeyDescription}>
-                Competing at the highest level of university swimming in Canada.
-                Representing the Warriors in the OUA conference and USPORTS
-                nationals. Training 20+ hours per week while balancing academic
-                commitments.
-              </div>
-              <div className={styles.journeyTechList}>
-                <span className="skill">Butterfly</span>
-                <span className="skill">Freestyle</span>
-                <span className="skill">Team Leadership</span>
-                <span className="skill">OUA Conference</span>
-                <span className="skill">USPORTS Nationals</span>
-              </div>
+              <div className={styles.journeyDot} />
             </div>
-            <div className={styles.journeyDot} />
-          </div>
+          ))}
           <div className={styles.verticalLine} />
         </div>
       </div>
