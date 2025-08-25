@@ -253,7 +253,7 @@ export const SwimHome = () => {
         </div>
       </div>
 
-      {/* Still need swimming resources and photos section (add additional photo albums) */}
+      {/* Still need photos section (add additional photo albums), then wave animation */}
     </div>
   );
 };
