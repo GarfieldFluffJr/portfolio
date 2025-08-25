@@ -192,13 +192,11 @@ export const SwimHome = () => {
 
       {/* Resources */}
       <div className={styles.sectionContainer}>
-        <div className={styles.teamsBigContainer}>
-          <div className={styles.teamsContainer}>
-            <h2 className={`${styles.teamsHeader} ${styles.sectionHeader}`}>
-              Swimming Resources
-            </h2>
+        <div className={styles.resourcesBigContainer}>
+          <div className={styles.resourcesContainer}>
+            <h2 className={`${styles.sectionHeader}`}>Swimming Resources</h2>
             <div className="card">
-              <ul className={styles.resourcesContainer}>
+              <ul className={styles.resourcesListContainer}>
                 <li>
                   <a
                     href="https://athletics.uwaterloo.ca/sports/mens-swimming-and-diving/roster"
