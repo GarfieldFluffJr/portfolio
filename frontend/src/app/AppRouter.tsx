@@ -3,12 +3,13 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import { AboutHome as About } from "./pages/About/About";
 import { ProjectsHome as Projects } from "./pages/Projects/Projects";
+import { SwimHome as Swim } from "./pages/Swim/Swim";
 import { ContactHome as Contact } from "./pages/Contact/Contact";
 import { ResumeHome as Resume } from "./pages/Resume/Resume";
 
 import NotFound from "./ui/404NotFound";
 import ScrollToTop from "./ui/ScrollToTop";
-import UnderConstruction from "./ui/UnderConstruction";
+// import UnderConstruction from "./ui/UnderConstruction";
 
 import AppLayout from "./layout/AppLayout";
 
@@ -47,7 +48,7 @@ function AppRouter() {
               path="swim"
               element={
                 <AppLayout title="Swim">
-                  <UnderConstruction />
+                  <Swim />
                 </AppLayout>
               }
             />

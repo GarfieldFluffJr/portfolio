@@ -21,14 +21,28 @@
   --main-hl: #835bb3;
   /* Progress scroll bar */
   --background-grey: #decfe4;
-  /* Skill hover background, caption background, combined with text-grey3, skills focus icon background, skills progress bar container background, work vertical timeline, connect icon circle background */
+  /* Skill hover background, caption background, combined with text-grey3, skills progress bar container background, work vertical timeline, connect icon circle background */
   --purple-highlight: #9d87cc;
   /* Connect icon hover background */
   --error: #e03468;
   --success: #28a745;
+  --blue: #7254c4;
 }
 
 /* Custom colours:
 - Navbar vertical menu background color (.hoverTrigger)
 - Navbar vertical dropdown background color (.dropdown)
 */
+
+/* Swim page specific styling */
+body.swimPage,
+html.swimPage {
+  --main-bg: #e5f5ff;
+  --border1: #bacdd9;
+  --border2: #5c939c;
+  --hover-bg: #A9DEDC;
+  --btn-active: #abdaed;
+  --main-hl: #5baab3;
+  --background-grey: #cfe2e4;
+  --purple-highlight: #87becc;
+}

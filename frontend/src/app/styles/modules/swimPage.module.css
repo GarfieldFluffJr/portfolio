@@ -1,0 +1,388 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3rem;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: var(--text-grey);
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.titleHR {
+  background-color: var(--border2);
+  height: 1px;
+  width: 6rem;
+  min-width: 60px;
+  border: none;
+}
+
+.titleDesc {
+  font-size: 0.9rem;
+  color: var(--text-grey);
+  text-align: center;
+  width: 60vw;
+}
+
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60vw;
+  margin: 2rem 0;
+}
+
+@media (max-width: 1500px) {
+  .sectionContainer {
+    width: 75vw;
+  }
+}
+
+.sectionHeader {
+  color: var(--text-grey);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.swimCardContainer {
+  padding: 2.5rem 2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.swimCardMobileOpen {
+  cursor: pointer;
+}
+
+.swimCardMobileClosed {
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 1.5;
+  max-height: calc(1.5em * 5.9);
+  position: relative;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+
+  /* word-wrap: break-word; */
+  /* -webkit-hyphens: auto;
+  hyphens: auto; */
+}
+
+.aboutSwimToggleButton {
+  margin-top: 0.5rem !important;
+}
+
+/* Milestones Section */
+.milestonesContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .milestonesContainer {
+    flex-direction: column;
+  }
+}
+
+.milestoneItem {
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 8px;
+  background-color: var(--slight-hl);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid var(--border1);
+  padding: 1rem 1.5rem;
+  color: var(--text-grey);
+
+  flex: 1;
+
+  transition: all 0.2s ease;
+}
+
+.milestoneItem:hover {
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border2);
+}
+
+.milestoneItemLeftBorder {
+  position: absolute;
+  background-color: var(--main-hl);
+  height: 100%;
+  width: 5px;
+  left: 0;
+  top: 0;
+}
+
+.milestoneHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  gap: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.milestoneItemTitle {
+  font-weight: 600;
+}
+
+.milestoneIcon {
+  background-color: var(--border1);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1.75rem;
+  height: fit-content;
+}
+
+.milestoneRightHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.milestoneDescription {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-grey3);
+}
+
+/* Teams Section */
+.teamsBigContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.teamsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+}
+
+@media (max-width: 1000px) {
+  .teamsContainer {
+    width: 100%;
+  }
+}
+
+.teamsHeader {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.teamsGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width: 1000px) {
+  .teamsGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.teamsLeftContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-right: 0.5rem;
+}
+
+.teamsLeftHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: left;
+  padding-bottom: 0.5rem;
+}
+
+.teamsName {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.teamsLocation {
+  color: var(--text-grey3);
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+  .teamsLocation {
+    font-size: 0.85rem;
+  }
+}
+
+.teamsNotes {
+  font-size: 0.85rem;
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.teamsNote {
+  padding-left: 0.5rem;
+}
+
+.teamsImageContainer {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center;
+  align-items: center; */
+  justify-content: right;
+  width: 100%;
+  /* margin-top: 0.5rem; */
+}
+
+.teamsImage {
+  border: 1px solid var(--border2);
+  min-width: 250px;
+}
+
+@media (max-width: 1000px) {
+  .teamsImageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teamsImage {
+    min-width: 250px;
+    width: min(30vw, 350px);
+  }
+
+  .teamsLeftContainer {
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Journey Section */
+.journeyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.journeyGrid {
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  gap: 1rem;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .journeyGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.journeyHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.journeyTitle {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .journeyTitle {
+    font-size: 1rem;
+  }
+}
+
+.journeyDot {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--slight-hl);
+  border: 0.25rem solid var(--border2);
+  position: absolute;
+  border-radius: 50%;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+}
+
+.verticalLine {
+  width: 1.5px;
+  height: 100%;
+  position: absolute;
+  background-color: var(--border1);
+  left: 37px;
+  top: 30px;
+}
+
+@media (max-width: 767px) {
+  .verticalLine {
+    display: none;
+  }
+
+  .journeyDot {
+    display: none;
+  }
+}
+
+/* Resources */
+.resourcesListContainer {
+  /* font-size: 0.95rem; */
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.resourcesContainer > li {
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.resourcesBigContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.resourcesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .resourcesContainer {
+    width: 100%;
+  }
+}

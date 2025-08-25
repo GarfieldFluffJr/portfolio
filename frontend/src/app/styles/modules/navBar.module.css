@@ -59,8 +59,15 @@
   }
 }
 
-.navLink {
+.regularNavLink {
   color: var(--text-grey);
+}
+
+.swimNavLink {
+  color: var(--blue);
+}
+
+.navLink {
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -223,7 +230,6 @@
 }
 
 .VnavLink {
-  color: var(--text-grey);
   font-weight: 500;
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;

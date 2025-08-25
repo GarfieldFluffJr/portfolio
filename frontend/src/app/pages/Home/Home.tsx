@@ -72,6 +72,7 @@ export const Home = () => {
       </section>
 
       {/* Technical Skills Section */}
+      {/* TODO: Preload icons */}
       <section className={styles.sectionContainer}>
         <SkillsSection />
       </section>
