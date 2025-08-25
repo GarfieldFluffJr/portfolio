@@ -29,10 +29,17 @@ export const projectsData: Project[] = [
   {
     name: "Portfolio",
     description:
-      "My personal portfolio website built with React, TypeScript, and Tailwind CSS. Showcases everything I've done, ranging from my professional experiences to my swim career! Uses Framer Motion for smooth animations.",
+      "My personal portfolio website built with React, TypeScript, and Tailwind CSS. Showcases everything I've done, ranging from my professional experiences to my swim career! Uses Framer Motion for smooth animations. Backend server was built using Node.js and server-side REST api routes were implemented using Express.js. Resend external api was used for emailing service with rate limiting. Frontend hosted on Vercel and backend on Render, stored in a mono repo.",
     githubLink: "https://github.com/GarfieldFluffJr/portfolio",
     liveLink: "",
     demoLink: "",
-    techStack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Framer Motion",
+    ],
   },
 ];

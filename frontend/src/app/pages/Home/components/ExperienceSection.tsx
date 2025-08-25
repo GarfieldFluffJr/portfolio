@@ -16,7 +16,7 @@ export default function ExperienceSection() {
       company: "Levanta Labs",
       title: "Software Engineer Intern",
       duration: "May 2025 - Aug 2025",
-      logo: "/images/levanta-labs.png",
+      logo: "/images/Home/levanta-labs.png",
       tech: [
         "React",
         "TypeScript",
@@ -33,7 +33,7 @@ export default function ExperienceSection() {
       company: "City of Toronto",
       title: "Lifeguard and Swim Instructor",
       duration: "Apr 2022 - Aug 2024",
-      logo: "/images/city-of-toronto.png",
+      logo: "/images/Home/city-of-toronto.png",
       tech: [
         "National Lifeguard",
         "Standard First-Aid",
