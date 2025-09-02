@@ -38,6 +38,30 @@
   width: 60vw;
 }
 
+.photoAlbumsButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--text-grey);
+  color: var(--slight-hl);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.photoAlbumsButton:hover {
+  background-color: var(--text-grey2);
+  transform: translateY(-1px);
+  box-shadow: var(--slight-box-shadow);
+}
+
 .sectionContainer {
   display: flex;
   flex-direction: column;

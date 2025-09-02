@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { NavLink, useLocation } from "react-router-dom";
 
 import styles from "../../styles/modules/swimPage.module.css";
+
+import { FiArrowRight } from "react-icons/fi";
 
 import useSwim from "./hooks/useSwim";
 import { majorMilestones } from "./Data/majorMilestones";
@@ -8,8 +12,22 @@ import { Teams } from "./Data/teams";
 import { journeyItems } from "./Data/journeyItems";
 
 export const SwimHome = () => {
+  const location = useLocation();
+
   const [swimAboutIsOpen, setSwimAboutIsOpen] = useState(false);
   const isMobile = useSwim();
+
+  useEffect(() => {
+    const hash = location.hash;
+
+    if (hash) {
+      const element = document.querySelector(hash);
+
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   const handleSwimAboutClick = () => {
     if (isMobile) {
@@ -28,7 +46,11 @@ export const SwimHome = () => {
         </div>
       </div>
 
-      {/* TODO: Add big black button to scroll down to photos */}
+      {/* View Photo Albums Button */}
+      <NavLink to="#photos" className={styles.photoAlbumsButton}>
+        <span>View Photo Albums</span>
+        <FiArrowRight size={16} />
+      </NavLink>
 
       {/* What Swimming Means to Me Section */}
       <div className={styles.sectionContainer}>
@@ -254,6 +276,11 @@ export const SwimHome = () => {
       </div>
 
       {/* Still need photos section (add additional photo albums), then wave animation */}
+
+      {/* Album section */}
+      <div className={styles.sectionContainer} id="photos">
+        <h2 className={styles.sectionHeader}>Photo Albums</h2>
+      </div>
     </div>
   );
 };
