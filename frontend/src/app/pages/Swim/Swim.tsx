@@ -285,7 +285,7 @@ export const SwimHome = () => {
           {photoAlbumCovers.map((album, index) => (
             <NavLink
               to={album.destination}
-              className={styles.photoAlbumCard}
+              className={`${styles.photoAlbumCard}`}
               key={index}
             >
               <img
