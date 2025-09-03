@@ -410,3 +410,32 @@
     width: 100%;
   }
 }
+
+/* Photo Album Section */
+.photoAlbumsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.photoAlbumCoverPhoto {
+  border: 1px solid var(--border2);
+  width: 350px;
+}
+
+@media (max-width: 768px) {
+  .photoAlbumsContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 955px) {
+  .photoAlbumCoverPhoto {
+    width: 90%;
+  }
+}

@@ -10,6 +10,7 @@ import useSwim from "./hooks/useSwim";
 import { majorMilestones } from "./Data/majorMilestones";
 import { Teams } from "./Data/teams";
 import { journeyItems } from "./Data/journeyItems";
+import { photoAlbumCovers } from "./Data/photoAlbum";
 
 export const SwimHome = () => {
   const location = useLocation();
@@ -280,6 +281,22 @@ export const SwimHome = () => {
       {/* Album section */}
       <div className={styles.sectionContainer} id="photos">
         <h2 className={styles.sectionHeader}>Photo Albums</h2>
+        <div className={styles.photoAlbumsContainer}>
+          {photoAlbumCovers.map((album, index) => (
+            <NavLink
+              to={album.destination}
+              className={styles.photoAlbumCard}
+              key={index}
+            >
+              <img
+                src={album.photo}
+                alt={album.title}
+                className={styles.photoAlbumCoverPhoto}
+              />
+              <div className={styles.photoAlbumTitle}>{album.title}</div>
+            </NavLink>
+          ))}
+        </div>
       </div>
     </div>
   );
