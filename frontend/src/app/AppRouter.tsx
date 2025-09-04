@@ -6,6 +6,7 @@ import { ProjectsHome as Projects } from "./pages/Projects/Projects";
 import { SwimHome as Swim } from "./pages/Swim/Swim";
 import { ContactHome as Contact } from "./pages/Contact/Contact";
 import { ResumeHome as Resume } from "./pages/Resume/Resume";
+import { SwimCuracaoHome as SwimCuracao } from "./pages/Swim/pages/SwimCuracao";
 
 import NotFound from "./ui/404NotFound";
 import ScrollToTop from "./ui/ScrollToTop";
@@ -44,14 +45,24 @@ function AppRouter() {
                 </AppLayout>
               }
             />
-            <Route
-              path="swim"
-              element={
-                <AppLayout title="Swim">
-                  <Swim />
-                </AppLayout>
-              }
-            />
+            <Route path="swim/">
+              <Route
+                index
+                element={
+                  <AppLayout title="Swim">
+                    <Swim />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="Curacao_2024"
+                element={
+                  <AppLayout title="Curacao 2024">
+                    <SwimCuracao />
+                  </AppLayout>
+                }
+              />
+            </Route>
             <Route
               path="contact"
               element={
