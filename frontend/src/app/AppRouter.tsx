@@ -7,6 +7,8 @@ import { SwimHome as Swim } from "./pages/Swim/Swim";
 import { ContactHome as Contact } from "./pages/Contact/Contact";
 import { ResumeHome as Resume } from "./pages/Resume/Resume";
 import { SwimCuracaoHome as SwimCuracao } from "./pages/Swim/pages/SwimCuracao";
+import { SwimFLLHome as SwimFLL } from "./pages/Swim/pages/SwimFLL";
+import { SwimFirstYearHome as SwimFirstYear } from "./pages/Swim/pages/SwimFirstYear";
 
 import NotFound from "./ui/404NotFound";
 import ScrollToTop from "./ui/ScrollToTop";
@@ -59,6 +61,22 @@ function AppRouter() {
                 element={
                   <AppLayout title="Curacao 2024">
                     <SwimCuracao />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="Fort_Lauderdale_2025"
+                element={
+                  <AppLayout title="Fort Lauderdale 2025">
+                    <SwimFLL />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="UW_First_Year"
+                element={
+                  <AppLayout title="UW First Year">
+                    <SwimFirstYear />
                   </AppLayout>
                 }
               />

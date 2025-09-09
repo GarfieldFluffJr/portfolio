@@ -24,7 +24,6 @@ export const SwimCuracaoHome = () => {
             <img
               src={photo}
               alt={`Curacao 2024 - ${index + 1}`}
-              // className={styles.photo}
               width={350}
             />
           </div>
