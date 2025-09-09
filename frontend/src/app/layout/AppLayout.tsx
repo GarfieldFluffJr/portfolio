@@ -17,7 +17,10 @@ export default function AppLayout({
 
   useEffect(() => {
     // Apply swim page styling to body
-    if (location.pathname === "/swim") {
+    if (
+      location.pathname === "/swim" ||
+      location.pathname.startsWith("/swim/")
+    ) {
       document.body.classList.add("swimPage");
     } else {
       document.body.classList.remove("swimPage");

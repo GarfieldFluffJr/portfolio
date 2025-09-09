@@ -477,3 +477,28 @@
   }
 }
 
+.albumContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoCard {
+  border-radius: 8px;
+  background-color: var(--slight-hl);
+  box-shadow: var(--slight-box-shadow);
+  border: 1px solid black;
+  color: var(--text-grey);
+  overflow: hidden;
+
+  transition: all 0.2s ease;
+}
+
+.photoCard:hover {
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border2);
+}
