@@ -491,7 +491,7 @@
   border-radius: 8px;
   background-color: var(--slight-hl);
   box-shadow: var(--slight-box-shadow);
-  border: 1px solid black;
+  border: 1px solid var(--border2);
   color: var(--text-grey);
   overflow: hidden;
 
@@ -500,5 +500,5 @@
 
 .photoCard:hover {
   box-shadow: var(--box-shadow);
-  border: 1px solid var(--border2);
+  border: 1px solid black;
 }

@@ -31,9 +31,9 @@ export const UW_First_Year: PhotoAlbum = {
   title: "UW First Year (2024-2025)",
   photos: [
     "/images/Swim/UW First Year/1.JPG",
-    "/images/Swim/UW First Year/2.JPEG",
+    "/images/Swim/UW First Year/2.jpg",
     "/images/Swim/UW First Year/3.png",
-    "/images/Swim/UW First Year/4.JPEG",
+    "/images/Swim/UW First Year/4.jpg",
     "/images/Swim/UW First Year/5.JPEG",
     "/images/Swim/UW First Year/6.JPG",
     "/images/Swim/UW First Year/7.png",
