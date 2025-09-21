@@ -41,3 +41,23 @@
   color: black;
   transform: scale(1.05);
 }
+
+.webringContainer {
+  position: absolute;
+  right: 10px;
+}
+
+.webring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: var(--text-grey);
+  gap: 5px;
+  transition: all 0.1s ease-in-out;
+}
+
+.webring:hover {
+  color: black;
+  transform: scale(1.05);
+}

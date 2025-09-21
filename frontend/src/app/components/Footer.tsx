@@ -26,6 +26,22 @@ export default function Footer() {
         </a>
       </div>
       <span>© {new Date().getFullYear()} Louie Yin. Made with ❤️</span>
+      <div className={styles.webringContainer}>
+        <a
+          href="https://se-webring.xyz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.webring}
+        >
+          <img
+            src="/icons/se-webring-icon.svg"
+            alt="Webring icon"
+            width="24"
+            height="24"
+          />
+          <span>SE Webring</span>
+        </a>
+      </div>
     </footer>
   );
 }
