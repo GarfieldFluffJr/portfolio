@@ -9,6 +9,14 @@ type Experience = {
 
 export const experienceData: Experience[] = [
   {
+    company: "Gale (YC W25)",
+    location: "San Francisco, CA, USA",
+    position: "Software Engineer Intern",
+    duration: "Oct 2025 - Present",
+    description: "Incoming Winter 2026",
+    tech: [],
+  },
+  {
     company: "Levanta Labs",
     location: "Toronto, ON, CA",
     position: "Software Engineer Intern",

@@ -13,6 +13,15 @@ type Experience = {
 export default function ExperienceSection() {
   const experiences: Experience[] = [
     {
+      company: "Gale (YC W25)",
+      title: "Software Engineer Intern",
+      duration: "Incoming Winter 2026",
+      logo: "/images/Home/gale.jpeg",
+      tech: ["🚀 Automating Visas"],
+      location: "San Francisco, CA, USA",
+      link: "https://galevisa.com/",
+    },
+    {
       company: "Levanta Labs",
       title: "Software Engineer Intern",
       duration: "May 2025 - Aug 2025",
