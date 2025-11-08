@@ -31,6 +31,7 @@ import {
   SiAutocad,
   SiRaspberrypi,
   SiOpenai,
+  SiScala,
 } from "react-icons/si";
 
 type FocusSkill = {
@@ -182,6 +183,10 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiCplusplus size={14} />
                     <span>C++</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiScala size={14} />
+                    <span>Scala</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiHtml5 size={14} />
