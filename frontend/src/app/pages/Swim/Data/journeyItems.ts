@@ -5,6 +5,10 @@ type Journey = {
 
 export const journeyItems: Journey[] = [
   {
+    title: "2025 Divisionals Athlete of the Week",
+    date: "Nov 2025",
+  },
+  {
     title: "Rookie of the Year Award Recipient",
     date: "Apr 2025",
   },
