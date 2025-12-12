@@ -42,4 +42,13 @@ export const projectsData: Project[] = [
       "Framer Motion",
     ],
   },
+  {
+    name: "Terence",
+    description:
+      "Terence is a Python package that significantly simplifies the GitHub API to allow for the retrieval of file contents of public GitHub repositories. Once a Terence class instance is authenticated with a GitHub developer token, it can fetch the contents and information of a repository with one method call. Terence is fully built using Python and the GitHub API, and is published on PyPi using Twine. Terence has been tested substantially with manual python test cases and pytest suites which are both available on GitHub. Furthermore, CI/CD workflows have been implemented to automatically matrix test different python environments on all client pytest suites on every commit, and Terence will automatically be updated on PyPi on every release on GitHub. You can view the documentation on GitHub.",
+    githubLink: "https://github.com/GarfieldFluffJr/Terence",
+    liveLink: "https://pypi.org/project/terence/",
+    demoLink: "",
+    techStack: ["Python", "GitHub API", "PyTest"],
+  },
 ];
