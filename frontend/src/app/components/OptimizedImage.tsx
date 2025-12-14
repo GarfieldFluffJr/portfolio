@@ -54,21 +54,37 @@ export default function OptimizedImage({
     ...style,
   };
 
+  const placeholderStyle: CSSProperties = {
+    width: width ? `${width}px` : "100%",
+    height: height ? `${height}px` : "auto",
+    backgroundColor: "#f0f0f0",
+    animation: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+    ...style,
+  };
+
+  // If not in view yet, render placeholder to prevent layout collapse
+  if (!isInView) {
+    return (
+      <div
+        ref={imgRef}
+        className={className}
+        style={placeholderStyle}
+        aria-label={`Loading ${alt}`}
+      />
+    );
+  }
+
   return (
-    <>
-      {isInView && (
-        <img
-          ref={imgRef}
-          src={src}
-          alt={alt}
-          width={width}
-          height={height}
-          className={className}
-          onLoad={() => setIsLoaded(true)}
-          style={imageStyle}
-          loading={priority ? "eager" : "lazy"} // Native lazy loading as fallback
-        />
-      )}
-    </>
+    <img
+      ref={imgRef}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      onLoad={() => setIsLoaded(true)}
+      style={imageStyle}
+      loading={priority ? "eager" : "lazy"} // Native lazy loading as fallback
+    />
   );
 }
