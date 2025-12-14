@@ -22,6 +22,10 @@
   .icon {
     display: none;
   }
+
+  .webringContainer {
+    display: none;
+  }
 }
 
 .iconContainer {
