@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from "../styles/modules/progressBar.module.css";
 import { useLocation } from "react-router-dom";
 
@@ -10,7 +10,7 @@ interface ScrollProgressBarProps {
 export default function ProgressBar({
   className = "",
 }: ScrollProgressBarProps) {
-  const [progress, setProgress] = useState<number>(0);
+  const progressBarRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -23,9 +23,11 @@ export default function ProgressBar({
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-      if (scrollHeight > 0) {
+      if (scrollHeight > 0 && progressBarRef.current) {
         const progressPercentage = (scrollTop / scrollHeight) * 100;
-        setProgress(Math.min(100, Math.max(0, progressPercentage)));
+        const clampedProgress = Math.min(100, Math.max(0, progressPercentage));
+        // Direct DOM manipulation to avoid React re-renders
+        progressBarRef.current.style.width = `${clampedProgress}%`;
       }
 
       ticking = false;
@@ -48,7 +50,7 @@ export default function ProgressBar({
 
   return (
     <div className={`${styles.progressContainer} ${className}`}>
-      <div className={barClass} style={{ width: `${progress}%` }} />
+      <div ref={progressBarRef} className={barClass} style={{ width: "0%" }} />
     </div>
   );
 }

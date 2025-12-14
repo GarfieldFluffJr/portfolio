@@ -1,13 +1,8 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { memo } from "react";
 
-export default function BounceTitle({ text }: { text: string }) {
-  const [animationKey, setAnimationKey] = useState(0);
+function BounceTitle({ text }: { text: string }) {
   const totalChars = text.length;
-
-  useEffect(() => {
-    setAnimationKey((prev) => prev + 1);
-  }, []);
 
   return (
     <div>
@@ -15,10 +10,10 @@ export default function BounceTitle({ text }: { text: string }) {
         const bounceHeight = -30 + (index / totalChars) * 25;
         return (
           <motion.span
-            key={`${animationKey}-${index}`}
+            key={index}
             initial={{ y: 0 }}
             animate={{ y: [0, bounceHeight, 0] }}
-            style={{ display: "inline-block" }}
+            style={{ display: "inline-block", willChange: "transform" }}
             transition={{
               duration: 0.5,
               delay: index * 0.075,
@@ -32,3 +27,5 @@ export default function BounceTitle({ text }: { text: string }) {
     </div>
   );
 }
+
+export default memo(BounceTitle);
