@@ -1,4 +1,5 @@
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { SiX } from "react-icons/si";
 
 import styles from "../styles/modules/footer.module.css";
 
@@ -22,6 +23,24 @@ export default function Footer() {
           className={styles.icon}
         >
           <FiLinkedin size={20} />
+          {}
+        </a>
+        <a
+          href="https://x.com/louiefatooey"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.icon}
+        >
+          <SiX size={20} />
+          {}
+        </a>
+        <a
+          href="mailto:l5yin@uwaterloo.ca"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.icon}
+        >
+          <FiMail size={20} />
           {}
         </a>
       </div>
