@@ -1,6 +1,7 @@
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 import BounceTitle from "../../../components/BounceTitle";
+import OptimizedImage from "../../../components/OptimizedImage";
 
 import useHero from "../hooks/useHero";
 
@@ -58,33 +59,37 @@ export default function HeroSection() {
           </div>
         </a>
       </div>
-      <img
-        src={"/images/Home/Jollibee.jpeg"}
-        alt={`Jollibee person image`}
+      <OptimizedImage
+        src="/images/Home/Jollibee.jpeg"
+        alt="Jollibee person image"
         className={`${styles.heroImage} ${
           imagesLoaded ? styles.heroImageJollibee : ""
         }`}
+        priority={true}
       />
-      <img
-        src={"/images/Home/OUA.jpeg"}
-        alt={`OUA medal image`}
+      <OptimizedImage
+        src="/images/Home/OUA.jpeg"
+        alt="OUA medal image"
         className={`${styles.heroImage} ${
           imagesLoaded ? styles.heroImageOUA : ""
         }`}
+        priority={true}
       />
-      <img
-        src={"/images/Home/Garfield.jpg"}
-        alt={`Garfield ice cream image`}
+      <OptimizedImage
+        src="/images/Home/Garfield.jpg"
+        alt="Garfield ice cream image"
         className={`${styles.heroImage} ${
           imagesLoaded ? styles.heroImageGarfield : ""
         }`}
+        priority={true}
       />
-      <img
-        src={"/images/Home/handwriting.png"}
-        alt={`Handwriting image`}
+      <OptimizedImage
+        src="/images/Home/handwriting.png"
+        alt="Handwriting image"
         className={`${styles.heroImageHandwritingInitial} ${
           imagesLoaded ? styles.heroImageHandwriting : ""
         }`}
+        priority={true}
       />
     </div>
   );

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import { FiPlay, FiGithub, FiExternalLink, FiArrowRight } from "react-icons/fi";
+import OptimizedImage from "../../../components/OptimizedImage";
 
 import styles from "../../../styles/modules/homePage.module.css";
 
@@ -62,7 +63,11 @@ export default function ProjectsSection() {
           <div key={i} className={styles.projectsCard}>
             {proj.demoLink !== "" ? (
               <div className={styles.projectsImage}>
-                <img src={proj.image} alt={`${proj.name} image`} width={400} />
+                <OptimizedImage
+                  src={proj.image}
+                  alt={`${proj.name} image`}
+                  width={400}
+                />
 
                 <a href={proj.demoLink} target="_blank">
                   <div className={styles.projectsImageLink}>
@@ -73,7 +78,11 @@ export default function ProjectsSection() {
               </div>
             ) : (
               <div className={styles.projectsImageNoLink}>
-                <img src={proj.image} alt={`${proj.name} image`} width={400} />
+                <OptimizedImage
+                  src={proj.image}
+                  alt={`${proj.name} image`}
+                  width={400}
+                />
               </div>
             )}
             <div className={styles.projectsCardText}>
