@@ -8,6 +8,8 @@ interface Star {
   size: number;
   duration: number;
   delay: number;
+  driftX: number; // drift distance in vw
+  driftY: number; // drift distance in vh
 }
 
 // Star SVG Component
@@ -40,6 +42,8 @@ export default function StarfieldBackground() {
       size: Math.random() * 20 + 10, // Size between 10-30px for star visibility
       duration: Math.random() * 4 + 3, // Duration between 3-7 seconds (longer lifespan)
       delay: 0,
+      driftX: (Math.random() - 0.5) * 30, // -15 to +15vw
+      driftY: (Math.random() - 0.5) * 30, // -15 to +15vh
     };
   }, []);
 
@@ -80,39 +84,41 @@ export default function StarfieldBackground() {
       }}
     >
       <AnimatePresence>
-        {stars.map((star) => (
-          <motion.div
-            key={star.id}
-            initial={{
-              opacity: 0,
-              scale: 0,
-              x: `${star.x}vw`,
-              y: `${star.y}vh`,
-            }}
-            animate={{
-              opacity: [0, 1, 1, 0],
-              scale: [0, 1, 1, 0],
-              x: `${star.x + (Math.random() - 0.5) * 10}vw`, // Drift horizontally
-              y: `${star.y + (Math.random() - 0.5) * 10}vh`, // Drift vertically
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0,
-            }}
-            transition={{
-              duration: star.duration,
-              ease: "easeInOut",
-              times: [0, 0.2, 0.8, 1], // Fade in quick, stay, fade out
-            }}
-            onAnimationComplete={() => removeStar(star.id)}
-            style={{
-              position: "absolute",
-              filter: `drop-shadow(0 0 ${star.size * 0.3}px rgba(255, 239, 213, 0.25))`,
-            }}
-          >
-            <StarSVG size={star.size} />
-          </motion.div>
-        ))}
+        {stars.map((star) => {
+          const fadeTime = 0.3; // Fade in/out time in seconds
+
+          return (
+            <motion.div
+              key={star.id}
+              initial={{
+                opacity: 0,
+                x: `${star.x}vw`,
+                y: `${star.y}vh`,
+              }}
+              animate={{
+                opacity: [0, 1, 1, 0], // Fade in, stay visible, fade out
+                x: `${star.x + star.driftX}vw`,
+                y: `${star.y + star.driftY}vh`,
+              }}
+              transition={{
+                duration: star.duration,
+                ease: "linear",
+                opacity: {
+                  duration: star.duration,
+                  times: [0, fadeTime / star.duration, 1 - fadeTime / star.duration, 1],
+                  ease: "easeInOut",
+                },
+              }}
+              onAnimationComplete={() => removeStar(star.id)}
+              style={{
+                position: "absolute",
+                filter: `drop-shadow(0 0 ${star.size * 0.3}px rgba(255, 239, 213, 0.25))`,
+              }}
+            >
+              <StarSVG size={star.size} />
+            </motion.div>
+          );
+        })}
       </AnimatePresence>
     </div>
   );
