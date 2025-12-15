@@ -10,6 +10,25 @@ interface Star {
   delay: number;
 }
 
+// Star SVG Component
+const StarSVG = ({ size }: { size: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+      fill="#FCFCB3"
+      stroke="#000000"
+      strokeWidth="0.4"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 export default function StarfieldBackground() {
   const [stars, setStars] = useState<Star[]>([]);
 
@@ -18,8 +37,8 @@ export default function StarfieldBackground() {
       id: Math.random(),
       x: Math.random() * 100, // Random X position (0-100%)
       y: Math.random() * 100, // Random Y position (0-100%)
-      size: Math.random() * 3 + 1, // Size between 1-4px
-      duration: Math.random() * 3 + 2, // Duration between 2-5 seconds
+      size: Math.random() * 20 + 10, // Size between 10-30px for star visibility
+      duration: Math.random() * 4 + 3, // Duration between 3-7 seconds (longer lifespan)
       delay: 0,
     };
   }, []);
@@ -88,14 +107,11 @@ export default function StarfieldBackground() {
             onAnimationComplete={() => removeStar(star.id)}
             style={{
               position: "absolute",
-              width: star.size,
-              height: star.size,
-              borderRadius: "50%",
-              background: `radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(157, 135, 204, 0.6) 50%, transparent 100%)`,
-              boxShadow: `0 0 ${star.size * 2}px rgba(157, 135, 204, 0.8)`,
-              filter: "blur(0.5px)",
+              filter: `drop-shadow(0 0 ${star.size * 0.3}px rgba(255, 239, 213, 0.25))`,
             }}
-          />
+          >
+            <StarSVG size={star.size} />
+          </motion.div>
         ))}
       </AnimatePresence>
     </div>
