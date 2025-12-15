@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import ProgressBar from "../components/ProgressBar";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import StarfieldBackground from "../components/StarfieldBackground";
 
 export default function AppLayout({
   children,
@@ -33,7 +34,8 @@ export default function AppLayout({
   }, [location.pathname]);
 
   return (
-    <div className="relative">
+    <div className="relative" style={{ position: "relative", zIndex: 1 }}>
+      <StarfieldBackground />
       <ProgressBar />
       <Navigation />
       <div>{children}</div>
