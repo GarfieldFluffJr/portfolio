@@ -48,8 +48,8 @@ export default function StarfieldBackground() {
   }, []);
 
   useEffect(() => {
-    // Create initial stars
-    const initialStars = Array.from({ length: 20 }, () => createStar());
+    // Start with just a few stars for a natural look
+    const initialStars = Array.from({ length: 3 }, () => createStar());
     setStars(initialStars);
 
     // Spawn new stars at random intervals
@@ -79,7 +79,7 @@ export default function StarfieldBackground() {
         width: "100vw",
         height: "100vh",
         pointerEvents: "none", // Allow clicks to pass through
-        zIndex: 0, // Behind content
+        zIndex: -1, // Behind all content
         overflow: "hidden",
       }}
     >
