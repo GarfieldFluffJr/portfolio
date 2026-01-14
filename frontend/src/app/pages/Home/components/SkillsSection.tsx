@@ -32,6 +32,8 @@ import {
   SiRaspberrypi,
   SiOpenai,
   SiScala,
+  SiLatex,
+  SiFastapi,
 } from "react-icons/si";
 
 type FocusSkill = {
@@ -55,7 +57,7 @@ export default function SkillsSection() {
     {
       tech: "React, Next.js, Astro",
       level: "Advanced",
-      percentage: "90",
+      percentage: "95",
     },
   ];
 
@@ -78,7 +80,7 @@ export default function SkillsSection() {
     {
       tech: "MySQL, PostgreSQL, MongoDB",
       level: "Proficient",
-      percentage: "73",
+      percentage: "78",
     },
   ];
   return (
@@ -200,6 +202,14 @@ export default function SkillsSection() {
                     <SiMarkdown size={14} />
                     <span>Markdown</span>
                   </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiLatex size={14} />
+                    <span>LaTeX</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <FiCode size={14} />
+                    <span>Assembly</span>
+                  </div>
                 </div>
               </div>
               <div className={styles.skillsAllWrapper}>
@@ -222,6 +232,10 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiExpress size={14} />
                     <span>Express.js</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiFastapi size={14} />
+                    <span>FastAPI</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiAstro size={14} />
