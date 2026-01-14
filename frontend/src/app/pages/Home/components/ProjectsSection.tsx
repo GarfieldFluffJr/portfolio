@@ -21,7 +21,7 @@ export default function ProjectsSection() {
     {
       name: "Cook Buddy",
       description:
-        "A friendly, interactive AI assistant who not only cooks alongside you but adapts recipes to fit whatever ingredients you have on hand. ",
+        "A friendly, interactive AI assistant who not only cooks alongside you but adapts recipes to fit whatever ingredients you have on hand.",
       image: "/images/Home/cook-buddy.png",
       tech: [
         "Python",
@@ -38,10 +38,35 @@ export default function ProjectsSection() {
       liveLink: "",
     },
     {
+      name: "MindView",
+      description:
+        "An interactive 3D brain viewer built for physicians that clearly visualizes tumor progression across multiple timepoints,with collaborative tools for faster, shared clinical decisions.",
+      image: "/images/Home/MindView.png",
+      tech: [
+        "JS/TS",
+        "Next.js",
+        "Python",
+        "FastAPI",
+        "MongoDB",
+        "Tensorflow",
+        "Gemini API"
+      ],
+      demoLink: "https://youtu.be/9CTsuVTGyxg",
+      gitHubLink: "https://github.com/GarfieldFluffJr/MindView",
+      liveLink: "https://mind-view-gamma.vercel.app/",
+    },
+    {
       name: "Portfolio",
       description: "My own portfolio site! Made with ❤️",
       image: "/images/Home/portfolio3.png",
-      tech: ["React", "TypeScript", "Tailwind.css", "Node.js", "Express.js", "Framer-Motion"],
+      tech: [
+        "React",
+        "TypeScript",
+        "Tailwind.css",
+        "Node.js",
+        "Express.js",
+        "Framer-Motion",
+      ],
       demoLink: "",
       gitHubLink: "https://github.com/GarfieldFluffJr/portfolio",
       liveLink: "",
