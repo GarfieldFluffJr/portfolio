@@ -27,6 +27,24 @@ export const projectsData: Project[] = [
     ],
   },
   {
+    name: "MindView",
+    description:
+      "An interactive 3D brain viewer built for physicians that clearly visualizes tumor progression across multiple timepoints,with collaborative tools for faster, shared clinical decisions. -- https://devpost.com/software/mindview --",
+    githubLink: "https://github.com/GarfieldFluffJr/MindView",
+    liveLink: "https://mind-view-gamma.vercel.app/",
+    demoLink: "https://youtu.be/9CTsuVTGyxg",
+    techStack: [
+      "JavaScript",
+      "TypeScript",
+      "Next.js",
+      "Python",
+      "FastAPI",
+      "MongoDB",
+      "Tensorflow",
+      "Gemini API",
+    ],
+  },
+  {
     name: "Portfolio",
     description:
       "My personal portfolio website built with React, TypeScript, and Tailwind CSS. Showcases everything I've done, ranging from my professional experiences to my swim career! Uses Framer Motion for smooth animations. Backend server was built using Node.js and server-side REST api routes were implemented using Express.js. Resend external api was used for emailing service with rate limiting. Frontend hosted on Vercel and backend on Render, stored in a mono repo.",
