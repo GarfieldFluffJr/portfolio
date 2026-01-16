@@ -9,6 +9,7 @@ import { ResumeHome as Resume } from "./pages/Resume/Resume";
 import { SwimCuracaoHome as SwimCuracao } from "./pages/Swim/pages/SwimCuracao";
 import { SwimFLLHome as SwimFLL } from "./pages/Swim/pages/SwimFLL";
 import { SwimFirstYearHome as SwimFirstYear } from "./pages/Swim/pages/SwimFirstYear";
+import { SwimCuracao2Home as SwimCuracao2 } from "./pages/Swim/pages/SwimCuracao2";
 
 import NotFound from "./ui/404NotFound";
 import ScrollToTop from "./ui/ScrollToTop";
@@ -77,6 +78,14 @@ function AppRouter() {
                 element={
                   <AppLayout title="UW First Year">
                     <SwimFirstYear />
+                  </AppLayout>
+                }
+              />
+              <Route
+                path="Curacao_2026"
+                element={
+                  <AppLayout title="Curcao 2026">
+                    <SwimCuracao2 />
                   </AppLayout>
                 }
               />

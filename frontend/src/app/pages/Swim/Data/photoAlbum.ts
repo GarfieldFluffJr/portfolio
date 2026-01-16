@@ -6,6 +6,11 @@ type PhotoAlbumCover = {
 
 export const photoAlbumCovers: PhotoAlbumCover[] = [
   {
+    title: "Curacao 2026",
+    photo: "images/Swim/Curacao 2026/1.jpg",
+    destination: "Curacao_2026",
+  },
+  {
     title: "UW First Year (2024-2025)",
     photo: "/images/Swim/UW First Year/1.JPG",
     destination: "UW_First_Year",
@@ -72,5 +77,24 @@ export const Curacao_2024: PhotoAlbum = {
     "/images/Swim/Curacao 2024/7.JPG",
     "/images/Swim/Curacao 2024/8.JPG",
     "/images/Swim/Curacao 2024/9.png",
+  ],
+};
+
+export const Curacao_2026: PhotoAlbum = {
+  title: "Curacao 2026",
+  photos: [
+    "/images/Swim/Curacao 2026/1.jpg",
+    "/images/Swim/Curacao 2026/2.jpeg",
+    "/images/Swim/Curacao 2026/3.jpg",
+    "/images/Swim/Curacao 2026/4.JPG",
+    "/images/Swim/Curacao 2026/5.jpg",
+    "/images/Swim/Curacao 2026/6.JPG",
+    "/images/Swim/Curacao 2026/7.jpg",
+    "/images/Swim/Curacao 2026/8.JPG",
+    "/images/Swim/Curacao 2026/9.jpg",
+    "/images/Swim/Curacao 2026/10.JPG",
+    "/images/Swim/Curacao 2026/11.jpg",
+    "/images/Swim/Curacao 2026/12.jpg",
+    "/images/Swim/Curacao 2026/13.jpg",
   ],
 };
