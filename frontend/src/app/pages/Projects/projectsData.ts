@@ -42,6 +42,7 @@ export const projectsData: Project[] = [
       "MongoDB",
       "Tensorflow",
       "Gemini API",
+      "Three.js"
     ],
   },
   {

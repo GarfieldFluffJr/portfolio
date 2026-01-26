@@ -49,7 +49,8 @@ export default function ProjectsSection() {
         "FastAPI",
         "MongoDB",
         "Tensorflow",
-        "Gemini API"
+        "Gemini API",
+        "3.js"
       ],
       demoLink: "https://youtu.be/9CTsuVTGyxg",
       gitHubLink: "https://github.com/GarfieldFluffJr/MindView",
