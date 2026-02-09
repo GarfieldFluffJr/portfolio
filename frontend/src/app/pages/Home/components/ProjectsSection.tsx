@@ -19,6 +19,22 @@ export default function ProjectsSection() {
   // For the links, put "" to make element disappear
   const projects: Project[] = [
     {
+      name: "MacNewFile",
+      description:
+        "MacNewFile is a downloadable application which modifies the Finder right-click menu on MacOS.",
+      image: "/images/Home/MacNewFile.png",
+      tech: [
+        "Objective-C",
+        "Xcode",
+        "Finder Extension",
+        "Homebrew Install",
+        "300+ Users",
+      ],
+      demoLink: "https://youtu.be/RFxfSQ_tTjo",
+      gitHubLink: "https://github.com/GarfieldFluffJr/MacNewFile",
+      liveLink: "",
+    },
+    {
       name: "Cook Buddy",
       description:
         "A friendly, interactive AI assistant who not only cooks alongside you but adapts recipes to fit whatever ingredients you have on hand.",
@@ -50,27 +66,11 @@ export default function ProjectsSection() {
         "MongoDB",
         "Tensorflow",
         "Gemini API",
-        "3.js"
+        "3.js",
       ],
       demoLink: "https://youtu.be/9CTsuVTGyxg",
       gitHubLink: "https://github.com/GarfieldFluffJr/MindView",
       liveLink: "https://mind-view-gamma.vercel.app/",
-    },
-    {
-      name: "Portfolio",
-      description: "My own portfolio site! Made with ❤️",
-      image: "/images/Home/portfolio3.png",
-      tech: [
-        "React",
-        "TypeScript",
-        "Tailwind.css",
-        "Node.js",
-        "Express.js",
-        "Framer-Motion",
-      ],
-      demoLink: "",
-      gitHubLink: "https://github.com/GarfieldFluffJr/portfolio",
-      liveLink: "",
     },
   ];
   return (
