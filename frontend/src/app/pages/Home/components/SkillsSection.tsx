@@ -59,12 +59,12 @@ export default function SkillsSection() {
     {
       tech: "CSS, Tailwind.css",
       level: "Advanced",
-      percentage: "98",
+      percentage: "97",
     },
     {
       tech: "React, Next.js, Astro",
       level: "Advanced",
-      percentage: "98",
+      percentage: "97",
     },
   ];
 
