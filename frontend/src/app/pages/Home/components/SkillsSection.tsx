@@ -1,6 +1,7 @@
 import styles from "../../../styles/modules/homePage.module.css";
 
 import { FiCode, FiDatabase, FiMonitor } from "react-icons/fi";
+import { FaJava } from "react-icons/fa";
 import {
   SiJavascript,
   SiTypescript,
@@ -34,6 +35,11 @@ import {
   SiScala,
   SiLatex,
   SiFastapi,
+  SiXcode,
+  SiSwift,
+  SiSpringboot,
+  SiKubernetes,
+  SiAnthropic,
 } from "react-icons/si";
 
 type FocusSkill = {
@@ -187,6 +193,18 @@ export default function SkillsSection() {
                     <span>C++</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
+                    <FiCode size={14} />
+                    <span>Obj-C</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiSwift size={14} />
+                    <span>Swift</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <FaJava size={14} />
+                    <span>Java</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
                     <SiScala size={14} />
                     <span>Scala</span>
                   </div>
@@ -238,6 +256,10 @@ export default function SkillsSection() {
                     <span>FastAPI</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
+                    <SiSpringboot size={14} />
+                    <span>Spring Boot</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
                     <SiAstro size={14} />
                     <span>Astro</span>
                   </div>
@@ -285,8 +307,16 @@ export default function SkillsSection() {
                     <span>GitHub</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
+                    <SiXcode size={14} />
+                    <span>Xcode</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
                     <SiDocker size={14} />
                     <span>Docker</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiKubernetes size={14} />
+                    <span>Kubernetes</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiFigma size={14} />
@@ -311,6 +341,10 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiOpenai size={14} />
                     <span>OpenAI</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiAnthropic size={14} />
+                    <span>Claude Code</span>
                   </div>
                 </div>
               </div>
