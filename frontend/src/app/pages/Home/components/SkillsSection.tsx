@@ -40,6 +40,7 @@ import {
   SiSpringboot,
   SiKubernetes,
   SiAnthropic,
+  SiRedis,
 } from "react-icons/si";
 
 type FocusSkill = {
@@ -52,41 +53,41 @@ export default function SkillsSection() {
   const frontend: FocusSkill[] = [
     {
       tech: "JavaScript, TypeScript",
-      level: "Advanced",
-      percentage: "95",
+      level: "Expert",
+      percentage: "100",
     },
     {
       tech: "CSS, Tailwind.css",
       level: "Advanced",
-      percentage: "95",
+      percentage: "98",
     },
     {
       tech: "React, Next.js, Astro",
       level: "Advanced",
-      percentage: "95",
+      percentage: "98",
     },
   ];
 
   const backend: FocusSkill[] = [
     {
       tech: "Node.js, Express.js, RESTful APIs",
-      level: "Advanced",
-      percentage: "95",
+      level: "Expert",
+      percentage: "100",
     },
     {
-      tech: "Docker",
+      tech: "Python, FastAPI, Flask",
+      level: "Advanced",
+      percentage: "90",
+    },
+    {
+      tech: "MySQL, PostgreSQL, MongoDB, Redis",
       level: "Advanced",
       percentage: "88",
     },
     {
-      tech: "Python, C, C++",
+      tech: "Docker, Kubernetes",
       level: "Proficient",
-      percentage: "80",
-    },
-    {
-      tech: "MySQL, PostgreSQL, MongoDB",
-      level: "Proficient",
-      percentage: "78",
+      percentage: "83",
     },
   ];
   return (
@@ -278,6 +279,10 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiMongodb size={14} />
                     <span>MongoDB</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiRedis size={14} />
+                    <span>Redis</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiSocketdotio size={14} />
