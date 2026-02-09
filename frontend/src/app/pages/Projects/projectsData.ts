@@ -73,7 +73,7 @@ export const projectsData: Project[] = [
   {
     name: "MacNewFile",
     description:
-      "MacNewFile is a downloadable application which modifies the Finder right-click menu on MacOS. It adds missing features such as creating new files (word, text, excel), copying the current filepath, and opening a new terminal instance. Built on Xcode with the Finder Extension. Within a week, it has reached 35 GitHub stars, 300+ users, and 3k+ project views!",
+      "MacNewFile is a downloadable application which modifies the Finder right-click menu on MacOS. It adds missing features such as creating new files (word, text, excel), copying the current filepath, and opening a new terminal instance. Built on Xcode with the Finder Extension and available for download via zip or Homebrew. Within a week, it has reached 35 GitHub stars, 300+ users, and 3k+ project views!",
     githubLink: "https://github.com/GarfieldFluffJr/MacNewFile",
     liveLink: "",
     demoLink: "https://youtu.be/RFxfSQ_tTjo",
