@@ -42,7 +42,7 @@ export const projectsData: Project[] = [
       "MongoDB",
       "Tensorflow",
       "Gemini API",
-      "Three.js"
+      "Three.js",
     ],
   },
   {
@@ -69,5 +69,14 @@ export const projectsData: Project[] = [
     liveLink: "https://pypi.org/project/terence/",
     demoLink: "",
     techStack: ["Python", "GitHub API", "PyTest"],
+  },
+  {
+    name: "MacNewFile",
+    description:
+      "MacNewFile is a downloadable application which modifies the Finder right-click menu on MacOS. It adds missing features such as creating new files (word, text, excel), copying the current filepath, and opening a new terminal instance. Built on Xcode with the Finder Extension. Within a week, it has reached 35 GitHub stars, 300+ users, and 3k+ project views!",
+    githubLink: "https://github.com/GarfieldFluffJr/MacNewFile",
+    liveLink: "",
+    demoLink: "https://youtu.be/RFxfSQ_tTjo",
+    techStack: ["Objective-C", "Xcode"],
   },
 ];
