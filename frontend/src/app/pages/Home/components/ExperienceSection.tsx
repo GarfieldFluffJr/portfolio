@@ -15,7 +15,7 @@ export default function ExperienceSection() {
     {
       company: "Gale (YC W25)",
       title: "Software Engineer Intern",
-      duration: "Incoming Winter 2026",
+      duration: "Jan 2026 - Apr 2026",
       logo: "/images/Home/gale.jpeg",
       tech: ["🚀 Automating Visas"],
       location: "San Francisco, CA, USA",
