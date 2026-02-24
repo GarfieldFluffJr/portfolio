@@ -41,6 +41,10 @@ import {
   SiKubernetes,
   SiAnthropic,
   SiRedis,
+  SiShadcnui,
+  SiFramer,
+  SiThreedotjs,
+  SiGooglegemini,
 } from "react-icons/si";
 
 type FocusSkill = {
@@ -292,6 +296,22 @@ export default function SkillsSection() {
                     <SiFlask size={14} />
                     <span>Flask</span>
                   </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiShadcnui size={14} />
+                    <span>shadcn/ui</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiFramer size={14} />
+                    <span>Framer Motion</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiThreedotjs size={14} />
+                    <span>Three.js</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiSwift size={14} />
+                    <span>SwiftUI</span>
+                  </div>
                 </div>
               </div>
               <div className={styles.skillsAllWrapper}>
@@ -350,6 +370,10 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiAnthropic size={14} />
                     <span>Claude Code</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiGooglegemini size={14} />
+                    <span>Gemini</span>
                   </div>
                 </div>
               </div>
