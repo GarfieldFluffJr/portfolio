@@ -5,6 +5,18 @@ type Journey = {
 
 export const journeyItems: Journey[] = [
   {
+    title: "Waterloo Varsity Record Holder - 50Bk (25.36 SCM)",
+    date: "Feb 2026",
+  },
+  {
+    title: "2026 OUA Championships",
+    date: "Feb 2026",
+  },
+  {
+    title: "Curacao Training Camp",
+    date: "Dec 2025",
+  },
+  {
     title: "2025 Divisionals Athlete of the Week",
     date: "Nov 2025",
   },
