@@ -45,6 +45,8 @@ import {
   SiFramer,
   SiThreedotjs,
   SiGooglegemini,
+  SiAmazonwebservices,
+  SiGooglecloud,
 } from "react-icons/si";
 
 type FocusSkill = {
@@ -374,6 +376,14 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiGooglegemini size={14} />
                     <span>Gemini</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiAmazonwebservices size={14} />
+                    <span>AWS</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiGooglecloud size={14} />
+                    <span>GCP</span>
                   </div>
                 </div>
               </div>
