@@ -28,7 +28,7 @@ export default function ProjectsSection() {
         "Xcode",
         "Finder Extension",
         "Homebrew Install",
-        "300+ Users",
+        "4000+ Users",
       ],
       demoLink: "https://youtu.be/RFxfSQ_tTjo",
       gitHubLink: "https://github.com/GarfieldFluffJr/MacNewFile",
