@@ -5,6 +5,10 @@ type Journey = {
 
 export const journeyItems: Journey[] = [
   {
+    title: "2026 USPORTS National Championships",
+    date: "Mar 2026",
+  },
+  {
     title: "Waterloo Varsity Record Holder - 50Bk (25.36 SCM)",
     date: "Feb 2026",
   },
