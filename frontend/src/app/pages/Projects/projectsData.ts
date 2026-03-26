@@ -79,4 +79,22 @@ export const projectsData: Project[] = [
     demoLink: "https://youtu.be/RFxfSQ_tTjo",
     techStack: ["Objective-C", "Xcode"],
   },
+  {
+    name: "Recon",
+    description:
+      "A live emergency context app that allows emergency 911 calls to mimic FaceTime and records and analyzes the video with Nova to generate a structured incident report to help first responders act faster. Used Swift and iOS SDK to build a dual-camera with embedded transcript recording that is processed by Amazon Nova 2 Lite, which returns a clean structured report with live playback that allows first responders to analyze the scene easier and respond faster. Supports 12+ languages.",
+    githubLink: "https://github.com/GarfieldFluffJr/Recon",
+    liveLink: "https://devpost.com/software/recon-ambnp1",
+    demoLink: "https://www.youtube.com/watch?v=PKwWFbcJCJs",
+    techStack: [
+      "Swift",
+      "SwiftUI",
+      "Python",
+      "Docker",
+      "Xcode",
+      "AWS",
+      "Nova 2 Lite",
+      "OpenAI SDK",
+    ],
+  },
 ];
