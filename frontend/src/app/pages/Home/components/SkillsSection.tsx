@@ -47,6 +47,7 @@ import {
   SiGooglegemini,
   SiAmazonwebservices,
   SiGooglecloud,
+  SiSqlite,
 } from "react-icons/si";
 
 type FocusSkill = {
@@ -212,6 +213,10 @@ export default function SkillsSection() {
                     <span>Java</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
+                    <FiDatabase size={14} />
+                    <span>SQL</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
                     <SiScala size={14} />
                     <span>Scala</span>
                   </div>
@@ -281,6 +286,10 @@ export default function SkillsSection() {
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiPostgresql size={14} />
                     <span>PostgreSQL</span>
+                  </div>
+                  <div className={`${styles.skillsWrapper} skill`}>
+                    <SiSqlite size={14} />
+                    <span>SQLite</span>
                   </div>
                   <div className={`${styles.skillsWrapper} skill`}>
                     <SiMongodb size={14} />
