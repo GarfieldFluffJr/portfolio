@@ -12,9 +12,10 @@ export const experienceData: Experience[] = [
     company: "Gale (YC W25)",
     location: "San Francisco, CA, USA",
     position: "Software Engineer Intern",
-    duration: "Oct 2025 - Present",
-    description: "Incoming Winter 2026",
-    tech: [],
+    duration: "Jan 2026 - Present",
+    description:
+      "Building various software tools to automate and speed up the US Immigration Visa process. Built an XFA PDF to HTMl5 end-to-end compiler pipeline to offer an alternative method to Adobe Acrobat, saving over $80,000 per year and facilitate lawyer collaboration within our admin dashboard.",
+    tech: ["TypeScript", "Python", "Java", "Spring Boot", "Flask", "SQLite", "Zod", "Kimi K2.5"],
   },
   {
     company: "Levanta Labs",
