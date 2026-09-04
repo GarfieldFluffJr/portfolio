@@ -9,13 +9,39 @@ type Experience = {
 
 export const experienceData: Experience[] = [
   {
+    company: "Rilla",
+    location: "New York City, NY, USA",
+    position: "Software Engineer Intern",
+    duration: "Sept 2026 - Present",
+    description: "Building voice agents for in-person sales.",
+    tech: ["Fall 2026"],
+  },
+  {
+    company: "Mercor",
+    location: "San Francisco, CA, USA",
+    position: "AI Data Annotator",
+    duration: "May 2026 - Aug 2026",
+    description:
+      "Evaluated and labelled AI-generated data to improve the accuracy, quality, and reliability of various frontier machine learning models. Applied detailed guidelines to review model outputs, identify errors, and provide structured feedback to support AI model training and evaluation.",
+    tech: ["Part-Time"],
+  },
+  {
     company: "Gale (YC W25)",
     location: "San Francisco, CA, USA",
     position: "Software Engineer Intern",
-    duration: "Jan 2026 - Present",
+    duration: "Jan 2026 - May 2026",
     description:
       "Building various software tools to automate and speed up the US Immigration Visa process. Built an XFA PDF to HTMl5 end-to-end compiler pipeline to offer an alternative method to Adobe Acrobat, saving over $80,000 per year and facilitate lawyer collaboration within our admin dashboard.",
-    tech: ["TypeScript", "Python", "Java", "Spring Boot", "Flask", "SQLite", "Zod", "Kimi K2.5"],
+    tech: [
+      "TypeScript",
+      "Python",
+      "Java",
+      "Spring Boot",
+      "Flask",
+      "SQLite",
+      "Zod",
+      "Kimi K2.5",
+    ],
   },
   {
     company: "Levanta Labs",
