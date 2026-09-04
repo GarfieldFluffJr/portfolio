@@ -13,9 +13,27 @@ type Experience = {
 export default function ExperienceSection() {
   const experiences: Experience[] = [
     {
+      company: "Rilla",
+      title: "Software Engineer Intern",
+      duration: "Sept 2026 - Present",
+      logo: "/images/Home/rilla.png",
+      tech: ["Building voice agents"],
+      location: "New York City, NY, USA",
+      link: "https://www.rilla.com/",
+    },
+    {
+      company: "Mercor",
+      title: "AI Data Annotator",
+      duration: "May 2026 - Aug 2026",
+      logo: "/images/Home/mercor.png",
+      tech: ["Part-Time"],
+      location: "San Francisco, CA, USA",
+      link: "https://www.mercor.com/",
+    },
+    {
       company: "Gale (YC W25)",
       title: "Software Engineer Intern",
-      duration: "Jan 2026 - Apr 2026",
+      duration: "Jan 2026 - May 2026",
       logo: "/images/Home/gale.jpeg",
       tech: [
         "TypeScript",
